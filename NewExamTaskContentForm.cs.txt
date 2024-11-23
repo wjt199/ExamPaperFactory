@@ -1,0 +1,1058 @@
+namespace ExamPaperFactory
+{
+    partial class NewExamTaskContentForm
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            { components.Dispose(); }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            this.fixedTitleLabel = new System.Windows.Forms.Label();
+            this.fixedFormGroupBox = new System.Windows.Forms.GroupBox();
+            this.secondHeadingNextSpacingLineButton = new System.Windows.Forms.Button();
+            this.firstHeadingNextSpacingLineButton = new System.Windows.Forms.Button();
+            this.subTitleNextSpacingLineButton = new System.Windows.Forms.Button();
+            this.secondHeadingNextSpacingLineComboBox = new System.Windows.Forms.ComboBox();
+            this.firstHeadingNextSpacingLineComboBox = new System.Windows.Forms.ComboBox();
+            this.subTitleNextSpacingLineComboBox = new System.Windows.Forms.ComboBox();
+            this.mainTitleNextSpacingLineComboBox = new System.Windows.Forms.ComboBox();
+            this.mainTitleFontButton = new System.Windows.Forms.Button();
+            this.marginRightComboBox = new System.Windows.Forms.ComboBox();
+            this.marginLeftComboBox = new System.Windows.Forms.ComboBox();
+            this.marginBottomComboBox = new System.Windows.Forms.ComboBox();
+            this.marginTopComboBox = new System.Windows.Forms.ComboBox();
+            this.orientationComboBox = new System.Windows.Forms.ComboBox();
+            this.examPaperSizeComboBox = new System.Windows.Forms.ComboBox();
+            this.fixedNextSpacingLineLabel = new System.Windows.Forms.Label();
+            this.secondHeadingFontSizeLabel = new System.Windows.Forms.Label();
+            this.secondHeadingFontStyleLabel = new System.Windows.Forms.Label();
+            this.secondHeadingFontLabel = new System.Windows.Forms.Label();
+            this.firstHeadingFontSizeLabel = new System.Windows.Forms.Label();
+            this.firstHeadingFontStyleLabel = new System.Windows.Forms.Label();
+            this.firstHeadingFontLabel = new System.Windows.Forms.Label();
+            this.subTitleFontSizeLabel = new System.Windows.Forms.Label();
+            this.subTitleFontStyleLabel = new System.Windows.Forms.Label();
+            this.subTitleFontLabel = new System.Windows.Forms.Label();
+            this.fixedSubTitleLabel = new System.Windows.Forms.Label();
+            this.mainTitleFontSizeLabel = new System.Windows.Forms.Label();
+            this.mainTitleFontStyleLabel = new System.Windows.Forms.Label();
+            this.mainTitleFontLabel = new System.Windows.Forms.Label();
+            this.fixedMainTitleLabel = new System.Windows.Forms.Label();
+            this.fixedFontSizeLabel = new System.Windows.Forms.Label();
+            this.fixedFontStyleLabel = new System.Windows.Forms.Label();
+            this.fixedFontLabel = new System.Windows.Forms.Label();
+            this.fixedSecondHeadingFontLabel = new System.Windows.Forms.Label();
+            this.fixedFirstHeadingLabel = new System.Windows.Forms.Label();
+            this.fixedMarginRightLabel = new System.Windows.Forms.Label();
+            this.fixedMarginLeftLabel = new System.Windows.Forms.Label();
+            this.fixedMarginBottomLabel = new System.Windows.Forms.Label();
+            this.fixedMarginTopLabel = new System.Windows.Forms.Label();
+            this.fixedMarginLabel = new System.Windows.Forms.Label();
+            this.fixedOrientationLabel = new System.Windows.Forms.Label();
+            this.fixedPaperSizeLabel = new System.Windows.Forms.Label();
+            this.MainTitleTextBox = new System.Windows.Forms.TextBox();
+            this.examPaperContentGroupBox = new System.Windows.Forms.GroupBox();
+            this.fixedAmountLabel = new System.Windows.Forms.Label();
+            this.fixedGradelLbel = new System.Windows.Forms.Label();
+            this.fixedSelectButtonLabel = new System.Windows.Forms.Label();
+            this.fixedQuestionStorageLabel = new System.Windows.Forms.Label();
+            this.selectQuestionPathButton1_1 = new System.Windows.Forms.Button();
+            this.amountComboBox1_1 = new System.Windows.Forms.ComboBox();
+            this.gradeComboBox1_1 = new System.Windows.Forms.ComboBox();
+            this.pathLabel1_1 = new System.Windows.Forms.Label();
+            this.fixedFirstHeadingLabel_ = new System.Windows.Forms.Label();
+            this.firstHeadingTextBox1 = new System.Windows.Forms.TextBox();
+            this.NewExamTaskMenuStrip = new System.Windows.Forms.MenuStrip();
+            this.yesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cancelToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.renewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.firstHeadingPlusToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.firstHeadingMinusToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.questionStoragePlusToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.questionStorageMinusToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.fixedFormGroupBox.SuspendLayout();
+            this.examPaperContentGroupBox.SuspendLayout();
+            this.NewExamTaskMenuStrip.SuspendLayout();
+            this.SuspendLayout();
+            // 
+            // fixedTitleLabel
+            // 
+            this.fixedTitleLabel.AutoSize = true;
+            this.fixedTitleLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.75F);
+            this.fixedTitleLabel.Location = new System.Drawing.Point(9, 29);
+            this.fixedTitleLabel.Name = "fixedTitleLabel";
+            this.fixedTitleLabel.Size = new System.Drawing.Size(67, 15);
+            this.fixedTitleLabel.TabIndex = 1;
+            this.fixedTitleLabel.Text = "试卷标题：";
+            // 
+            // fixedFormGroupBox
+            // 
+            this.fixedFormGroupBox.Controls.Add(this.secondHeadingNextSpacingLineButton);
+            this.fixedFormGroupBox.Controls.Add(this.firstHeadingNextSpacingLineButton);
+            this.fixedFormGroupBox.Controls.Add(this.subTitleNextSpacingLineButton);
+            this.fixedFormGroupBox.Controls.Add(this.secondHeadingNextSpacingLineComboBox);
+            this.fixedFormGroupBox.Controls.Add(this.firstHeadingNextSpacingLineComboBox);
+            this.fixedFormGroupBox.Controls.Add(this.subTitleNextSpacingLineComboBox);
+            this.fixedFormGroupBox.Controls.Add(this.mainTitleNextSpacingLineComboBox);
+            this.fixedFormGroupBox.Controls.Add(this.mainTitleFontButton);
+            this.fixedFormGroupBox.Controls.Add(this.marginRightComboBox);
+            this.fixedFormGroupBox.Controls.Add(this.marginLeftComboBox);
+            this.fixedFormGroupBox.Controls.Add(this.marginBottomComboBox);
+            this.fixedFormGroupBox.Controls.Add(this.marginTopComboBox);
+            this.fixedFormGroupBox.Controls.Add(this.orientationComboBox);
+            this.fixedFormGroupBox.Controls.Add(this.examPaperSizeComboBox);
+            this.fixedFormGroupBox.Controls.Add(this.fixedNextSpacingLineLabel);
+            this.fixedFormGroupBox.Controls.Add(this.secondHeadingFontSizeLabel);
+            this.fixedFormGroupBox.Controls.Add(this.secondHeadingFontStyleLabel);
+            this.fixedFormGroupBox.Controls.Add(this.secondHeadingFontLabel);
+            this.fixedFormGroupBox.Controls.Add(this.firstHeadingFontSizeLabel);
+            this.fixedFormGroupBox.Controls.Add(this.firstHeadingFontStyleLabel);
+            this.fixedFormGroupBox.Controls.Add(this.firstHeadingFontLabel);
+            this.fixedFormGroupBox.Controls.Add(this.subTitleFontSizeLabel);
+            this.fixedFormGroupBox.Controls.Add(this.subTitleFontStyleLabel);
+            this.fixedFormGroupBox.Controls.Add(this.subTitleFontLabel);
+            this.fixedFormGroupBox.Controls.Add(this.fixedSubTitleLabel);
+            this.fixedFormGroupBox.Controls.Add(this.mainTitleFontSizeLabel);
+            this.fixedFormGroupBox.Controls.Add(this.mainTitleFontStyleLabel);
+            this.fixedFormGroupBox.Controls.Add(this.mainTitleFontLabel);
+            this.fixedFormGroupBox.Controls.Add(this.fixedMainTitleLabel);
+            this.fixedFormGroupBox.Controls.Add(this.fixedFontSizeLabel);
+            this.fixedFormGroupBox.Controls.Add(this.fixedFontStyleLabel);
+            this.fixedFormGroupBox.Controls.Add(this.fixedFontLabel);
+            this.fixedFormGroupBox.Controls.Add(this.fixedSecondHeadingFontLabel);
+            this.fixedFormGroupBox.Controls.Add(this.fixedFirstHeadingLabel);
+            this.fixedFormGroupBox.Controls.Add(this.fixedMarginRightLabel);
+            this.fixedFormGroupBox.Controls.Add(this.fixedMarginLeftLabel);
+            this.fixedFormGroupBox.Controls.Add(this.fixedMarginBottomLabel);
+            this.fixedFormGroupBox.Controls.Add(this.fixedMarginTopLabel);
+            this.fixedFormGroupBox.Controls.Add(this.fixedMarginLabel);
+            this.fixedFormGroupBox.Controls.Add(this.fixedOrientationLabel);
+            this.fixedFormGroupBox.Controls.Add(this.fixedPaperSizeLabel);
+            this.fixedFormGroupBox.Font = new System.Drawing.Font("宋体", 9F);
+            this.fixedFormGroupBox.Location = new System.Drawing.Point(5, 53);
+            this.fixedFormGroupBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.fixedFormGroupBox.Name = "fixedFormGroupBox";
+            this.fixedFormGroupBox.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.fixedFormGroupBox.Size = new System.Drawing.Size(504, 173);
+            this.fixedFormGroupBox.TabIndex = 3;
+            this.fixedFormGroupBox.TabStop = false;
+            this.fixedFormGroupBox.Text = "试卷布局";
+            // 
+            // secondHeadingNextSpacingLineButton
+            // 
+            this.secondHeadingNextSpacingLineButton.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.secondHeadingNextSpacingLineButton.Location = new System.Drawing.Point(455, 146);
+            this.secondHeadingNextSpacingLineButton.Name = "secondHeadingNextSpacingLineButton";
+            this.secondHeadingNextSpacingLineButton.Size = new System.Drawing.Size(45, 24);
+            this.secondHeadingNextSpacingLineButton.TabIndex = 44;
+            this.secondHeadingNextSpacingLineButton.Text = "...";
+            this.secondHeadingNextSpacingLineButton.UseVisualStyleBackColor = false;
+            this.secondHeadingNextSpacingLineButton.Click += new System.EventHandler(this.SecondHeadingNextSpacingLineButton_Click);
+            // 
+            // firstHeadingNextSpacingLineButton
+            // 
+            this.firstHeadingNextSpacingLineButton.Location = new System.Drawing.Point(455, 123);
+            this.firstHeadingNextSpacingLineButton.Name = "firstHeadingNextSpacingLineButton";
+            this.firstHeadingNextSpacingLineButton.Size = new System.Drawing.Size(45, 24);
+            this.firstHeadingNextSpacingLineButton.TabIndex = 38;
+            this.firstHeadingNextSpacingLineButton.Text = "...";
+            this.firstHeadingNextSpacingLineButton.UseVisualStyleBackColor = true;
+            this.firstHeadingNextSpacingLineButton.Click += new System.EventHandler(this.FirstHeadingNextSpacingLineButton_Click);
+            // 
+            // subTitleNextSpacingLineButton
+            // 
+            this.subTitleNextSpacingLineButton.Location = new System.Drawing.Point(455, 100);
+            this.subTitleNextSpacingLineButton.Name = "subTitleNextSpacingLineButton";
+            this.subTitleNextSpacingLineButton.Size = new System.Drawing.Size(45, 24);
+            this.subTitleNextSpacingLineButton.TabIndex = 32;
+            this.subTitleNextSpacingLineButton.Text = "...";
+            this.subTitleNextSpacingLineButton.UseVisualStyleBackColor = true;
+            this.subTitleNextSpacingLineButton.Click += new System.EventHandler(this.SubTitleNextSpacingLineButton_Click);
+            // 
+            // secondHeadingNextSpacingLineComboBox
+            // 
+            this.secondHeadingNextSpacingLineComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.secondHeadingNextSpacingLineComboBox.Font = new System.Drawing.Font("Times New Roman", 8.5F);
+            this.secondHeadingNextSpacingLineComboBox.FormattingEnabled = true;
+            this.secondHeadingNextSpacingLineComboBox.Items.AddRange(new object[] {
+            "1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20",
+                "21","22","23","24","25","26","27","28","29","30","31","32","33","34","35","36","37","38","39","40",
+                "41","42","43","44","45","46","47","48","49","50","51","52","53","54","55","56","57","58","59","60",
+                "61","62","63","64","65","66","67","68","69","70","71","72","73","74","75","76","77","78","79","80",
+                "81","82","83","84","85","86","87","88","89","90","91","92","93","94","95","96","97","98","99"});
+            this.secondHeadingNextSpacingLineComboBox.Location = new System.Drawing.Point(393, 147);
+            this.secondHeadingNextSpacingLineComboBox.Name = "secondHeadingNextSpacingLineComboBox";
+            this.secondHeadingNextSpacingLineComboBox.Size = new System.Drawing.Size(62, 22);
+            this.secondHeadingNextSpacingLineComboBox.TabIndex = 43;
+            this.secondHeadingNextSpacingLineComboBox.TextChanged += new System.EventHandler(this.secondHeadingNextSpacingLineComboBox_TextChanged);
+            // 
+            // firstHeadingNextSpacingLineComboBox
+            // 
+            this.firstHeadingNextSpacingLineComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.firstHeadingNextSpacingLineComboBox.Font = new System.Drawing.Font("Times New Roman", 8.5F);
+            this.firstHeadingNextSpacingLineComboBox.FormattingEnabled = true;
+            this.firstHeadingNextSpacingLineComboBox.Items.AddRange(new object[] {
+            "1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20",
+                "21","22","23","24","25","26","27","28","29","30","31","32","33","34","35","36","37","38","39","40",
+                "41","42","43","44","45","46","47","48","49","50","51","52","53","54","55","56","57","58","59","60",
+                "61","62","63","64","65","66","67","68","69","70","71","72","73","74","75","76","77","78","79","80",
+                "81","82","83","84","85","86","87","88","89","90","91","92","93","94","95","96","97","98","99"});
+            this.firstHeadingNextSpacingLineComboBox.Location = new System.Drawing.Point(393, 124);
+            this.firstHeadingNextSpacingLineComboBox.Name = "firstHeadingNextSpacingLineComboBox";
+            this.firstHeadingNextSpacingLineComboBox.Size = new System.Drawing.Size(62, 22);
+            this.firstHeadingNextSpacingLineComboBox.TabIndex = 37;
+            this.firstHeadingNextSpacingLineComboBox.TextChanged += new System.EventHandler(this.firstHeadingNextSpacingLineComboBox_TextChanged);
+            // 
+            // subTitleNextSpacingLineComboBox
+            // 
+            this.subTitleNextSpacingLineComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.subTitleNextSpacingLineComboBox.Font = new System.Drawing.Font("Times New Roman", 8.5F);
+            this.subTitleNextSpacingLineComboBox.FormattingEnabled = true;
+            this.subTitleNextSpacingLineComboBox.Items.AddRange(new object[] {
+            "1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20",
+                "21","22","23","24","25","26","27","28","29","30","31","32","33","34","35","36","37","38","39","40",
+                "41","42","43","44","45","46","47","48","49","50","51","52","53","54","55","56","57","58","59","60",
+                "61","62","63","64","65","66","67","68","69","70","71","72","73","74","75","76","77","78","79","80",
+                "81","82","83","84","85","86","87","88","89","90","91","92","93","94","95","96","97","98","99"});
+            this.subTitleNextSpacingLineComboBox.Location = new System.Drawing.Point(393, 101);
+            this.subTitleNextSpacingLineComboBox.Name = "subTitleNextSpacingLineComboBox";
+            this.subTitleNextSpacingLineComboBox.Size = new System.Drawing.Size(62, 22);
+            this.subTitleNextSpacingLineComboBox.TabIndex = 31;
+            this.subTitleNextSpacingLineComboBox.TextChanged += new System.EventHandler(this.subTitleNextSpacingLineComboBox_TextChanged);
+            // 
+            // mainTitleNextSpacingLineComboBox
+            // 
+            this.mainTitleNextSpacingLineComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.mainTitleNextSpacingLineComboBox.Font = new System.Drawing.Font("Times New Roman", 8F);
+            this.mainTitleNextSpacingLineComboBox.FormattingEnabled = true;
+            this.mainTitleNextSpacingLineComboBox.Items.AddRange(new object[] {
+            "1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20",
+                "21","22","23","24","25","26","27","28","29","30","31","32","33","34","35","36","37","38","39","40",
+                "41","42","43","44","45","46","47","48","49","50","51","52","53","54","55","56","57","58","59","60",
+                "61","62","63","64","65","66","67","68","69","70","71","72","73","74","75","76","77","78","79","80",
+                "81","82","83","84","85","86","87","88","89","90","91","92","93","94","95","96","97","98","99"});
+            this.mainTitleNextSpacingLineComboBox.Location = new System.Drawing.Point(393, 78);
+            this.mainTitleNextSpacingLineComboBox.Name = "mainTitleNextSpacingLineComboBox";
+            this.mainTitleNextSpacingLineComboBox.Size = new System.Drawing.Size(62, 22);
+            this.mainTitleNextSpacingLineComboBox.TabIndex = 25;
+            this.mainTitleNextSpacingLineComboBox.TextChanged += new System.EventHandler(this.mainTitleNextSpacingLineComboBox_TextChanged);
+            // 
+            // mainTitleFontButton
+            // 
+            this.mainTitleFontButton.Location = new System.Drawing.Point(455, 77);
+            this.mainTitleFontButton.Name = "mainTitleFontButton";
+            this.mainTitleFontButton.Size = new System.Drawing.Size(45, 24);
+            this.mainTitleFontButton.TabIndex = 26;
+            this.mainTitleFontButton.Text = "...";
+            this.mainTitleFontButton.UseVisualStyleBackColor = true;
+            this.mainTitleFontButton.Click += new System.EventHandler(this.MainTitleFontButton_Click);
+            // 
+            // marginRightComboBox
+            // 
+            this.marginRightComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.marginRightComboBox.Font = new System.Drawing.Font("Times New Roman", 10F);
+            this.marginRightComboBox.FormattingEnabled = true;
+            this.marginRightComboBox.Items.AddRange(new object[] {
+            "0","1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20",
+                "21","22","23","24","25","26","27","28","29","30","31","32","33","34","35","36","37","38","39","40",
+                "41","42","43","44","45","46","47","48","49","50","51","52","53","54","55","56","57","58","59","60",
+                "61","62","63","64","65","66","67","68","69","70","71","72","73","74","75","76","77","78","79","80",
+                "81","82","83","84","85","86","87","88","89","90","91","92","93","94","95","96","97","98","99","100",
+                "101","102","103","104","105","106","107","108","109","110","111","112","113","114","115","116","117","118","119","120",
+                "121","122","123","124","125","126","127","128","129","130","131","132","133","134","135","136","137","138","139","140",
+                "141","142","143","144","145","146","147","148","149","150","151","152","153","154","155","156","157","158","159","160",
+                "161","162","163","164","165","166","167","168","169","170","171","172","173","174","175","176","177","178","179","180",
+                "181","182","183","184","185","186","187","188","189","190","191","192","193","194","195","196","197","198","199","200",
+                "201","202","203","204","205","206","207","208","209","210","211","212","213","214","215","216","217","218","219","220",
+                "221","222","223","224","225","226","227","228","229","230","231","232","233","234","235","236","237","238","239","240",
+                "241","242","243","244","245","246","247","248","249","250","251","252","253","254","255","256","257","258","259","260",
+                "261","262","263","264","265","266","267","268","269","270","271","272","273","274","275","276","277","278","279","280",
+                "281","282","283","284","285","286","287","288","289","290","291","292","293","294","295","296","297","298","299","300"});
+            this.marginRightComboBox.Location = new System.Drawing.Point(267, 31);
+            this.marginRightComboBox.Name = "marginRightComboBox";
+            this.marginRightComboBox.Size = new System.Drawing.Size(58, 23);
+            this.marginRightComboBox.TabIndex = 12;
+            this.marginRightComboBox.TextChanged += new System.EventHandler(this.marginRightComboBox_TextChanged);
+            // 
+            // marginLeftComboBox
+            // 
+            this.marginLeftComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.marginLeftComboBox.Font = new System.Drawing.Font("Times New Roman", 10F);
+            this.marginLeftComboBox.FormattingEnabled = true;
+            this.marginLeftComboBox.Items.AddRange(new object[] {
+            "0","1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20",
+                "21","22","23","24","25","26","27","28","29","30","31","32","33","34","35","36","37","38","39","40",
+                "41","42","43","44","45","46","47","48","49","50","51","52","53","54","55","56","57","58","59","60",
+                "61","62","63","64","65","66","67","68","69","70","71","72","73","74","75","76","77","78","79","80",
+                "81","82","83","84","85","86","87","88","89","90","91","92","93","94","95","96","97","98","99","100",
+                "101","102","103","104","105","106","107","108","109","110","111","112","113","114","115","116","117","118","119","120",
+                "121","122","123","124","125","126","127","128","129","130","131","132","133","134","135","136","137","138","139","140",
+                "141","142","143","144","145","146","147","148","149","150","151","152","153","154","155","156","157","158","159","160",
+                "161","162","163","164","165","166","167","168","169","170","171","172","173","174","175","176","177","178","179","180",
+                "181","182","183","184","185","186","187","188","189","190","191","192","193","194","195","196","197","198","199","200",
+                "201","202","203","204","205","206","207","208","209","210","211","212","213","214","215","216","217","218","219","220",
+                "221","222","223","224","225","226","227","228","229","230","231","232","233","234","235","236","237","238","239","240",
+                "241","242","243","244","245","246","247","248","249","250","251","252","253","254","255","256","257","258","259","260",
+                "261","262","263","264","265","266","267","268","269","270","271","272","273","274","275","276","277","278","279","280",
+                "281","282","283","284","285","286","287","288","289","290","291","292","293","294","295","296","297","298","299","300"});
+            this.marginLeftComboBox.Location = new System.Drawing.Point(197, 31);
+            this.marginLeftComboBox.Name = "marginLeftComboBox";
+            this.marginLeftComboBox.Size = new System.Drawing.Size(58, 23);
+            this.marginLeftComboBox.TabIndex = 10;
+            this.marginLeftComboBox.TextChanged += new System.EventHandler(this.marginLeftComboBox_TextChanged);
+            // 
+            // marginBottomComboBox
+            // 
+            this.marginBottomComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.marginBottomComboBox.Font = new System.Drawing.Font("Times New Roman", 10F);
+            this.marginBottomComboBox.FormattingEnabled = true;
+            this.marginBottomComboBox.Items.AddRange(new object[] {
+            "0","1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20",
+                "21","22","23","24","25","26","27","28","29","30","31","32","33","34","35","36","37","38","39","40",
+                "41","42","43","44","45","46","47","48","49","50","51","52","53","54","55","56","57","58","59","60",
+                "61","62","63","64","65","66","67","68","69","70","71","72","73","74","75","76","77","78","79","80",
+                "81","82","83","84","85","86","87","88","89","90","91","92","93","94","95","96","97","98","99","100",
+                "101","102","103","104","105","106","107","108","109","110","111","112","113","114","115","116","117","118","119","120",
+                "121","122","123","124","125","126","127","128","129","130","131","132","133","134","135","136","137","138","139","140",
+                "141","142","143","144","145","146","147","148","149","150","151","152","153","154","155","156","157","158","159","160",
+                "161","162","163","164","165","166","167","168","169","170","171","172","173","174","175","176","177","178","179","180",
+                "181","182","183","184","185","186","187","188","189","190","191","192","193","194","195","196","197","198","199","200",
+                "201","202","203","204","205","206","207","208","209","210","211","212","213","214","215","216","217","218","219","220",
+                "221","222","223","224","225","226","227","228","229","230","231","232","233","234","235","236","237","238","239","240",
+                "241","242","243","244","245","246","247","248","249","250","251","252","253","254","255","256","257","258","259","260",
+                "261","262","263","264","265","266","267","268","269","270","271","272","273","274","275","276","277","278","279","280",
+                "281","282","283","284","285","286","287","288","289","290","291","292","293","294","295","296","297","298","299","300"});
+            this.marginBottomComboBox.Location = new System.Drawing.Point(127, 31);
+            this.marginBottomComboBox.Name = "marginBottomComboBox";
+            this.marginBottomComboBox.Size = new System.Drawing.Size(58, 23);
+            this.marginBottomComboBox.TabIndex = 8;
+            this.marginBottomComboBox.TextChanged += new System.EventHandler(this.marginBottomComboBox_TextChanged);
+            // 
+            // marginTopComboBox
+            // 
+            this.marginTopComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.marginTopComboBox.Font = new System.Drawing.Font("Times New Roman", 10F);
+            this.marginTopComboBox.FormattingEnabled = true;
+            this.marginTopComboBox.Items.AddRange(new object[] {
+            "0","1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20",
+                "21","22","23","24","25","26","27","28","29","30","31","32","33","34","35","36","37","38","39","40",
+                "41","42","43","44","45","46","47","48","49","50","51","52","53","54","55","56","57","58","59","60",
+                "61","62","63","64","65","66","67","68","69","70","71","72","73","74","75","76","77","78","79","80",
+                "81","82","83","84","85","86","87","88","89","90","91","92","93","94","95","96","97","98","99","100",
+                "101","102","103","104","105","106","107","108","109","110","111","112","113","114","115","116","117","118","119","120",
+                "121","122","123","124","125","126","127","128","129","130","131","132","133","134","135","136","137","138","139","140",
+                "141","142","143","144","145","146","147","148","149","150","151","152","153","154","155","156","157","158","159","160",
+                "161","162","163","164","165","166","167","168","169","170","171","172","173","174","175","176","177","178","179","180",
+                "181","182","183","184","185","186","187","188","189","190","191","192","193","194","195","196","197","198","199","200",
+                "201","202","203","204","205","206","207","208","209","210","211","212","213","214","215","216","217","218","219","220",
+                "221","222","223","224","225","226","227","228","229","230","231","232","233","234","235","236","237","238","239","240",
+                "241","242","243","244","245","246","247","248","249","250","251","252","253","254","255","256","257","258","259","260",
+                "261","262","263","264","265","266","267","268","269","270","271","272","273","274","275","276","277","278","279","280",
+                "281","282","283","284","285","286","287","288","289","290","291","292","293","294","295","296","297","298","299","300"});
+            this.marginTopComboBox.Location = new System.Drawing.Point(57, 31);
+            this.marginTopComboBox.Name = "marginTopComboBox";
+            this.marginTopComboBox.Size = new System.Drawing.Size(58, 23);
+            this.marginTopComboBox.TabIndex = 6;
+            this.marginTopComboBox.TextChanged += new System.EventHandler(this.marginTopComboBox_TextChanged);
+            // 
+            // orientationComboBox
+            // 
+            this.orientationComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.orientationComboBox.Font = new System.Drawing.Font("宋体", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.orientationComboBox.FormattingEnabled = true;
+            this.orientationComboBox.Items.AddRange(new object[] {
+            "横版",
+            "竖版"});
+            this.orientationComboBox.Location = new System.Drawing.Point(444, 31);
+            this.orientationComboBox.Name = "orientationComboBox";
+            this.orientationComboBox.Size = new System.Drawing.Size(55, 23);
+            this.orientationComboBox.TabIndex = 16;
+            this.orientationComboBox.TextChanged += new System.EventHandler(this.orientationComboBox_TextChanged);
+            // 
+            // examPaperSizeComboBox
+            // 
+            this.examPaperSizeComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.examPaperSizeComboBox.Font = new System.Drawing.Font("Times New Roman", 10F);
+            this.examPaperSizeComboBox.FormattingEnabled = true;
+            this.examPaperSizeComboBox.Items.AddRange(new object[] {
+            "A3",
+            "A4"});
+            this.examPaperSizeComboBox.Location = new System.Drawing.Point(380, 31);
+            this.examPaperSizeComboBox.Name = "examPaperSizeComboBox";
+            this.examPaperSizeComboBox.Size = new System.Drawing.Size(55, 23);
+            this.examPaperSizeComboBox.TabIndex = 14;
+            this.examPaperSizeComboBox.TextChanged += new System.EventHandler(this.examPaperSizeComboBox_TextChanged);
+            // 
+            // fixedNextSpacingLineLabel
+            // 
+            this.fixedNextSpacingLineLabel.AutoSize = true;
+            this.fixedNextSpacingLineLabel.Font = new System.Drawing.Font("宋体", 8.75F);
+            this.fixedNextSpacingLineLabel.Location = new System.Drawing.Point(397, 63);
+            this.fixedNextSpacingLineLabel.Name = "fixedNextSpacingLineLabel";
+            this.fixedNextSpacingLineLabel.Size = new System.Drawing.Size(41, 12);
+            this.fixedNextSpacingLineLabel.TabIndex = 20;
+            this.fixedNextSpacingLineLabel.Text = "行间距";
+            // 
+            // secondHeadingFontSizeLabel
+            // 
+            this.secondHeadingFontSizeLabel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.secondHeadingFontSizeLabel.CausesValidation = false;
+            this.secondHeadingFontSizeLabel.Font = new System.Drawing.Font("Times New Roman", 10F);
+            this.secondHeadingFontSizeLabel.Location = new System.Drawing.Point(347, 147);
+            this.secondHeadingFontSizeLabel.Margin = new System.Windows.Forms.Padding(0);
+            this.secondHeadingFontSizeLabel.Name = "secondHeadingFontSizeLabel";
+            this.secondHeadingFontSizeLabel.Size = new System.Drawing.Size(46, 22);
+            this.secondHeadingFontSizeLabel.TabIndex = 42;
+            this.secondHeadingFontSizeLabel.Text = "12";
+            this.secondHeadingFontSizeLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.secondHeadingFontSizeLabel.UseCompatibleTextRendering = true;
+            this.secondHeadingFontSizeLabel.TextChanged += new System.EventHandler(this.secondHeadingFontSizeLabel_TextChanged);
+            // 
+            // secondHeadingFontStyleLabel
+            // 
+            this.secondHeadingFontStyleLabel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.secondHeadingFontStyleLabel.CausesValidation = false;
+            this.secondHeadingFontStyleLabel.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.secondHeadingFontStyleLabel.Location = new System.Drawing.Point(281, 147);
+            this.secondHeadingFontStyleLabel.Margin = new System.Windows.Forms.Padding(0);
+            this.secondHeadingFontStyleLabel.Name = "secondHeadingFontStyleLabel";
+            this.secondHeadingFontStyleLabel.Size = new System.Drawing.Size(66, 22);
+            this.secondHeadingFontStyleLabel.TabIndex = 41;
+            this.secondHeadingFontStyleLabel.Text = "常规";
+            this.secondHeadingFontStyleLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.secondHeadingFontStyleLabel.UseCompatibleTextRendering = true;
+            this.secondHeadingFontStyleLabel.TextChanged += new System.EventHandler(this.secondHeadingFontStyleLabel_TextChanged);
+            // 
+            // secondHeadingFontLabel
+            // 
+            this.secondHeadingFontLabel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.secondHeadingFontLabel.CausesValidation = false;
+            this.secondHeadingFontLabel.Font = new System.Drawing.Font("宋体", 8.75F);
+            this.secondHeadingFontLabel.Location = new System.Drawing.Point(63, 147);
+            this.secondHeadingFontLabel.Margin = new System.Windows.Forms.Padding(0);
+            this.secondHeadingFontLabel.Name = "secondHeadingFontLabel";
+            this.secondHeadingFontLabel.Size = new System.Drawing.Size(218, 22);
+            this.secondHeadingFontLabel.TabIndex = 40;
+            this.secondHeadingFontLabel.Text = "宋体";
+            this.secondHeadingFontLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.secondHeadingFontLabel.UseCompatibleTextRendering = true;
+            this.secondHeadingFontLabel.TextChanged += new System.EventHandler(this.secondHeadingFontLabel_TextChanged);
+            // 
+            // firstHeadingFontSizeLabel
+            // 
+            this.firstHeadingFontSizeLabel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.firstHeadingFontSizeLabel.CausesValidation = false;
+            this.firstHeadingFontSizeLabel.Font = new System.Drawing.Font("Times New Roman", 10F);
+            this.firstHeadingFontSizeLabel.Location = new System.Drawing.Point(347, 124);
+            this.firstHeadingFontSizeLabel.Margin = new System.Windows.Forms.Padding(0);
+            this.firstHeadingFontSizeLabel.Name = "firstHeadingFontSizeLabel";
+            this.firstHeadingFontSizeLabel.Size = new System.Drawing.Size(46, 22);
+            this.firstHeadingFontSizeLabel.TabIndex = 36;
+            this.firstHeadingFontSizeLabel.Text = "14";
+            this.firstHeadingFontSizeLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.firstHeadingFontSizeLabel.UseCompatibleTextRendering = true;
+            this.firstHeadingFontSizeLabel.TextChanged += new System.EventHandler(this.firstHeadingFontSizeLabel_TextChanged);
+            // 
+            // firstHeadingFontStyleLabel
+            // 
+            this.firstHeadingFontStyleLabel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.firstHeadingFontStyleLabel.CausesValidation = false;
+            this.firstHeadingFontStyleLabel.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.firstHeadingFontStyleLabel.Location = new System.Drawing.Point(281, 124);
+            this.firstHeadingFontStyleLabel.Margin = new System.Windows.Forms.Padding(0);
+            this.firstHeadingFontStyleLabel.Name = "firstHeadingFontStyleLabel";
+            this.firstHeadingFontStyleLabel.Size = new System.Drawing.Size(66, 22);
+            this.firstHeadingFontStyleLabel.TabIndex = 35;
+            this.firstHeadingFontStyleLabel.Text = "常规";
+            this.firstHeadingFontStyleLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.firstHeadingFontStyleLabel.UseCompatibleTextRendering = true;
+            this.firstHeadingFontStyleLabel.TextChanged += new System.EventHandler(this.firstHeadingFontStyleLabel_TextChanged);
+            // 
+            // firstHeadingFontLabel
+            // 
+            this.firstHeadingFontLabel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.firstHeadingFontLabel.CausesValidation = false;
+            this.firstHeadingFontLabel.Font = new System.Drawing.Font("宋体", 8.75F);
+            this.firstHeadingFontLabel.Location = new System.Drawing.Point(63, 124);
+            this.firstHeadingFontLabel.Margin = new System.Windows.Forms.Padding(0);
+            this.firstHeadingFontLabel.Name = "firstHeadingFontLabel";
+            this.firstHeadingFontLabel.Size = new System.Drawing.Size(218, 22);
+            this.firstHeadingFontLabel.TabIndex = 34;
+            this.firstHeadingFontLabel.Text = "黑体";
+            this.firstHeadingFontLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.firstHeadingFontLabel.UseCompatibleTextRendering = true;
+            this.firstHeadingFontLabel.TextChanged += new System.EventHandler(this.firstHeadingFontLabel_TextChanged);
+            // 
+            // subTitleFontSizeLabel
+            // 
+            this.subTitleFontSizeLabel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.subTitleFontSizeLabel.CausesValidation = false;
+            this.subTitleFontSizeLabel.Font = new System.Drawing.Font("Times New Roman", 10F);
+            this.subTitleFontSizeLabel.Location = new System.Drawing.Point(347, 101);
+            this.subTitleFontSizeLabel.Margin = new System.Windows.Forms.Padding(0);
+            this.subTitleFontSizeLabel.Name = "subTitleFontSizeLabel";
+            this.subTitleFontSizeLabel.Size = new System.Drawing.Size(46, 22);
+            this.subTitleFontSizeLabel.TabIndex = 30;
+            this.subTitleFontSizeLabel.Text = "14";
+            this.subTitleFontSizeLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.subTitleFontSizeLabel.UseCompatibleTextRendering = true;
+            this.subTitleFontSizeLabel.TextChanged += new System.EventHandler(this.subTitleFontSizeLabel_TextChanged);
+            // 
+            // subTitleFontStyleLabel
+            // 
+            this.subTitleFontStyleLabel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.subTitleFontStyleLabel.CausesValidation = false;
+            this.subTitleFontStyleLabel.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.subTitleFontStyleLabel.Location = new System.Drawing.Point(281, 101);
+            this.subTitleFontStyleLabel.Margin = new System.Windows.Forms.Padding(0);
+            this.subTitleFontStyleLabel.Name = "subTitleFontStyleLabel";
+            this.subTitleFontStyleLabel.Size = new System.Drawing.Size(66, 22);
+            this.subTitleFontStyleLabel.TabIndex = 29;
+            this.subTitleFontStyleLabel.Text = "常规";
+            this.subTitleFontStyleLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.subTitleFontStyleLabel.UseCompatibleTextRendering = true;
+            this.subTitleFontStyleLabel.TextChanged += new System.EventHandler(this.subTitleFontStyleLabel_TextChanged);
+            // 
+            // subTitleFontLabel
+            // 
+            this.subTitleFontLabel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.subTitleFontLabel.CausesValidation = false;
+            this.subTitleFontLabel.Font = new System.Drawing.Font("宋体", 8.75F);
+            this.subTitleFontLabel.Location = new System.Drawing.Point(63, 101);
+            this.subTitleFontLabel.Margin = new System.Windows.Forms.Padding(0);
+            this.subTitleFontLabel.Name = "subTitleFontLabel";
+            this.subTitleFontLabel.Size = new System.Drawing.Size(218, 22);
+            this.subTitleFontLabel.TabIndex = 28;
+            this.subTitleFontLabel.Text = "黑体";
+            this.subTitleFontLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.subTitleFontLabel.UseCompatibleTextRendering = true;
+            this.subTitleFontLabel.TextChanged += new System.EventHandler(this.subTitleFontLabel_TextChanged);
+            // 
+            // fixedSubTitleLabel
+            // 
+            this.fixedSubTitleLabel.AutoSize = true;
+            this.fixedSubTitleLabel.Font = new System.Drawing.Font("宋体", 8.75F);
+            this.fixedSubTitleLabel.Location = new System.Drawing.Point(5, 107);
+            this.fixedSubTitleLabel.Name = "fixedSubTitleLabel";
+            this.fixedSubTitleLabel.Size = new System.Drawing.Size(65, 12);
+            this.fixedSubTitleLabel.TabIndex = 27;
+            this.fixedSubTitleLabel.Text = "单位姓名：";
+            // 
+            // mainTitleFontSizeLabel
+            // 
+            this.mainTitleFontSizeLabel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.mainTitleFontSizeLabel.CausesValidation = false;
+            this.mainTitleFontSizeLabel.Font = new System.Drawing.Font("Times New Roman", 10F);
+            this.mainTitleFontSizeLabel.Location = new System.Drawing.Point(347, 78);
+            this.mainTitleFontSizeLabel.Margin = new System.Windows.Forms.Padding(0);
+            this.mainTitleFontSizeLabel.Name = "mainTitleFontSizeLabel";
+            this.mainTitleFontSizeLabel.Size = new System.Drawing.Size(46, 22);
+            this.mainTitleFontSizeLabel.TabIndex = 24;
+            this.mainTitleFontSizeLabel.Text = "20";
+            this.mainTitleFontSizeLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.mainTitleFontSizeLabel.UseCompatibleTextRendering = true;
+            this.mainTitleFontSizeLabel.TextChanged += new System.EventHandler(this.mainTitleFontSizeLabel_TextChanged);
+            // 
+            // mainTitleFontStyleLabel
+            // 
+            this.mainTitleFontStyleLabel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.mainTitleFontStyleLabel.CausesValidation = false;
+            this.mainTitleFontStyleLabel.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mainTitleFontStyleLabel.Location = new System.Drawing.Point(281, 78);
+            this.mainTitleFontStyleLabel.Margin = new System.Windows.Forms.Padding(0);
+            this.mainTitleFontStyleLabel.Name = "mainTitleFontStyleLabel";
+            this.mainTitleFontStyleLabel.Size = new System.Drawing.Size(66, 22);
+            this.mainTitleFontStyleLabel.TabIndex = 23;
+            this.mainTitleFontStyleLabel.Text = "常规";
+            this.mainTitleFontStyleLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.mainTitleFontStyleLabel.UseCompatibleTextRendering = true;
+            this.mainTitleFontStyleLabel.TextChanged += new System.EventHandler(this.mainTitleFontStyleLabel_TextChanged);
+            // 
+            // mainTitleFontLabel
+            // 
+            this.mainTitleFontLabel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.mainTitleFontLabel.CausesValidation = false;
+            this.mainTitleFontLabel.Font = new System.Drawing.Font("宋体", 8.75F);
+            this.mainTitleFontLabel.Location = new System.Drawing.Point(63, 78);
+            this.mainTitleFontLabel.Margin = new System.Windows.Forms.Padding(0);
+            this.mainTitleFontLabel.Name = "mainTitleFontLabel";
+            this.mainTitleFontLabel.Size = new System.Drawing.Size(218, 22);
+            this.mainTitleFontLabel.TabIndex = 22;
+            this.mainTitleFontLabel.Text = "方正小标宋简体";
+            this.mainTitleFontLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.mainTitleFontLabel.UseCompatibleTextRendering = true;
+            this.mainTitleFontLabel.TextChanged += new System.EventHandler(this.mainTitleFontLabel_TextChanged);
+            // 
+            // fixedMainTitleLabel
+            // 
+            this.fixedMainTitleLabel.AutoSize = true;
+            this.fixedMainTitleLabel.Font = new System.Drawing.Font("宋体", 8.75F);
+            this.fixedMainTitleLabel.Location = new System.Drawing.Point(5, 84);
+            this.fixedMainTitleLabel.Name = "fixedMainTitleLabel";
+            this.fixedMainTitleLabel.Size = new System.Drawing.Size(65, 12);
+            this.fixedMainTitleLabel.TabIndex = 21;
+            this.fixedMainTitleLabel.Text = "试卷标题：";
+            // 
+            // fixedFontSizeLabel
+            // 
+            this.fixedFontSizeLabel.AutoSize = true;
+            this.fixedFontSizeLabel.Font = new System.Drawing.Font("宋体", 8.75F);
+            this.fixedFontSizeLabel.Location = new System.Drawing.Point(354, 63);
+            this.fixedFontSizeLabel.Name = "fixedFontSizeLabel";
+            this.fixedFontSizeLabel.Size = new System.Drawing.Size(29, 12);
+            this.fixedFontSizeLabel.TabIndex = 19;
+            this.fixedFontSizeLabel.Text = "字号";
+            // 
+            // fixedFontStyleLabel
+            // 
+            this.fixedFontStyleLabel.AutoSize = true;
+            this.fixedFontStyleLabel.Font = new System.Drawing.Font("宋体", 8.75F);
+            this.fixedFontStyleLabel.Location = new System.Drawing.Point(300, 63);
+            this.fixedFontStyleLabel.Name = "fixedFontStyleLabel";
+            this.fixedFontStyleLabel.Size = new System.Drawing.Size(29, 12);
+            this.fixedFontStyleLabel.TabIndex = 18;
+            this.fixedFontStyleLabel.Text = "字形";
+            // 
+            // fixedFontLabel
+            // 
+            this.fixedFontLabel.AutoSize = true;
+            this.fixedFontLabel.Font = new System.Drawing.Font("宋体", 8.75F);
+            this.fixedFontLabel.Location = new System.Drawing.Point(67, 63);
+            this.fixedFontLabel.Name = "fixedFontLabel";
+            this.fixedFontLabel.Size = new System.Drawing.Size(29, 12);
+            this.fixedFontLabel.TabIndex = 17;
+            this.fixedFontLabel.Text = "字体";
+            // 
+            // fixedSecondHeadingFontLabel
+            // 
+            this.fixedSecondHeadingFontLabel.AutoSize = true;
+            this.fixedSecondHeadingFontLabel.Font = new System.Drawing.Font("宋体", 8.75F);
+            this.fixedSecondHeadingFontLabel.Location = new System.Drawing.Point(5, 153);
+            this.fixedSecondHeadingFontLabel.Name = "fixedSecondHeadingFontLabel";
+            this.fixedSecondHeadingFontLabel.Size = new System.Drawing.Size(65, 12);
+            this.fixedSecondHeadingFontLabel.TabIndex = 39;
+            this.fixedSecondHeadingFontLabel.Text = "二级标题：";
+            // 
+            // fixedFirstHeadingLabel
+            // 
+            this.fixedFirstHeadingLabel.AutoSize = true;
+            this.fixedFirstHeadingLabel.Font = new System.Drawing.Font("宋体", 8.75F);
+            this.fixedFirstHeadingLabel.Location = new System.Drawing.Point(5, 130);
+            this.fixedFirstHeadingLabel.Name = "fixedFirstHeadingLabel";
+            this.fixedFirstHeadingLabel.Size = new System.Drawing.Size(65, 12);
+            this.fixedFirstHeadingLabel.TabIndex = 33;
+            this.fixedFirstHeadingLabel.Text = "一级标题：";
+            // 
+            // fixedMarginRightLabel
+            // 
+            this.fixedMarginRightLabel.AutoSize = true;
+            this.fixedMarginRightLabel.Font = new System.Drawing.Font("宋体", 8.75F);
+            this.fixedMarginRightLabel.Location = new System.Drawing.Point(269, 15);
+            this.fixedMarginRightLabel.Name = "fixedMarginRightLabel";
+            this.fixedMarginRightLabel.Size = new System.Drawing.Size(41, 12);
+            this.fixedMarginRightLabel.TabIndex = 11;
+            this.fixedMarginRightLabel.Text = "右边距";
+            // 
+            // fixedMarginLeftLabel
+            // 
+            this.fixedMarginLeftLabel.AutoSize = true;
+            this.fixedMarginLeftLabel.Font = new System.Drawing.Font("宋体", 8.75F);
+            this.fixedMarginLeftLabel.Location = new System.Drawing.Point(199, 15);
+            this.fixedMarginLeftLabel.Name = "fixedMarginLeftLabel";
+            this.fixedMarginLeftLabel.Size = new System.Drawing.Size(41, 12);
+            this.fixedMarginLeftLabel.TabIndex = 9;
+            this.fixedMarginLeftLabel.Text = "左边距";
+            // 
+            // fixedMarginBottomLabel
+            // 
+            this.fixedMarginBottomLabel.AutoSize = true;
+            this.fixedMarginBottomLabel.Font = new System.Drawing.Font("宋体", 8.75F);
+            this.fixedMarginBottomLabel.Location = new System.Drawing.Point(129, 15);
+            this.fixedMarginBottomLabel.Name = "fixedMarginBottomLabel";
+            this.fixedMarginBottomLabel.Size = new System.Drawing.Size(41, 12);
+            this.fixedMarginBottomLabel.TabIndex = 7;
+            this.fixedMarginBottomLabel.Text = "下边距";
+            // 
+            // fixedMarginTopLabel
+            // 
+            this.fixedMarginTopLabel.AutoSize = true;
+            this.fixedMarginTopLabel.Font = new System.Drawing.Font("宋体", 8.75F);
+            this.fixedMarginTopLabel.Location = new System.Drawing.Point(59, 15);
+            this.fixedMarginTopLabel.Name = "fixedMarginTopLabel";
+            this.fixedMarginTopLabel.Size = new System.Drawing.Size(41, 12);
+            this.fixedMarginTopLabel.TabIndex = 5;
+            this.fixedMarginTopLabel.Text = "上边距";
+            // 
+            // fixedMarginLabel
+            // 
+            this.fixedMarginLabel.AutoSize = true;
+            this.fixedMarginLabel.Font = new System.Drawing.Font("宋体", 8.75F);
+            this.fixedMarginLabel.Location = new System.Drawing.Point(11, 36);
+            this.fixedMarginLabel.Name = "fixedMarginLabel";
+            this.fixedMarginLabel.Size = new System.Drawing.Size(53, 12);
+            this.fixedMarginLabel.TabIndex = 4;
+            this.fixedMarginLabel.Text = "页边距：";
+            // 
+            // fixedOrientationLabel
+            // 
+            this.fixedOrientationLabel.AutoSize = true;
+            this.fixedOrientationLabel.Font = new System.Drawing.Font("宋体", 9F);
+            this.fixedOrientationLabel.Location = new System.Drawing.Point(446, 15);
+            this.fixedOrientationLabel.Name = "fixedOrientationLabel";
+            this.fixedOrientationLabel.Size = new System.Drawing.Size(29, 12);
+            this.fixedOrientationLabel.TabIndex = 15;
+            this.fixedOrientationLabel.Text = "排版";
+            // 
+            // fixedPaperSizeLabel
+            // 
+            this.fixedPaperSizeLabel.AutoSize = true;
+            this.fixedPaperSizeLabel.Font = new System.Drawing.Font("宋体", 9F);
+            this.fixedPaperSizeLabel.Location = new System.Drawing.Point(384, 15);
+            this.fixedPaperSizeLabel.Name = "fixedPaperSizeLabel";
+            this.fixedPaperSizeLabel.Size = new System.Drawing.Size(29, 12);
+            this.fixedPaperSizeLabel.TabIndex = 13;
+            this.fixedPaperSizeLabel.Text = "纸张";
+            // 
+            // MainTitleTextBox
+            // 
+            this.MainTitleTextBox.BackColor = System.Drawing.SystemColors.Control;
+            this.MainTitleTextBox.Font = new System.Drawing.Font("宋体", 10F);
+            this.MainTitleTextBox.Location = new System.Drawing.Point(72, 30);
+            this.MainTitleTextBox.Name = "MainTitleTextBox";
+            this.MainTitleTextBox.Size = new System.Drawing.Size(432, 23);
+            this.MainTitleTextBox.TabIndex = 2;
+            this.MainTitleTextBox.Text = "请输入试卷名称...";
+            this.MainTitleTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.MainTitleTextBox.TextChanged += new System.EventHandler(this.MainTitleTextBox_TextChanged);
+            // 
+            // examPaperContentGroupBox
+            // 
+            this.examPaperContentGroupBox.Controls.Add(this.fixedAmountLabel);
+            this.examPaperContentGroupBox.Controls.Add(this.fixedGradelLbel);
+            this.examPaperContentGroupBox.Controls.Add(this.fixedSelectButtonLabel);
+            this.examPaperContentGroupBox.Controls.Add(this.fixedQuestionStorageLabel);
+            this.examPaperContentGroupBox.Controls.Add(this.selectQuestionPathButton1_1);
+            this.examPaperContentGroupBox.Controls.Add(this.amountComboBox1_1);
+            this.examPaperContentGroupBox.Controls.Add(this.gradeComboBox1_1);
+            this.examPaperContentGroupBox.Controls.Add(this.pathLabel1_1);
+            this.examPaperContentGroupBox.Controls.Add(this.fixedFirstHeadingLabel_);
+            this.examPaperContentGroupBox.Controls.Add(this.firstHeadingTextBox1);
+            this.examPaperContentGroupBox.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.examPaperContentGroupBox.Location = new System.Drawing.Point(5, 229);
+            this.examPaperContentGroupBox.Name = "examPaperContentGroupBox";
+            this.examPaperContentGroupBox.Size = new System.Drawing.Size(504, 60);
+            this.examPaperContentGroupBox.TabIndex = 45;
+            this.examPaperContentGroupBox.TabStop = false;
+            this.examPaperContentGroupBox.Text = "考试内容";
+            // 
+            // fixedAmountLabel
+            // 
+            this.fixedAmountLabel.AutoSize = true;
+            this.fixedAmountLabel.Location = new System.Drawing.Point(456, 17);
+            this.fixedAmountLabel.Name = "fixedAmountLabel";
+            this.fixedAmountLabel.Size = new System.Drawing.Size(29, 12);
+            this.fixedAmountLabel.TabIndex = 50;
+            this.fixedAmountLabel.Text = "题数";
+            // 
+            // fixedGradelLbel
+            // 
+            this.fixedGradelLbel.AutoSize = true;
+            this.fixedGradelLbel.Location = new System.Drawing.Point(409, 17);
+            this.fixedGradelLbel.Name = "fixedGradelLbel";
+            this.fixedGradelLbel.Size = new System.Drawing.Size(29, 12);
+            this.fixedGradelLbel.TabIndex = 49;
+            this.fixedGradelLbel.Text = "分数";
+            // 
+            // fixedSelectButtonLabel
+            // 
+            this.fixedSelectButtonLabel.AutoSize = true;
+            this.fixedSelectButtonLabel.Location = new System.Drawing.Point(308, 17);
+            this.fixedSelectButtonLabel.Name = "fixedSelectButtonLabel";
+            this.fixedSelectButtonLabel.Size = new System.Drawing.Size(83, 12);
+            this.fixedSelectButtonLabel.TabIndex = 48;
+            this.fixedSelectButtonLabel.Text = "题库路径 选择";
+            // 
+            // fixedQuestionStorageLabel
+            // 
+            this.fixedQuestionStorageLabel.AutoSize = true;
+            this.fixedQuestionStorageLabel.Font = new System.Drawing.Font("宋体", 10F);
+            this.fixedQuestionStorageLabel.Location = new System.Drawing.Point(74, 16);
+            this.fixedQuestionStorageLabel.Name = "fixedQuestionStorageLabel";
+            this.fixedQuestionStorageLabel.Size = new System.Drawing.Size(35, 14);
+            this.fixedQuestionStorageLabel.TabIndex = 47;
+            this.fixedQuestionStorageLabel.Text = "题库";
+            // 
+            // selectQuestionPathButton1_1
+            // 
+            this.selectQuestionPathButton1_1.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.selectQuestionPathButton1_1.Location = new System.Drawing.Point(364, 31);
+            this.selectQuestionPathButton1_1.Name = "selectQuestionPathButton1_1";
+            this.selectQuestionPathButton1_1.Size = new System.Drawing.Size(42, 24);
+            this.selectQuestionPathButton1_1.TabIndex = 53;
+            this.selectQuestionPathButton1_1.Text = "...";
+            this.selectQuestionPathButton1_1.UseVisualStyleBackColor = false;
+            this.selectQuestionPathButton1_1.Click += new System.EventHandler(this.SelectQuestionPathButton0_0_Click);
+            // 
+            // amountComboBox1_1
+            // 
+            this.amountComboBox1_1.BackColor = System.Drawing.SystemColors.Control;
+            this.amountComboBox1_1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.amountComboBox1_1.Font = new System.Drawing.Font("Times New Roman", 8.5F);
+            this.amountComboBox1_1.FormattingEnabled = true;
+            this.amountComboBox1_1.Items.AddRange(new object[] {
+            "1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20",
+                "21","22","23","24","25","26","27","28","29","30","31","32","33","34","35","36","37","38","39","40",
+                "41","42","43","44","45","46","47","48","49","50","51","52","53","54","55","56","57","58","59","60",
+                "61","62","63","64","65","66","67","68","69","70","71","72","73","74","75","76","77","78","79","80",
+                "81","82","83","84","85","86","87","88","89","90","91","92","93","94","95","96","97","98","99","100"});
+            this.amountComboBox1_1.Location = new System.Drawing.Point(453, 32);
+            this.amountComboBox1_1.Name = "amountComboBox1_1";
+            this.amountComboBox1_1.Size = new System.Drawing.Size(46, 22);
+            this.amountComboBox1_1.TabIndex = 55;
+            this.amountComboBox1_1.TextChanged += new System.EventHandler(this.amountComboBox1_1_TextChanged);
+            // 
+            // gradeComboBox1_1
+            // 
+            this.gradeComboBox1_1.BackColor = System.Drawing.SystemColors.Control;
+            this.gradeComboBox1_1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.gradeComboBox1_1.Font = new System.Drawing.Font("Times New Roman", 8.5F);
+            this.gradeComboBox1_1.FormattingEnabled = true;
+            this.gradeComboBox1_1.Items.AddRange(new object[] {
+            "0.5","1","1.5","2","2.5","3","3.5","4","4.5","5","5.5","6","6.5","7","7.5","8","8.5","9","9.5","10",
+                "10.5","11","11.5","12","12.5","13","13.5","14","14.5","15","15.5","16","16.5","17","17.5","18","18.5","19","19.5","20",
+                "20.5","21","21.5","22","22.5","23","23.5","24","24.5","25","25.5","26","26.5","27","27.5","28","28.5","29","29.5","30",
+                "30.5","31","31.5","32","32.5","33","33.5","34","34.5","35","35.5","36","36.5","37","37.5","38","38.5","39","39.5","40",
+                "40.5","41","41.5","42","42.5","43","43.5","44","44.5","45","45.5","46","46.5","47","47.5","48","48.5","49","49.5","50",
+                "50.5","51","51.5","52","52.5","53","53.5","54","54.5","55","55.5","56","56.5","57","57.5","58","58.5","59","59.5","60",
+                "60.5","61","61.5","62","62.5","63","63.5","64","64.5","65","65.5","66","66.5","67","67.5","68","68.5","69","69.5","70",
+                "70.5","71","71.5","72","72.5","73","73.5","74","74.5","75","75.5","76","76.5","77","77.5","78","78.5","79","79.5","80",
+                "80.5","81","81.5","82","82.5","83","83.5","84","84.5","85","85.5","86","86.5","87","87.5","88","88.5","89","89.5","90",
+                "90.5","91","91.5","92","92.5","93","93.5","94","94.5","95","95.5","96","96.5","97","97.5","98","98.5","99","99.5","100"});
+            this.gradeComboBox1_1.Location = new System.Drawing.Point(406, 32);
+            this.gradeComboBox1_1.Name = "gradeComboBox1_1";
+            this.gradeComboBox1_1.Size = new System.Drawing.Size(46, 22);
+            this.gradeComboBox1_1.TabIndex = 54;
+            this.gradeComboBox1_1.TextChanged += new System.EventHandler(this.gradeComboBox1_1_TextChanged);
+            // 
+            // pathLabel1_1
+            // 
+            this.pathLabel1_1.AutoEllipsis = true;
+            this.pathLabel1_1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pathLabel1_1.Font = new System.Drawing.Font("Times New Roman", 10F);
+            this.pathLabel1_1.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.pathLabel1_1.Location = new System.Drawing.Point(72, 32);
+            this.pathLabel1_1.Name = "pathLabel1_1";
+            this.pathLabel1_1.Size = new System.Drawing.Size(293, 22);
+            this.pathLabel1_1.TabIndex = 52;
+            this.pathLabel1_1.Text = "请选择题库文件...";
+            this.pathLabel1_1.TextChanged += new System.EventHandler(this.pathLabel1_1_TextChanged);
+            // 
+            // fixedFirstHeadingLabel_
+            // 
+            this.fixedFirstHeadingLabel_.AutoSize = true;
+            this.fixedFirstHeadingLabel_.Font = new System.Drawing.Font("宋体", 10F);
+            this.fixedFirstHeadingLabel_.Location = new System.Drawing.Point(5, 16);
+            this.fixedFirstHeadingLabel_.Name = "fixedFirstHeadingLabel_";
+            this.fixedFirstHeadingLabel_.Size = new System.Drawing.Size(35, 14);
+            this.fixedFirstHeadingLabel_.TabIndex = 46;
+            this.fixedFirstHeadingLabel_.Text = "题型";
+            // 
+            // firstHeadingTextBox1
+            // 
+            this.firstHeadingTextBox1.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.firstHeadingTextBox1.Font = new System.Drawing.Font("宋体", 9F);
+            this.firstHeadingTextBox1.Location = new System.Drawing.Point(6, 32);
+            this.firstHeadingTextBox1.Name = "firstHeadingTextBox1";
+            this.firstHeadingTextBox1.Size = new System.Drawing.Size(65, 21);
+            this.firstHeadingTextBox1.TabIndex = 51;
+            this.firstHeadingTextBox1.Text = "请输入题目";
+            this.firstHeadingTextBox1.TextChanged += new System.EventHandler(this.firstHeadingTextBox1_TextChanged);
+            // 
+            // NewExamTaskMenuStrip
+            // 
+            this.NewExamTaskMenuStrip.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.NewExamTaskMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.yesToolStripMenuItem,
+            this.cancelToolStripMenuItem,
+            this.renewToolStripMenuItem,
+            this.firstHeadingPlusToolStripMenuItem,
+            this.firstHeadingMinusToolStripMenuItem,
+            this.questionStoragePlusToolStripMenuItem,
+            this.questionStorageMinusToolStripMenuItem});
+            this.NewExamTaskMenuStrip.Location = new System.Drawing.Point(0, 0);
+            this.NewExamTaskMenuStrip.Name = "NewExamTaskMenuStrip";
+            this.NewExamTaskMenuStrip.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
+            this.NewExamTaskMenuStrip.Size = new System.Drawing.Size(512, 25);
+            this.NewExamTaskMenuStrip.TabIndex = 48;
+            this.NewExamTaskMenuStrip.Text = "menuStrip1";
+            // 
+            // yesToolStripMenuItem
+            // 
+            this.yesToolStripMenuItem.Enabled = false;
+            this.yesToolStripMenuItem.Name = "yesToolStripMenuItem";
+            this.yesToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Y)));
+            this.yesToolStripMenuItem.Size = new System.Drawing.Size(59, 21);
+            this.yesToolStripMenuItem.Text = "确认(Y)";
+            this.yesToolStripMenuItem.Click += new System.EventHandler(this.YesToolStripMenuItem_Click);
+            // 
+            // cancelToolStripMenuItem
+            // 
+            this.cancelToolStripMenuItem.Name = "cancelToolStripMenuItem";
+            this.cancelToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.C)));
+            this.cancelToolStripMenuItem.Size = new System.Drawing.Size(60, 21);
+            this.cancelToolStripMenuItem.Text = "取消(C)";
+            this.cancelToolStripMenuItem.Click += new System.EventHandler(this.CancelToolStripMenuItem_Click);
+            // 
+            // renewToolStripMenuItem
+            // 
+            this.renewToolStripMenuItem.Name = "renewToolStripMenuItem";
+            this.renewToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.R)));
+            this.renewToolStripMenuItem.Size = new System.Drawing.Size(60, 21);
+            this.renewToolStripMenuItem.Text = "复位(R)";
+            this.renewToolStripMenuItem.Click += new System.EventHandler(this.RenewToolStripMenuItem_Click);
+            // 
+            // firstHeadingPlusToolStripMenuItem
+            // 
+            this.firstHeadingPlusToolStripMenuItem.Name = "firstHeadingPlusToolStripMenuItem";
+            this.firstHeadingPlusToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Up)));
+            this.firstHeadingPlusToolStripMenuItem.Size = new System.Drawing.Size(67, 21);
+            this.firstHeadingPlusToolStripMenuItem.Text = "题型+(↑)";
+            this.firstHeadingPlusToolStripMenuItem.Click += new System.EventHandler(this.FirstHeadingPlusToolStripMenuItem_Click);
+            // 
+            // firstHeadingMinusToolStripMenuItem
+            // 
+            this.firstHeadingMinusToolStripMenuItem.Name = "firstHeadingMinusToolStripMenuItem";
+            this.firstHeadingMinusToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Down)));
+            this.firstHeadingMinusToolStripMenuItem.Size = new System.Drawing.Size(63, 21);
+            this.firstHeadingMinusToolStripMenuItem.Text = "题型-(↓)";
+            this.firstHeadingMinusToolStripMenuItem.Click += new System.EventHandler(this.FirstHeadingMinusToolStripMenuItem_Click);
+            // 
+            // questionStoragePlusToolStripMenuItem
+            // 
+            this.questionStoragePlusToolStripMenuItem.Name = "questionStoragePlusToolStripMenuItem";
+            this.questionStoragePlusToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Right)));
+            this.questionStoragePlusToolStripMenuItem.Size = new System.Drawing.Size(73, 21);
+            this.questionStoragePlusToolStripMenuItem.Text = "题库+(→)";
+            this.questionStoragePlusToolStripMenuItem.Click += new System.EventHandler(this.QuestionStoragePlusToolStripMenuItem_Click);
+            // 
+            // questionStorageMinusToolStripMenuItem
+            // 
+            this.questionStorageMinusToolStripMenuItem.Name = "questionStorageMinusToolStripMenuItem";
+            this.questionStorageMinusToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Left)));
+            this.questionStorageMinusToolStripMenuItem.Size = new System.Drawing.Size(69, 21);
+            this.questionStorageMinusToolStripMenuItem.Text = "题库-(←)";
+            this.questionStorageMinusToolStripMenuItem.Click += new System.EventHandler(this.QuestionStorageMinusToolStripMenuItem_Click);
+            // 
+            // NewExamTaskContentForm
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(512, 292);
+            this.Controls.Add(this.examPaperContentGroupBox);
+            this.Controls.Add(this.MainTitleTextBox);
+            this.Controls.Add(this.fixedTitleLabel);
+            this.Controls.Add(this.fixedFormGroupBox);
+            this.Controls.Add(this.NewExamTaskMenuStrip);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MainMenuStrip = this.NewExamTaskMenuStrip;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
+            this.Name = "NewExamTaskContentForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "新建试卷任务";
+            this.fixedFormGroupBox.ResumeLayout(false);
+            this.fixedFormGroupBox.PerformLayout();
+            this.examPaperContentGroupBox.ResumeLayout(false);
+            this.examPaperContentGroupBox.PerformLayout();
+            this.NewExamTaskMenuStrip.ResumeLayout(false);
+            this.NewExamTaskMenuStrip.PerformLayout();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
+        }
+
+        #endregion
+        private System.Windows.Forms.Label fixedTitleLabel;
+        private System.Windows.Forms.GroupBox fixedFormGroupBox;
+        private System.Windows.Forms.Label fixedNextSpacingLineLabel;
+        private System.Windows.Forms.Label secondHeadingFontSizeLabel;
+        private System.Windows.Forms.Label secondHeadingFontStyleLabel;
+        private System.Windows.Forms.Label secondHeadingFontLabel;
+        private System.Windows.Forms.Label firstHeadingFontSizeLabel;
+        private System.Windows.Forms.Label firstHeadingFontStyleLabel;
+        private System.Windows.Forms.Label firstHeadingFontLabel;
+        private System.Windows.Forms.Label subTitleFontSizeLabel;
+        private System.Windows.Forms.Label subTitleFontStyleLabel;
+        private System.Windows.Forms.Label subTitleFontLabel;
+        private System.Windows.Forms.Label fixedSubTitleLabel;
+        private System.Windows.Forms.Label mainTitleFontSizeLabel;
+        private System.Windows.Forms.Label mainTitleFontStyleLabel;
+        private System.Windows.Forms.Label mainTitleFontLabel;
+        private System.Windows.Forms.Label fixedMainTitleLabel;
+        private System.Windows.Forms.Label fixedFontSizeLabel;
+        private System.Windows.Forms.Label fixedFontStyleLabel;
+        private System.Windows.Forms.Label fixedFontLabel;
+        private System.Windows.Forms.Label fixedSecondHeadingFontLabel;
+        private System.Windows.Forms.Label fixedFirstHeadingLabel;
+        private System.Windows.Forms.Label fixedMarginRightLabel;
+        private System.Windows.Forms.Label fixedMarginLeftLabel;
+        private System.Windows.Forms.Label fixedMarginBottomLabel;
+        private System.Windows.Forms.Label fixedMarginTopLabel;
+        private System.Windows.Forms.Label fixedMarginLabel;
+        private System.Windows.Forms.Label fixedOrientationLabel;
+        private System.Windows.Forms.Label fixedPaperSizeLabel;
+        private System.Windows.Forms.ComboBox orientationComboBox;
+        private System.Windows.Forms.ComboBox examPaperSizeComboBox;
+        private System.Windows.Forms.ComboBox marginTopComboBox;
+        private System.Windows.Forms.ComboBox marginRightComboBox;
+        private System.Windows.Forms.ComboBox marginLeftComboBox;
+        private System.Windows.Forms.ComboBox marginBottomComboBox;
+        private System.Windows.Forms.TextBox MainTitleTextBox;
+        private System.Windows.Forms.Button mainTitleFontButton;
+        private System.Windows.Forms.ComboBox mainTitleNextSpacingLineComboBox;
+        private System.Windows.Forms.ComboBox secondHeadingNextSpacingLineComboBox;
+        private System.Windows.Forms.ComboBox firstHeadingNextSpacingLineComboBox;
+        private System.Windows.Forms.ComboBox subTitleNextSpacingLineComboBox;
+        private System.Windows.Forms.Button secondHeadingNextSpacingLineButton;
+        private System.Windows.Forms.Button firstHeadingNextSpacingLineButton;
+        private System.Windows.Forms.Button subTitleNextSpacingLineButton;
+        private System.Windows.Forms.GroupBox examPaperContentGroupBox;
+        private System.Windows.Forms.Label fixedFirstHeadingLabel_;
+        private System.Windows.Forms.TextBox firstHeadingTextBox1;
+        private System.Windows.Forms.Label pathLabel1_1;
+        private System.Windows.Forms.ComboBox amountComboBox1_1;
+        private System.Windows.Forms.ComboBox gradeComboBox1_1;
+        private System.Windows.Forms.Button selectQuestionPathButton1_1;
+        private System.Windows.Forms.Label fixedQuestionStorageLabel;
+        private System.Windows.Forms.Label fixedGradelLbel;
+        private System.Windows.Forms.Label fixedSelectButtonLabel;
+        private System.Windows.Forms.Label fixedAmountLabel;
+        private System.Windows.Forms.MenuStrip NewExamTaskMenuStrip;
+        private System.Windows.Forms.ToolStripMenuItem yesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cancelToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem renewToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem firstHeadingPlusToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem firstHeadingMinusToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem questionStoragePlusToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem questionStorageMinusToolStripMenuItem;
+    }
+}

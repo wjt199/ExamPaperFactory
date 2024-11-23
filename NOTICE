@@ -1,0 +1,16 @@
+﻿Software:ExamPaper Factory 
+Version:1.0.1
+
+Copyright (C) 2024 Nineteen21. All Rights Reserved.
+Author: Nineteen21
+E-mail: wjt199@sina.com
+
+This program ExamPaper Factory is released under license GPLv3.
+See LICENSE in the project root for license information.
+
+Please note, this project may automatically load third party code from external 
+repositories (for example, OFFICE modules, or other dependencies). 
+If so, such third party code may be subject to other license terms than as set 
+forth above. In addition, such third party code may also depend on and load 
+multiple tiers of dependencies. Please review the applicable licenses of the 
+additional dependencies.

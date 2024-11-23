@@ -1,0 +1,2080 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="formExamPaperToolStripProgressBar.AutoSize" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="formExamPaperToolStripProgressBar.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 16</value>
+  </data>
+  <data name="formExamPaperToolStripProgressBar.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <metadata name="mainMenuStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="mainMenuStrip.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="mainMenuStrip.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft YaHei UI, 9pt</value>
+  </data>
+  <data name="openEPFileToolStripMenuItem.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
+    <value>Ctrl+O</value>
+  </data>
+  <data name="openEPFileToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>213, 22</value>
+  </data>
+  <data name="openEPFileToolStripMenuItem.Text" xml:space="preserve">
+    <value>打开试卷任务(O)</value>
+  </data>
+  <data name="newEPFileToolStripMenuItem.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
+    <value>Ctrl+N</value>
+  </data>
+  <data name="newEPFileToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>213, 22</value>
+  </data>
+  <data name="newEPFileToolStripMenuItem.Text" xml:space="preserve">
+    <value>新建试卷任务(N)</value>
+  </data>
+  <data name="editEPFileToolStripMenuItem.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="editEPFileToolStripMenuItem.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
+    <value>Ctrl+E</value>
+  </data>
+  <data name="editEPFileToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>213, 22</value>
+  </data>
+  <data name="editEPFileToolStripMenuItem.Text" xml:space="preserve">
+    <value>编辑试卷任务(E)</value>
+  </data>
+  <data name="toolStripSeparator1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>210, 6</value>
+  </data>
+  <data name="saveToolStripMenuItem.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="saveToolStripMenuItem.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
+    <value>Ctrl+S</value>
+  </data>
+  <data name="saveToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>213, 22</value>
+  </data>
+  <data name="saveToolStripMenuItem.Text" xml:space="preserve">
+    <value>保存(S)</value>
+  </data>
+  <data name="saveAsToolStripMenuItem.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="saveAsToolStripMenuItem.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
+    <value>Ctrl+Alt+S</value>
+  </data>
+  <data name="saveAsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>213, 22</value>
+  </data>
+  <data name="saveAsToolStripMenuItem.Text" xml:space="preserve">
+    <value>另存为(^S)</value>
+  </data>
+  <data name="toolStripSeparator2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>210, 6</value>
+  </data>
+  <data name="quitToolStripMenuItem.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
+    <value>Ctrl+Q</value>
+  </data>
+  <data name="quitToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>213, 22</value>
+  </data>
+  <data name="quitToolStripMenuItem.Text" xml:space="preserve">
+    <value>退出(Q)</value>
+  </data>
+  <data name="fileToolStripMenuItem.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
+    <value>Alt+F</value>
+  </data>
+  <data name="fileToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>58, 21</value>
+  </data>
+  <data name="fileToolStripMenuItem.Text" xml:space="preserve">
+    <value>文件(F)</value>
+  </data>
+  <data name="questionStorageToolStripMenuItem.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="questionStorageToolStripMenuItem.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
+    <value>Ctrl+B</value>
+  </data>
+  <data name="questionStorageToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>60, 21</value>
+  </data>
+  <data name="questionStorageToolStripMenuItem.Text" xml:space="preserve">
+    <value>题库(B)</value>
+  </data>
+  <data name="questionStorageToolStripMenuItem.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="formExamPaperAndAnswerToolStripMenuItem.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="formExamPaperAndAnswerToolStripMenuItem.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
+    <value>Ctrl+Alt+G</value>
+  </data>
+  <data name="formExamPaperAndAnswerToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>280, 22</value>
+  </data>
+  <data name="formExamPaperAndAnswerToolStripMenuItem.Text" xml:space="preserve">
+    <value>生成考试试卷及答案(^G)</value>
+  </data>
+  <data name="formExamPaperToolStripMenuItem.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="formExamPaperToolStripMenuItem.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
+    <value>Ctrl+G</value>
+  </data>
+  <data name="formExamPaperToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>280, 22</value>
+  </data>
+  <data name="formExamPaperToolStripMenuItem.Text" xml:space="preserve">
+    <value>生成考试考卷(G)</value>
+  </data>
+  <data name="toolStripSeparator3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>277, 6</value>
+  </data>
+  <data name="openExamPaperDirToolStripMenuItem.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="openExamPaperDirToolStripMenuItem.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
+    <value>Ctrl+Alt+O</value>
+  </data>
+  <data name="openExamPaperDirToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>280, 22</value>
+  </data>
+  <data name="openExamPaperDirToolStripMenuItem.Text" xml:space="preserve">
+    <value>打开试卷目录(^O)</value>
+  </data>
+  <data name="locationExamPaperToolStripMenuItem.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
+    <value>Ctrl+L</value>
+  </data>
+  <data name="locationExamPaperToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>280, 22</value>
+  </data>
+  <data name="locationExamPaperToolStripMenuItem.Text" xml:space="preserve">
+    <value>试卷生成目录(L)</value>
+  </data>
+  <data name="examPaperDirToolStripTextBox.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft YaHei UI, 9pt</value>
+  </data>
+  <data name="examPaperDirToolStripTextBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>210, 23</value>
+  </data>
+  <data name="examPaperDirToolStripTextBox.Text" xml:space="preserve">
+    <value>点击↑↑↑生成试卷目录</value>
+  </data>
+  <data name="examPaperToolStripMenuItem.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
+    <value>Alt+E</value>
+  </data>
+  <data name="examPaperToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>59, 21</value>
+  </data>
+  <data name="examPaperToolStripMenuItem.Text" xml:space="preserve">
+    <value>考卷(E)</value>
+  </data>
+  <data name="manualToolStripMenuItem.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
+    <value>Ctrl+M</value>
+  </data>
+  <data name="manualToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>193, 22</value>
+  </data>
+  <data name="manualToolStripMenuItem.Text" xml:space="preserve">
+    <value>使用手册(M)</value>
+  </data>
+  <data name="aboutToolStripMenuItem.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
+    <value>Ctrl+A</value>
+  </data>
+  <data name="aboutToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>193, 22</value>
+  </data>
+  <data name="aboutToolStripMenuItem.Text" xml:space="preserve">
+    <value>关于(A)</value>
+  </data>
+  <data name="helpToolStripMenuItem.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
+    <value>Ctrl+H</value>
+  </data>
+  <data name="helpToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>61, 21</value>
+  </data>
+  <data name="helpToolStripMenuItem.Text" xml:space="preserve">
+    <value>帮助(H)</value>
+  </data>
+  <data name="mainMenuStrip.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="mainMenuStrip.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 2, 0, 2</value>
+  </data>
+  <data name="mainMenuStrip.Size" type="System.Drawing.Size, System.Drawing">
+    <value>375, 25</value>
+  </data>
+  <data name="mainMenuStrip.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;mainMenuStrip.Name" xml:space="preserve">
+    <value>mainMenuStrip</value>
+  </data>
+  <data name="&gt;&gt;mainMenuStrip.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;mainMenuStrip.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;mainMenuStrip.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="textColumnsLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 10pt</value>
+  </data>
+  <data name="textColumnsLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="textColumnsLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>183, 16</value>
+  </data>
+  <data name="textColumnsLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="textColumnsLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>58, 22</value>
+  </data>
+  <data name="textColumnsLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>42</value>
+  </data>
+  <data name="textColumnsLabel.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;textColumnsLabel.Name" xml:space="preserve">
+    <value>textColumnsLabel</value>
+  </data>
+  <data name="&gt;&gt;textColumnsLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;textColumnsLabel.Parent" xml:space="preserve">
+    <value>fixedFormGroupBox</value>
+  </data>
+  <data name="&gt;&gt;textColumnsLabel.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="fixedTextColumnsLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="fixedTextColumnsLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>宋体, 9pt</value>
+  </data>
+  <data name="fixedTextColumnsLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="fixedTextColumnsLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>149, 22</value>
+  </data>
+  <data name="fixedTextColumnsLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>41, 12</value>
+  </data>
+  <data name="fixedTextColumnsLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>41</value>
+  </data>
+  <data name="fixedTextColumnsLabel.Text" xml:space="preserve">
+    <value>分栏：</value>
+  </data>
+  <data name="&gt;&gt;fixedTextColumnsLabel.Name" xml:space="preserve">
+    <value>fixedTextColumnsLabel</value>
+  </data>
+  <data name="&gt;&gt;fixedTextColumnsLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;fixedTextColumnsLabel.Parent" xml:space="preserve">
+    <value>fixedFormGroupBox</value>
+  </data>
+  <data name="&gt;&gt;fixedTextColumnsLabel.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="fixedNextSpacingLineLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="fixedNextSpacingLineLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>宋体, 8.75pt</value>
+  </data>
+  <data name="fixedNextSpacingLineLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>319, 88</value>
+  </data>
+  <data name="fixedNextSpacingLineLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>41, 12</value>
+  </data>
+  <data name="fixedNextSpacingLineLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>20</value>
+  </data>
+  <data name="fixedNextSpacingLineLabel.Text" xml:space="preserve">
+    <value>行间距</value>
+  </data>
+  <data name="&gt;&gt;fixedNextSpacingLineLabel.Name" xml:space="preserve">
+    <value>fixedNextSpacingLineLabel</value>
+  </data>
+  <data name="&gt;&gt;fixedNextSpacingLineLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;fixedNextSpacingLineLabel.Parent" xml:space="preserve">
+    <value>fixedFormGroupBox</value>
+  </data>
+  <data name="&gt;&gt;fixedNextSpacingLineLabel.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="secondHeadingNextSpacingLineLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 10pt</value>
+  </data>
+  <data name="secondHeadingNextSpacingLineLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>318, 169</value>
+  </data>
+  <data name="secondHeadingNextSpacingLineLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="secondHeadingNextSpacingLineLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>43, 22</value>
+  </data>
+  <data name="secondHeadingNextSpacingLineLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>40</value>
+  </data>
+  <data name="secondHeadingNextSpacingLineLabel.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;secondHeadingNextSpacingLineLabel.Name" xml:space="preserve">
+    <value>secondHeadingNextSpacingLineLabel</value>
+  </data>
+  <data name="&gt;&gt;secondHeadingNextSpacingLineLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;secondHeadingNextSpacingLineLabel.Parent" xml:space="preserve">
+    <value>fixedFormGroupBox</value>
+  </data>
+  <data name="&gt;&gt;secondHeadingNextSpacingLineLabel.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="firstHeadingNextSpacingLineLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 10pt</value>
+  </data>
+  <data name="firstHeadingNextSpacingLineLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>318, 147</value>
+  </data>
+  <data name="firstHeadingNextSpacingLineLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="firstHeadingNextSpacingLineLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>43, 22</value>
+  </data>
+  <data name="firstHeadingNextSpacingLineLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>35</value>
+  </data>
+  <data name="firstHeadingNextSpacingLineLabel.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;firstHeadingNextSpacingLineLabel.Name" xml:space="preserve">
+    <value>firstHeadingNextSpacingLineLabel</value>
+  </data>
+  <data name="&gt;&gt;firstHeadingNextSpacingLineLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;firstHeadingNextSpacingLineLabel.Parent" xml:space="preserve">
+    <value>fixedFormGroupBox</value>
+  </data>
+  <data name="&gt;&gt;firstHeadingNextSpacingLineLabel.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="subTitleNextSpacingLineLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 10pt</value>
+  </data>
+  <data name="subTitleNextSpacingLineLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>318, 125</value>
+  </data>
+  <data name="subTitleNextSpacingLineLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="subTitleNextSpacingLineLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>43, 22</value>
+  </data>
+  <data name="subTitleNextSpacingLineLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>30</value>
+  </data>
+  <data name="subTitleNextSpacingLineLabel.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;subTitleNextSpacingLineLabel.Name" xml:space="preserve">
+    <value>subTitleNextSpacingLineLabel</value>
+  </data>
+  <data name="&gt;&gt;subTitleNextSpacingLineLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;subTitleNextSpacingLineLabel.Parent" xml:space="preserve">
+    <value>fixedFormGroupBox</value>
+  </data>
+  <data name="&gt;&gt;subTitleNextSpacingLineLabel.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="mainTitleNextSpacingLineLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 10pt</value>
+  </data>
+  <data name="mainTitleNextSpacingLineLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>318, 103</value>
+  </data>
+  <data name="mainTitleNextSpacingLineLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="mainTitleNextSpacingLineLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>43, 22</value>
+  </data>
+  <data name="mainTitleNextSpacingLineLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>25</value>
+  </data>
+  <data name="mainTitleNextSpacingLineLabel.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;mainTitleNextSpacingLineLabel.Name" xml:space="preserve">
+    <value>mainTitleNextSpacingLineLabel</value>
+  </data>
+  <data name="&gt;&gt;mainTitleNextSpacingLineLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;mainTitleNextSpacingLineLabel.Parent" xml:space="preserve">
+    <value>fixedFormGroupBox</value>
+  </data>
+  <data name="&gt;&gt;mainTitleNextSpacingLineLabel.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="secondHeadingFontSizeLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 10pt</value>
+  </data>
+  <data name="secondHeadingFontSizeLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>275, 169</value>
+  </data>
+  <data name="secondHeadingFontSizeLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="secondHeadingFontSizeLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>43, 22</value>
+  </data>
+  <data name="secondHeadingFontSizeLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>39</value>
+  </data>
+  <data name="secondHeadingFontSizeLabel.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;secondHeadingFontSizeLabel.Name" xml:space="preserve">
+    <value>secondHeadingFontSizeLabel</value>
+  </data>
+  <data name="&gt;&gt;secondHeadingFontSizeLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;secondHeadingFontSizeLabel.Parent" xml:space="preserve">
+    <value>fixedFormGroupBox</value>
+  </data>
+  <data name="&gt;&gt;secondHeadingFontSizeLabel.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="secondHeadingFontStyleLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 9pt</value>
+  </data>
+  <data name="secondHeadingFontStyleLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>209, 169</value>
+  </data>
+  <data name="secondHeadingFontStyleLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="secondHeadingFontStyleLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>66, 22</value>
+  </data>
+  <data name="secondHeadingFontStyleLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>38</value>
+  </data>
+  <data name="secondHeadingFontStyleLabel.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;secondHeadingFontStyleLabel.Name" xml:space="preserve">
+    <value>secondHeadingFontStyleLabel</value>
+  </data>
+  <data name="&gt;&gt;secondHeadingFontStyleLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;secondHeadingFontStyleLabel.Parent" xml:space="preserve">
+    <value>fixedFormGroupBox</value>
+  </data>
+  <data name="&gt;&gt;secondHeadingFontStyleLabel.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="secondHeadingFontLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>宋体, 8.75pt</value>
+  </data>
+  <data name="secondHeadingFontLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>63, 169</value>
+  </data>
+  <data name="secondHeadingFontLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="secondHeadingFontLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>146, 22</value>
+  </data>
+  <data name="secondHeadingFontLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>37</value>
+  </data>
+  <data name="secondHeadingFontLabel.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="&gt;&gt;secondHeadingFontLabel.Name" xml:space="preserve">
+    <value>secondHeadingFontLabel</value>
+  </data>
+  <data name="&gt;&gt;secondHeadingFontLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;secondHeadingFontLabel.Parent" xml:space="preserve">
+    <value>fixedFormGroupBox</value>
+  </data>
+  <data name="&gt;&gt;secondHeadingFontLabel.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="firstHeadingFontSizeLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 10pt</value>
+  </data>
+  <data name="firstHeadingFontSizeLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>275, 147</value>
+  </data>
+  <data name="firstHeadingFontSizeLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="firstHeadingFontSizeLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>43, 22</value>
+  </data>
+  <data name="firstHeadingFontSizeLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>34</value>
+  </data>
+  <data name="firstHeadingFontSizeLabel.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;firstHeadingFontSizeLabel.Name" xml:space="preserve">
+    <value>firstHeadingFontSizeLabel</value>
+  </data>
+  <data name="&gt;&gt;firstHeadingFontSizeLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;firstHeadingFontSizeLabel.Parent" xml:space="preserve">
+    <value>fixedFormGroupBox</value>
+  </data>
+  <data name="&gt;&gt;firstHeadingFontSizeLabel.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="firstHeadingFontStyleLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 9pt</value>
+  </data>
+  <data name="firstHeadingFontStyleLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>209, 147</value>
+  </data>
+  <data name="firstHeadingFontStyleLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="firstHeadingFontStyleLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>66, 22</value>
+  </data>
+  <data name="firstHeadingFontStyleLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>33</value>
+  </data>
+  <data name="firstHeadingFontStyleLabel.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;firstHeadingFontStyleLabel.Name" xml:space="preserve">
+    <value>firstHeadingFontStyleLabel</value>
+  </data>
+  <data name="&gt;&gt;firstHeadingFontStyleLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;firstHeadingFontStyleLabel.Parent" xml:space="preserve">
+    <value>fixedFormGroupBox</value>
+  </data>
+  <data name="&gt;&gt;firstHeadingFontStyleLabel.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="firstHeadingFontLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>宋体, 8.75pt</value>
+  </data>
+  <data name="firstHeadingFontLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>63, 147</value>
+  </data>
+  <data name="firstHeadingFontLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="firstHeadingFontLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>146, 22</value>
+  </data>
+  <data name="firstHeadingFontLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>32</value>
+  </data>
+  <data name="firstHeadingFontLabel.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="&gt;&gt;firstHeadingFontLabel.Name" xml:space="preserve">
+    <value>firstHeadingFontLabel</value>
+  </data>
+  <data name="&gt;&gt;firstHeadingFontLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;firstHeadingFontLabel.Parent" xml:space="preserve">
+    <value>fixedFormGroupBox</value>
+  </data>
+  <data name="&gt;&gt;firstHeadingFontLabel.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="subTitleFontSizeLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 10pt</value>
+  </data>
+  <data name="subTitleFontSizeLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>275, 125</value>
+  </data>
+  <data name="subTitleFontSizeLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="subTitleFontSizeLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>43, 22</value>
+  </data>
+  <data name="subTitleFontSizeLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>29</value>
+  </data>
+  <data name="subTitleFontSizeLabel.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;subTitleFontSizeLabel.Name" xml:space="preserve">
+    <value>subTitleFontSizeLabel</value>
+  </data>
+  <data name="&gt;&gt;subTitleFontSizeLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;subTitleFontSizeLabel.Parent" xml:space="preserve">
+    <value>fixedFormGroupBox</value>
+  </data>
+  <data name="&gt;&gt;subTitleFontSizeLabel.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="subTitleFontStyleLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 9pt</value>
+  </data>
+  <data name="subTitleFontStyleLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>209, 125</value>
+  </data>
+  <data name="subTitleFontStyleLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="subTitleFontStyleLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>66, 22</value>
+  </data>
+  <data name="subTitleFontStyleLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>28</value>
+  </data>
+  <data name="subTitleFontStyleLabel.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;subTitleFontStyleLabel.Name" xml:space="preserve">
+    <value>subTitleFontStyleLabel</value>
+  </data>
+  <data name="&gt;&gt;subTitleFontStyleLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;subTitleFontStyleLabel.Parent" xml:space="preserve">
+    <value>fixedFormGroupBox</value>
+  </data>
+  <data name="&gt;&gt;subTitleFontStyleLabel.ZOrder" xml:space="preserve">
+    <value>14</value>
+  </data>
+  <data name="subTitleFontLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>宋体, 8.75pt</value>
+  </data>
+  <data name="subTitleFontLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>63, 125</value>
+  </data>
+  <data name="subTitleFontLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="subTitleFontLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>146, 22</value>
+  </data>
+  <data name="subTitleFontLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>27</value>
+  </data>
+  <data name="subTitleFontLabel.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="&gt;&gt;subTitleFontLabel.Name" xml:space="preserve">
+    <value>subTitleFontLabel</value>
+  </data>
+  <data name="&gt;&gt;subTitleFontLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;subTitleFontLabel.Parent" xml:space="preserve">
+    <value>fixedFormGroupBox</value>
+  </data>
+  <data name="&gt;&gt;subTitleFontLabel.ZOrder" xml:space="preserve">
+    <value>15</value>
+  </data>
+  <data name="fixedSubTitleLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="fixedSubTitleLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>宋体, 8.75pt</value>
+  </data>
+  <data name="fixedSubTitleLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>5, 131</value>
+  </data>
+  <data name="fixedSubTitleLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>65, 12</value>
+  </data>
+  <data name="fixedSubTitleLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>26</value>
+  </data>
+  <data name="fixedSubTitleLabel.Text" xml:space="preserve">
+    <value>单位姓名：</value>
+  </data>
+  <data name="&gt;&gt;fixedSubTitleLabel.Name" xml:space="preserve">
+    <value>fixedSubTitleLabel</value>
+  </data>
+  <data name="&gt;&gt;fixedSubTitleLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;fixedSubTitleLabel.Parent" xml:space="preserve">
+    <value>fixedFormGroupBox</value>
+  </data>
+  <data name="&gt;&gt;fixedSubTitleLabel.ZOrder" xml:space="preserve">
+    <value>16</value>
+  </data>
+  <data name="mainTitleFontSizeLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 10pt</value>
+  </data>
+  <data name="mainTitleFontSizeLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>275, 103</value>
+  </data>
+  <data name="mainTitleFontSizeLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="mainTitleFontSizeLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>43, 22</value>
+  </data>
+  <data name="mainTitleFontSizeLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>24</value>
+  </data>
+  <data name="mainTitleFontSizeLabel.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;mainTitleFontSizeLabel.Name" xml:space="preserve">
+    <value>mainTitleFontSizeLabel</value>
+  </data>
+  <data name="&gt;&gt;mainTitleFontSizeLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;mainTitleFontSizeLabel.Parent" xml:space="preserve">
+    <value>fixedFormGroupBox</value>
+  </data>
+  <data name="&gt;&gt;mainTitleFontSizeLabel.ZOrder" xml:space="preserve">
+    <value>17</value>
+  </data>
+  <data name="mainTitleFontStyleLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 9pt</value>
+  </data>
+  <data name="mainTitleFontStyleLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>209, 103</value>
+  </data>
+  <data name="mainTitleFontStyleLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="mainTitleFontStyleLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>66, 22</value>
+  </data>
+  <data name="mainTitleFontStyleLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>23</value>
+  </data>
+  <data name="mainTitleFontStyleLabel.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;mainTitleFontStyleLabel.Name" xml:space="preserve">
+    <value>mainTitleFontStyleLabel</value>
+  </data>
+  <data name="&gt;&gt;mainTitleFontStyleLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;mainTitleFontStyleLabel.Parent" xml:space="preserve">
+    <value>fixedFormGroupBox</value>
+  </data>
+  <data name="&gt;&gt;mainTitleFontStyleLabel.ZOrder" xml:space="preserve">
+    <value>18</value>
+  </data>
+  <data name="mainTitleFontLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>宋体, 8.75pt</value>
+  </data>
+  <data name="mainTitleFontLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>63, 103</value>
+  </data>
+  <data name="mainTitleFontLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="mainTitleFontLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>146, 22</value>
+  </data>
+  <data name="mainTitleFontLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>22</value>
+  </data>
+  <data name="mainTitleFontLabel.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="&gt;&gt;mainTitleFontLabel.Name" xml:space="preserve">
+    <value>mainTitleFontLabel</value>
+  </data>
+  <data name="&gt;&gt;mainTitleFontLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;mainTitleFontLabel.Parent" xml:space="preserve">
+    <value>fixedFormGroupBox</value>
+  </data>
+  <data name="&gt;&gt;mainTitleFontLabel.ZOrder" xml:space="preserve">
+    <value>19</value>
+  </data>
+  <data name="fixedMainTitleLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="fixedMainTitleLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>宋体, 8.75pt</value>
+  </data>
+  <data name="fixedMainTitleLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>5, 109</value>
+  </data>
+  <data name="fixedMainTitleLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>65, 12</value>
+  </data>
+  <data name="fixedMainTitleLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>21</value>
+  </data>
+  <data name="fixedMainTitleLabel.Text" xml:space="preserve">
+    <value>试卷标题：</value>
+  </data>
+  <data name="&gt;&gt;fixedMainTitleLabel.Name" xml:space="preserve">
+    <value>fixedMainTitleLabel</value>
+  </data>
+  <data name="&gt;&gt;fixedMainTitleLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;fixedMainTitleLabel.Parent" xml:space="preserve">
+    <value>fixedFormGroupBox</value>
+  </data>
+  <data name="&gt;&gt;fixedMainTitleLabel.ZOrder" xml:space="preserve">
+    <value>20</value>
+  </data>
+  <data name="fixedFontSizeLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="fixedFontSizeLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>宋体, 8.75pt</value>
+  </data>
+  <data name="fixedFontSizeLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>282, 88</value>
+  </data>
+  <data name="fixedFontSizeLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>29, 12</value>
+  </data>
+  <data name="fixedFontSizeLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>19</value>
+  </data>
+  <data name="fixedFontSizeLabel.Text" xml:space="preserve">
+    <value>字号</value>
+  </data>
+  <data name="&gt;&gt;fixedFontSizeLabel.Name" xml:space="preserve">
+    <value>fixedFontSizeLabel</value>
+  </data>
+  <data name="&gt;&gt;fixedFontSizeLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;fixedFontSizeLabel.Parent" xml:space="preserve">
+    <value>fixedFormGroupBox</value>
+  </data>
+  <data name="&gt;&gt;fixedFontSizeLabel.ZOrder" xml:space="preserve">
+    <value>21</value>
+  </data>
+  <data name="fixedFontStyleLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="fixedFontStyleLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>宋体, 8.75pt</value>
+  </data>
+  <data name="fixedFontStyleLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>228, 88</value>
+  </data>
+  <data name="fixedFontStyleLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>29, 12</value>
+  </data>
+  <data name="fixedFontStyleLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>18</value>
+  </data>
+  <data name="fixedFontStyleLabel.Text" xml:space="preserve">
+    <value>字形</value>
+  </data>
+  <data name="&gt;&gt;fixedFontStyleLabel.Name" xml:space="preserve">
+    <value>fixedFontStyleLabel</value>
+  </data>
+  <data name="&gt;&gt;fixedFontStyleLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;fixedFontStyleLabel.Parent" xml:space="preserve">
+    <value>fixedFormGroupBox</value>
+  </data>
+  <data name="&gt;&gt;fixedFontStyleLabel.ZOrder" xml:space="preserve">
+    <value>22</value>
+  </data>
+  <data name="fixedFontLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="fixedFontLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>宋体, 8.75pt</value>
+  </data>
+  <data name="fixedFontLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>119, 88</value>
+  </data>
+  <data name="fixedFontLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>29, 12</value>
+  </data>
+  <data name="fixedFontLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>17</value>
+  </data>
+  <data name="fixedFontLabel.Text" xml:space="preserve">
+    <value>字体</value>
+  </data>
+  <data name="&gt;&gt;fixedFontLabel.Name" xml:space="preserve">
+    <value>fixedFontLabel</value>
+  </data>
+  <data name="&gt;&gt;fixedFontLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;fixedFontLabel.Parent" xml:space="preserve">
+    <value>fixedFormGroupBox</value>
+  </data>
+  <data name="&gt;&gt;fixedFontLabel.ZOrder" xml:space="preserve">
+    <value>23</value>
+  </data>
+  <data name="fixedSecondHeadingFontLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="fixedSecondHeadingFontLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>宋体, 8.75pt</value>
+  </data>
+  <data name="fixedSecondHeadingFontLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>5, 175</value>
+  </data>
+  <data name="fixedSecondHeadingFontLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>65, 12</value>
+  </data>
+  <data name="fixedSecondHeadingFontLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>36</value>
+  </data>
+  <data name="fixedSecondHeadingFontLabel.Text" xml:space="preserve">
+    <value>二级标题：</value>
+  </data>
+  <data name="&gt;&gt;fixedSecondHeadingFontLabel.Name" xml:space="preserve">
+    <value>fixedSecondHeadingFontLabel</value>
+  </data>
+  <data name="&gt;&gt;fixedSecondHeadingFontLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;fixedSecondHeadingFontLabel.Parent" xml:space="preserve">
+    <value>fixedFormGroupBox</value>
+  </data>
+  <data name="&gt;&gt;fixedSecondHeadingFontLabel.ZOrder" xml:space="preserve">
+    <value>24</value>
+  </data>
+  <data name="fixedFirstHeadingLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="fixedFirstHeadingLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>宋体, 8.75pt</value>
+  </data>
+  <data name="fixedFirstHeadingLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>5, 153</value>
+  </data>
+  <data name="fixedFirstHeadingLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>65, 12</value>
+  </data>
+  <data name="fixedFirstHeadingLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>31</value>
+  </data>
+  <data name="fixedFirstHeadingLabel.Text" xml:space="preserve">
+    <value>一级标题：</value>
+  </data>
+  <data name="&gt;&gt;fixedFirstHeadingLabel.Name" xml:space="preserve">
+    <value>fixedFirstHeadingLabel</value>
+  </data>
+  <data name="&gt;&gt;fixedFirstHeadingLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;fixedFirstHeadingLabel.Parent" xml:space="preserve">
+    <value>fixedFormGroupBox</value>
+  </data>
+  <data name="&gt;&gt;fixedFirstHeadingLabel.ZOrder" xml:space="preserve">
+    <value>25</value>
+  </data>
+  <data name="fixedMarginRightLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="fixedMarginRightLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>宋体, 8.75pt</value>
+  </data>
+  <data name="fixedMarginRightLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>311, 45</value>
+  </data>
+  <data name="fixedMarginRightLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>41, 12</value>
+  </data>
+  <data name="fixedMarginRightLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>15</value>
+  </data>
+  <data name="fixedMarginRightLabel.Text" xml:space="preserve">
+    <value>右边距</value>
+  </data>
+  <data name="&gt;&gt;fixedMarginRightLabel.Name" xml:space="preserve">
+    <value>fixedMarginRightLabel</value>
+  </data>
+  <data name="&gt;&gt;fixedMarginRightLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;fixedMarginRightLabel.Parent" xml:space="preserve">
+    <value>fixedFormGroupBox</value>
+  </data>
+  <data name="&gt;&gt;fixedMarginRightLabel.ZOrder" xml:space="preserve">
+    <value>26</value>
+  </data>
+  <data name="fixedMarginLeftLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="fixedMarginLeftLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>宋体, 8.75pt</value>
+  </data>
+  <data name="fixedMarginLeftLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>231, 45</value>
+  </data>
+  <data name="fixedMarginLeftLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>41, 12</value>
+  </data>
+  <data name="fixedMarginLeftLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="fixedMarginLeftLabel.Text" xml:space="preserve">
+    <value>左边距</value>
+  </data>
+  <data name="&gt;&gt;fixedMarginLeftLabel.Name" xml:space="preserve">
+    <value>fixedMarginLeftLabel</value>
+  </data>
+  <data name="&gt;&gt;fixedMarginLeftLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;fixedMarginLeftLabel.Parent" xml:space="preserve">
+    <value>fixedFormGroupBox</value>
+  </data>
+  <data name="&gt;&gt;fixedMarginLeftLabel.ZOrder" xml:space="preserve">
+    <value>27</value>
+  </data>
+  <data name="fixedMarginBottomLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="fixedMarginBottomLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>宋体, 8.75pt</value>
+  </data>
+  <data name="fixedMarginBottomLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>151, 45</value>
+  </data>
+  <data name="fixedMarginBottomLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>41, 12</value>
+  </data>
+  <data name="fixedMarginBottomLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="fixedMarginBottomLabel.Text" xml:space="preserve">
+    <value>下边距</value>
+  </data>
+  <data name="&gt;&gt;fixedMarginBottomLabel.Name" xml:space="preserve">
+    <value>fixedMarginBottomLabel</value>
+  </data>
+  <data name="&gt;&gt;fixedMarginBottomLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;fixedMarginBottomLabel.Parent" xml:space="preserve">
+    <value>fixedFormGroupBox</value>
+  </data>
+  <data name="&gt;&gt;fixedMarginBottomLabel.ZOrder" xml:space="preserve">
+    <value>28</value>
+  </data>
+  <data name="fixedMarginTopLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="fixedMarginTopLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>宋体, 8.75pt</value>
+  </data>
+  <data name="fixedMarginTopLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>71, 45</value>
+  </data>
+  <data name="fixedMarginTopLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>41, 12</value>
+  </data>
+  <data name="fixedMarginTopLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="fixedMarginTopLabel.Text" xml:space="preserve">
+    <value>上边距</value>
+  </data>
+  <data name="&gt;&gt;fixedMarginTopLabel.Name" xml:space="preserve">
+    <value>fixedMarginTopLabel</value>
+  </data>
+  <data name="&gt;&gt;fixedMarginTopLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;fixedMarginTopLabel.Parent" xml:space="preserve">
+    <value>fixedFormGroupBox</value>
+  </data>
+  <data name="&gt;&gt;fixedMarginTopLabel.ZOrder" xml:space="preserve">
+    <value>29</value>
+  </data>
+  <data name="marginRightLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 10pt</value>
+  </data>
+  <data name="marginRightLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>303, 60</value>
+  </data>
+  <data name="marginRightLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="marginRightLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>58, 22</value>
+  </data>
+  <data name="marginRightLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>16</value>
+  </data>
+  <data name="marginRightLabel.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;marginRightLabel.Name" xml:space="preserve">
+    <value>marginRightLabel</value>
+  </data>
+  <data name="&gt;&gt;marginRightLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;marginRightLabel.Parent" xml:space="preserve">
+    <value>fixedFormGroupBox</value>
+  </data>
+  <data name="&gt;&gt;marginRightLabel.ZOrder" xml:space="preserve">
+    <value>30</value>
+  </data>
+  <data name="marginLeftLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 10pt</value>
+  </data>
+  <data name="marginLeftLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>223, 60</value>
+  </data>
+  <data name="marginLeftLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="marginLeftLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>58, 22</value>
+  </data>
+  <data name="marginLeftLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="marginLeftLabel.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;marginLeftLabel.Name" xml:space="preserve">
+    <value>marginLeftLabel</value>
+  </data>
+  <data name="&gt;&gt;marginLeftLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;marginLeftLabel.Parent" xml:space="preserve">
+    <value>fixedFormGroupBox</value>
+  </data>
+  <data name="&gt;&gt;marginLeftLabel.ZOrder" xml:space="preserve">
+    <value>31</value>
+  </data>
+  <data name="marginBottomLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 10pt</value>
+  </data>
+  <data name="marginBottomLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>143, 60</value>
+  </data>
+  <data name="marginBottomLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="marginBottomLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>58, 22</value>
+  </data>
+  <data name="marginBottomLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="marginBottomLabel.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;marginBottomLabel.Name" xml:space="preserve">
+    <value>marginBottomLabel</value>
+  </data>
+  <data name="&gt;&gt;marginBottomLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;marginBottomLabel.Parent" xml:space="preserve">
+    <value>fixedFormGroupBox</value>
+  </data>
+  <data name="&gt;&gt;marginBottomLabel.ZOrder" xml:space="preserve">
+    <value>32</value>
+  </data>
+  <data name="marginTopLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 10pt</value>
+  </data>
+  <data name="marginTopLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>63, 60</value>
+  </data>
+  <data name="marginTopLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="marginTopLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>58, 22</value>
+  </data>
+  <data name="marginTopLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="marginTopLabel.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;marginTopLabel.Name" xml:space="preserve">
+    <value>marginTopLabel</value>
+  </data>
+  <data name="&gt;&gt;marginTopLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;marginTopLabel.Parent" xml:space="preserve">
+    <value>fixedFormGroupBox</value>
+  </data>
+  <data name="&gt;&gt;marginTopLabel.ZOrder" xml:space="preserve">
+    <value>33</value>
+  </data>
+  <data name="fixedMarginLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="fixedMarginLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>宋体, 8.75pt</value>
+  </data>
+  <data name="fixedMarginLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>17, 66</value>
+  </data>
+  <data name="fixedMarginLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>53, 12</value>
+  </data>
+  <data name="fixedMarginLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="fixedMarginLabel.Text" xml:space="preserve">
+    <value>页边距：</value>
+  </data>
+  <data name="&gt;&gt;fixedMarginLabel.Name" xml:space="preserve">
+    <value>fixedMarginLabel</value>
+  </data>
+  <data name="&gt;&gt;fixedMarginLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;fixedMarginLabel.Parent" xml:space="preserve">
+    <value>fixedFormGroupBox</value>
+  </data>
+  <data name="&gt;&gt;fixedMarginLabel.ZOrder" xml:space="preserve">
+    <value>34</value>
+  </data>
+  <data name="orientationLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>宋体, 8.75pt</value>
+  </data>
+  <data name="orientationLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>303, 16</value>
+  </data>
+  <data name="orientationLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="orientationLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>58, 22</value>
+  </data>
+  <data name="orientationLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="orientationLabel.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;orientationLabel.Name" xml:space="preserve">
+    <value>orientationLabel</value>
+  </data>
+  <data name="&gt;&gt;orientationLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;orientationLabel.Parent" xml:space="preserve">
+    <value>fixedFormGroupBox</value>
+  </data>
+  <data name="&gt;&gt;orientationLabel.ZOrder" xml:space="preserve">
+    <value>35</value>
+  </data>
+  <data name="paperSizeLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 10pt</value>
+  </data>
+  <data name="paperSizeLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>63, 16</value>
+  </data>
+  <data name="paperSizeLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="paperSizeLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>58, 22</value>
+  </data>
+  <data name="paperSizeLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="paperSizeLabel.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;paperSizeLabel.Name" xml:space="preserve">
+    <value>paperSizeLabel</value>
+  </data>
+  <data name="&gt;&gt;paperSizeLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;paperSizeLabel.Parent" xml:space="preserve">
+    <value>fixedFormGroupBox</value>
+  </data>
+  <data name="&gt;&gt;paperSizeLabel.ZOrder" xml:space="preserve">
+    <value>36</value>
+  </data>
+  <data name="fixedOrientationLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="fixedOrientationLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>宋体, 9pt</value>
+  </data>
+  <data name="fixedOrientationLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>269, 22</value>
+  </data>
+  <data name="fixedOrientationLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>41, 12</value>
+  </data>
+  <data name="fixedOrientationLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="fixedOrientationLabel.Text" xml:space="preserve">
+    <value>排版：</value>
+  </data>
+  <data name="&gt;&gt;fixedOrientationLabel.Name" xml:space="preserve">
+    <value>fixedOrientationLabel</value>
+  </data>
+  <data name="&gt;&gt;fixedOrientationLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;fixedOrientationLabel.Parent" xml:space="preserve">
+    <value>fixedFormGroupBox</value>
+  </data>
+  <data name="&gt;&gt;fixedOrientationLabel.ZOrder" xml:space="preserve">
+    <value>37</value>
+  </data>
+  <data name="fixedPaperSizeLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="fixedPaperSizeLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>宋体, 9pt</value>
+  </data>
+  <data name="fixedPaperSizeLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>29, 22</value>
+  </data>
+  <data name="fixedPaperSizeLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>41, 12</value>
+  </data>
+  <data name="fixedPaperSizeLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="fixedPaperSizeLabel.Text" xml:space="preserve">
+    <value>纸张：</value>
+  </data>
+  <data name="&gt;&gt;fixedPaperSizeLabel.Name" xml:space="preserve">
+    <value>fixedPaperSizeLabel</value>
+  </data>
+  <data name="&gt;&gt;fixedPaperSizeLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;fixedPaperSizeLabel.Parent" xml:space="preserve">
+    <value>fixedFormGroupBox</value>
+  </data>
+  <data name="&gt;&gt;fixedPaperSizeLabel.ZOrder" xml:space="preserve">
+    <value>38</value>
+  </data>
+  <data name="fixedFormGroupBox.Font" type="System.Drawing.Font, System.Drawing">
+    <value>宋体, 9pt</value>
+  </data>
+  <data name="fixedFormGroupBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>5, 53</value>
+  </data>
+  <data name="fixedFormGroupBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="fixedFormGroupBox.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="fixedFormGroupBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>366, 196</value>
+  </data>
+  <data name="fixedFormGroupBox.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="fixedFormGroupBox.Text" xml:space="preserve">
+    <value>试卷布局</value>
+  </data>
+  <data name="&gt;&gt;fixedFormGroupBox.Name" xml:space="preserve">
+    <value>fixedFormGroupBox</value>
+  </data>
+  <data name="&gt;&gt;fixedFormGroupBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;fixedFormGroupBox.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;fixedFormGroupBox.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="fixedTitleLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="fixedTitleLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.75pt</value>
+  </data>
+  <data name="fixedTitleLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>8, 29</value>
+  </data>
+  <data name="fixedTitleLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>67, 15</value>
+  </data>
+  <data name="fixedTitleLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="fixedTitleLabel.Text" xml:space="preserve">
+    <value>试卷标题：</value>
+  </data>
+  <data name="&gt;&gt;fixedTitleLabel.Name" xml:space="preserve">
+    <value>fixedTitleLabel</value>
+  </data>
+  <data name="&gt;&gt;fixedTitleLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;fixedTitleLabel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;fixedTitleLabel.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="titleLable.Font" type="System.Drawing.Font, System.Drawing">
+    <value>宋体, 8.75pt</value>
+  </data>
+  <data name="titleLable.Location" type="System.Drawing.Point, System.Drawing">
+    <value>68, 29</value>
+  </data>
+  <data name="titleLable.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="titleLable.Size" type="System.Drawing.Size, System.Drawing">
+    <value>298, 22</value>
+  </data>
+  <data name="titleLable.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="titleLable.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;titleLable.Name" xml:space="preserve">
+    <value>titleLable</value>
+  </data>
+  <data name="&gt;&gt;titleLable.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;titleLable.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;titleLable.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="moreExamPaperInfoButton.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="moreExamPaperInfoButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="moreExamPaperInfoButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>284, 15</value>
+  </data>
+  <data name="moreExamPaperInfoButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>76, 25</value>
+  </data>
+  <data name="moreExamPaperInfoButton.TabIndex" type="System.Int32, mscorlib">
+    <value>46</value>
+  </data>
+  <data name="moreExamPaperInfoButton.Text" xml:space="preserve">
+    <value>选题内容 ↩️</value>
+  </data>
+  <data name="&gt;&gt;moreExamPaperInfoButton.Name" xml:space="preserve">
+    <value>moreExamPaperInfoButton</value>
+  </data>
+  <data name="&gt;&gt;moreExamPaperInfoButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;moreExamPaperInfoButton.Parent" xml:space="preserve">
+    <value>fixedContentGroupBox</value>
+  </data>
+  <data name="&gt;&gt;moreExamPaperInfoButton.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="gradeAmountLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 10pt</value>
+  </data>
+  <data name="gradeAmountLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>172, 17</value>
+  </data>
+  <data name="gradeAmountLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="gradeAmountLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>50, 22</value>
+  </data>
+  <data name="gradeAmountLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>45</value>
+  </data>
+  <data name="gradeAmountLabel.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;gradeAmountLabel.Name" xml:space="preserve">
+    <value>gradeAmountLabel</value>
+  </data>
+  <data name="&gt;&gt;gradeAmountLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;gradeAmountLabel.Parent" xml:space="preserve">
+    <value>fixedContentGroupBox</value>
+  </data>
+  <data name="&gt;&gt;gradeAmountLabel.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="firstHeadingAmountLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 10pt</value>
+  </data>
+  <data name="firstHeadingAmountLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>63, 16</value>
+  </data>
+  <data name="firstHeadingAmountLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="firstHeadingAmountLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>50, 22</value>
+  </data>
+  <data name="firstHeadingAmountLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>43</value>
+  </data>
+  <data name="firstHeadingAmountLabel.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;firstHeadingAmountLabel.Name" xml:space="preserve">
+    <value>firstHeadingAmountLabel</value>
+  </data>
+  <data name="&gt;&gt;firstHeadingAmountLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;firstHeadingAmountLabel.Parent" xml:space="preserve">
+    <value>fixedContentGroupBox</value>
+  </data>
+  <data name="&gt;&gt;firstHeadingAmountLabel.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="fixedGradeAmountLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="fixedGradeAmountLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>宋体, 9pt</value>
+  </data>
+  <data name="fixedGradeAmountLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>138, 22</value>
+  </data>
+  <data name="fixedGradeAmountLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>41, 12</value>
+  </data>
+  <data name="fixedGradeAmountLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>44</value>
+  </data>
+  <data name="fixedGradeAmountLabel.Text" xml:space="preserve">
+    <value>总分：</value>
+  </data>
+  <data name="&gt;&gt;fixedGradeAmountLabel.Name" xml:space="preserve">
+    <value>fixedGradeAmountLabel</value>
+  </data>
+  <data name="&gt;&gt;fixedGradeAmountLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;fixedGradeAmountLabel.Parent" xml:space="preserve">
+    <value>fixedContentGroupBox</value>
+  </data>
+  <data name="&gt;&gt;fixedGradeAmountLabel.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="fixedFirstHeadingAmountLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="fixedFirstHeadingAmountLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>宋体, 9pt</value>
+  </data>
+  <data name="fixedFirstHeadingAmountLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>17, 21</value>
+  </data>
+  <data name="fixedFirstHeadingAmountLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>53, 12</value>
+  </data>
+  <data name="fixedFirstHeadingAmountLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>42</value>
+  </data>
+  <data name="fixedFirstHeadingAmountLabel.Text" xml:space="preserve">
+    <value>大题数：</value>
+  </data>
+  <data name="&gt;&gt;fixedFirstHeadingAmountLabel.Name" xml:space="preserve">
+    <value>fixedFirstHeadingAmountLabel</value>
+  </data>
+  <data name="&gt;&gt;fixedFirstHeadingAmountLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;fixedFirstHeadingAmountLabel.Parent" xml:space="preserve">
+    <value>fixedContentGroupBox</value>
+  </data>
+  <data name="&gt;&gt;fixedFirstHeadingAmountLabel.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="fixedContentGroupBox.Font" type="System.Drawing.Font, System.Drawing">
+    <value>宋体, 9pt</value>
+  </data>
+  <data name="fixedContentGroupBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>5, 253</value>
+  </data>
+  <data name="fixedContentGroupBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="fixedContentGroupBox.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="fixedContentGroupBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>366, 45</value>
+  </data>
+  <data name="fixedContentGroupBox.TabIndex" type="System.Int32, mscorlib">
+    <value>41</value>
+  </data>
+  <data name="fixedContentGroupBox.Text" xml:space="preserve">
+    <value>考试内容</value>
+  </data>
+  <data name="&gt;&gt;fixedContentGroupBox.Name" xml:space="preserve">
+    <value>fixedContentGroupBox</value>
+  </data>
+  <data name="&gt;&gt;fixedContentGroupBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;fixedContentGroupBox.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;fixedContentGroupBox.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <metadata name="mainStatusStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>160, 17</value>
+  </metadata>
+  <data name="formExamPaperToolStripStatusLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>宋体, 9pt</value>
+  </data>
+  <data name="formExamPaperToolStripStatusLabel.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
+    <value>Yes</value>
+  </data>
+  <data name="formExamPaperToolStripStatusLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>0, 17</value>
+  </data>
+  <data name="formExamPaperToolStripStatusLabel.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="formExamPaperToolStripStatusLabel.TextImageRelation" type="System.Windows.Forms.TextImageRelation, System.Windows.Forms">
+    <value>TextAboveImage</value>
+  </data>
+  <data name="mainStatusStrip.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 300</value>
+  </data>
+  <data name="mainStatusStrip.Size" type="System.Drawing.Size, System.Drawing">
+    <value>375, 22</value>
+  </data>
+  <data name="mainStatusStrip.TabIndex" type="System.Int32, mscorlib">
+    <value>42</value>
+  </data>
+  <data name="mainStatusStrip.Text" xml:space="preserve">
+    <value>statusStrip1</value>
+  </data>
+  <data name="&gt;&gt;mainStatusStrip.Name" xml:space="preserve">
+    <value>mainStatusStrip</value>
+  </data>
+  <data name="&gt;&gt;mainStatusStrip.Type" xml:space="preserve">
+    <value>System.Windows.Forms.StatusStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;mainStatusStrip.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;mainStatusStrip.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>96, 96</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>375, 322</value>
+  </data>
+  <data name="$this.Font" type="System.Drawing.Font, System.Drawing">
+    <value>宋体, 7pt</value>
+  </data>
+  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        AAABAAEAICAAAAEAIACoEAAAFgAAACgAAAAgAAAAQAAAAAEAIAAAAAAAABAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHKycABysnAAcrJwAHKycABysnAAcr
+        JwAHKycABysnAAcrJwAHKycABysnAAcrJwAHKycABysnAAcrJwAHKycABysnAAcrJwAHKycABysnAAcr
+        JwAHKycAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAcrJwAHKygMByslVwYr
+        ImQGKyFjBishYwYrIWMGKyFjBishYwYrIWMGKyFjBishYwYrIWMGKyFjBishYwYrIWMGKyFjBishYwYr
+        ImQHKyVbBysoEQcrJwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHKycABysnAAUr
+        HSINLEHkGy2A/xwthP8cLYT/HC2E/xwthP8cLYT/HC2E/xwthP8cLYT/HC2E/xwthP8cLYT/HC2E/xwt
+        hP8cLYT/Gy2D/w4sRu8FKx8xBysnAAcrJwAAAAAAAAAAAAAAAAAAAAAABysnAAcrJwAHKycABysnAAcr
+        JwAFKicAAyoaMA4qU+cmLMD/KCzH/ygsx/8oLMf/KCzH/ygsx/8oLMf/KCzH/ygsx/8oLMf/KCzH/ygs
+        x/8oLMf/KCzH/ygsx/8nLMP/ECpa8QQqHD0GKicABysnAAcrJwAHKycABysnAAcrJwAHKycDCCwnAwAN
+        HAIAAA4CAAALAgANHgcNLyegLUUw/jhKQf84SkL/OEpC/zhKQv84SkL/OEpC/zhKQv84SkL/OEpC/zhK
+        Qv84SkL/OEpC/zhKQv84SkL/OEpC/zhKQf8tRDD/DC4noQAMHgYAAAsCAAAOAgAOHAIILCcDBysnAwcr
+        JycGKyeWEjIprCI8LaogOiyqHTgsrCA8Kui2pzX/2sI3/9nAN//ZwTf/2cA3/9nBN//YwDf/2cE3/9nB
+        N//YwDf/2MA3/9jAN//YwDf/2cA3/9jAN//YwDf/28I3/7OlNf8eOynoHTgsrCA6LKoiOy2qEjIprAYr
+        J5YHKycnBysnAwMpJmElPi7ym4ZH/72bTv+xk0z/RlQy/7mpNP/StzT/y7Iy/8mwMv/JsDL/xa0x/9vA
+        Nv/GrTH/v6gv/861M//bwDb/2b42/8+1M//LsjL/0rg0/9G3NP/KsTL/rp8y/0dUMv+zlEz/vZtO/5uG
+        R/8lPi7yAykmYQcrJwMHKycALUIvAAQpJl1KVDbtzqVS/9yuVf9QWzT/mY0s/3ZnHf+HdyH/hXQh/3Zn
+        Hf93aR3/gnIg/4NzIP95ah7/gHAf/6qVKv+SgCT/h3Yh/4V1If+DcyD/i3oi/4d2If+Ngyn/UVo1/96v
+        Vv/NpVL/SlQ27AQpJl0uQzAABysnAAcrJwAFKicAACQlKiI8Ldq1lk3/3K5W/05ZNP++rTX/zLIy/9/D
+        N//jxzj/48c4/9q/Nv/AqC//4cU3/+LFOP/hxTf/4sY4/8mwMf/ZvjX/4sY4/9S5NP/fwzf/48Y3/7ys
+        Nf9QWTT/3q9W/7SVTf8iPC3YACUlKQUqJwAHKycABysnAAMpJioTMirHgnZC/8ylUv/CnlD/QlAy/4CB
+        MP+bkzH/mZEx/5iRMf+YkTH/mZIx/5qTMf+ZkTH/mJEx/5mRMf+YkTH/mpIx/5mSMf+YkTH/mZIx/5mT
+        Mv+akzL/foAw/0RRMv/CnlD/y6RS/391Qf8SMinHAykmKgcrJwAHKycPBisniQ8wKckwRDDGMUUwxi9D
+        MMUQLyfOGUxF+T+Uhv9Aloj/P5WF/z6UhP8+lIT/PpSE/z6UhP8+lIT/PpSE/z6UhP8/lYT/QJaH/0CX
+        iP88joD/G1BI/yp0aP8XS0P7EC8o0S1CL8UvRDDGLUIvxg4vKckGKyeJBysnDwcrJwQHKycNACYlDAAS
+        HgwAEB0MAAwcCgAXFS0qbmTlbvDb/23y2P9c4LP/Wt6t/1rerf9a3q3/Wt6t/1rerf9a3q3/Wt6t/1ve
+        sP9r79P/cfbg/2jl0P8pcGX/R7Wj/yRqX/AAHx08AAobCQARHgwAFB8MACclDAcrJw0HKycEBysnAAcr
+        JwAHKycABysnAAcrJwAHKycAABMRIipuZORs7dj/b/DX/27nu/9u5bb/buW2/27ltv9u5bb/buW2/27l
+        tv9u5bb/bua4/2/v0/9v893/Z+LO/ylvZP9Gs6H/JGlf7wEeGzIHKycADy8qACI4MQAUMSwABisnAAcr
+        JwAAAAAAAAAAAAAAAAAAAAAAAAAAAAcrJwAAExEjKm5k5Gzt2P9w79P/deGg/3bfmP924Jn/duCZ/3bg
+        mf924Jn/duCZ/3bfmP914Jv/cO3L/2/z3v9n4s7/KW9k/0azof8kaV/vAR4bMgosKAC/gmwBv4JsA7+C
+        bAK/gmwAv4JsAAAAAABcx9wAXMfcAFzH3ABcx9wABysnAAATESMqbmTkbO3Y/3Pv1f+M3qf/kdyg/5Dc
+        oP+R3KD/kdyg/5HcoP+R3KD/kdyf/4/dov927M7/b/Pe/2fizv8pb2T/RrOh/yRpX+8BHhsyVE9EAL+C
+        bDO/gmyKv4JsTL+CbAC/gmwAXMfcAFzH3ABcx9wAXMfcAVzH3AAHLCgAABMRIypuZORs7dj/cu/W/4fg
+        s/+L3a3/i96t/4verf+L3q3/i96t/4verf+L3q3/id+v/3Xt0f9v893/Z+LO/ylvZP9Gs6H/JGlf7wEe
+        GzIkOTIAv4JsDb+CbCS/gmwUv4JsAL+CbABcx9wAXMfcAFzH3Alcx9xiXMfcFx5VWAAAExEjKm5k5Gzu
+        2P905tP/lqOg/5yYmP+cmJj/nJiY/5yYmP+cmJj/nJiY/5yYmP+ZnJv/edzL/2/03v9n4s7/KW9k/0az
+        of8kaV/vAR4bMgUqJgC/gmwAv4JsAL+CbAC/gmwAv4JsAFzH3ABcx9wBXMfcX1zH3Ndcx9x7iv//BAAR
+        DyIqbmTkbO3Y/3Lt2v+Cy83/hcXK/4XFy/+Fxcv/hcXL/4XFy/+Fxcv/hcXL/4TIy/906Nj/b/Pd/2fi
+        zv8pb2T/RrOh/yRpX+8BHhsyBysnAAAAAAAAAAAAAAAAAAAAAAAAAAAAXMfcAFzH3ABcx9wYXMfchlzH
+        3CwAFAwAABMRIypuZORs7tj/dOfa/5Wo0f+bndD/mp7Q/5qe0P+antD/mp7Q/5qe0P+antD/mKLQ/3nd
+        2P9v9N3/Z+LO/ylvZP9Gs6H/JGlf7wEeGzIHKycAAAAAAAAAAAAAAAAAAAAAAAAAAABcx9wAXMfcAFzH
+        3ABcx9wLXMfcAQ03NQAAExEjKm5k5Gzu2P9w6tv/d7vU/3mz1P95tNT/ebTU/3m01P95tNT/ebTU/3m0
+        1P94t9T/cePZ/2/03f9n4s7/KW9l/0e1o/8lamDvAR4bMgcrJwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AABcx9wAXMfcAFzH3ABcx9wABysmAAATESMqbmTkbO7Y/3Dq2/93vtT/eLbU/3i31P94t9T/eLfU/3i3
+        1P94t9T/eLbU/3e61P9x5dr/cPXe/2jkz/8kZVv/MYZ4/xtVTPEDIh8zBysnAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHKycAABMRIypuZORs7dj/b/Pc/2/13P9v9dz/b/Xc/2/1
+        3P9v9dz/b/Xc/2/13P9v9dz/b/Xd/2zt1/9m4Mv/XtC+/yBdVP8cWE//CS8qyQYpJhsHKycAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAcrJwAAExEjKm5k5Gzt2P9v8tz/b/Lc/2/y
+        3P9v8tz/b/Lc/2/y3P9v8tz/b/Lc/2/y3P9w9d//TK+f/yRlXP8qcmf/GE5G/xJCPM8GKSUxGDsvAHqP
+        UwBCRSUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABysnAAATESMqbmTkbO3Y/2/y
+        3P9v8tz/b/Lc/2/y3P9v8tz/b/Lc/2/y3P9v8tz/b/Lc/3H13/9En5H/M4t9/zubi/8URkDPASAdMf//
+        /wDT3HUC0Np0ANDadAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHKycAABMRIypv
+        ZeRu8Nr/cfbf/3H13/9x9d//cfXf/3H13/9x9d//cfXf/3H13/9x9d//cvni/0ajlP8mbmP/GE9HzwMj
+        HzFac0YA0Np0KtDadGfQ2nQJ0Np0ANDadAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAcr
+        JwAAHRoiG1FK40GajP9CnY/+Qp2O/kKdjv5CnY7+Qp2O/kKdjv5CnY7+Qp2O/kKdjv5Dn5D+Km1j/wkw
+        K84FKCQyBysnAMXRcADQ2nQG0Np0ZtDadFjQ2nQA0Np0AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAABysnAAcsKAsGKiZQBScjXQUnI1wFJyNcBScjXAUnI1wFJyNcBScjXAUnI1wFJyNcBScjXAUn
+        I1wGKCVcBiklKAgtKQAEJCEAw89vANDadADQ2nQF0Np0FdDadADQ2nQAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAHKycABysnAAcrJwAHLCcABywnAAcsJwAHLCcABywnAAcsJwAHLCcABywnAAcs
+        JwAHLCcABywnAAcrJwAHKycABysnAAcrJwAAAAAA0Np0ANDadADQ2nQA0Np0ANDadAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAA///////////4AAAf+AAAH/AAAA8AAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAA+AAAAIAAAAAAAAAAAAAAAAAAAB8AAAAfAAAAH4AAAB/4AAAf+AAAD/gA
+        AA/4AAAH+AAAB/gAAAf4AAEH//////////8=
+</value>
+  </data>
+  <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
+  </data>
+  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
+    <value>CenterScreen</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>试卷工厂</value>
+  </data>
+  <data name="&gt;&gt;formExamPaperToolStripProgressBar.Name" xml:space="preserve">
+    <value>formExamPaperToolStripProgressBar</value>
+  </data>
+  <data name="&gt;&gt;formExamPaperToolStripProgressBar.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripProgressBar, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;fileToolStripMenuItem.Name" xml:space="preserve">
+    <value>fileToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;fileToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;openEPFileToolStripMenuItem.Name" xml:space="preserve">
+    <value>openEPFileToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;openEPFileToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;newEPFileToolStripMenuItem.Name" xml:space="preserve">
+    <value>newEPFileToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;newEPFileToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;editEPFileToolStripMenuItem.Name" xml:space="preserve">
+    <value>editEPFileToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;editEPFileToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolStripSeparator1.Name" xml:space="preserve">
+    <value>toolStripSeparator1</value>
+  </data>
+  <data name="&gt;&gt;toolStripSeparator1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;saveToolStripMenuItem.Name" xml:space="preserve">
+    <value>saveToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;saveToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;saveAsToolStripMenuItem.Name" xml:space="preserve">
+    <value>saveAsToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;saveAsToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolStripSeparator2.Name" xml:space="preserve">
+    <value>toolStripSeparator2</value>
+  </data>
+  <data name="&gt;&gt;toolStripSeparator2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;quitToolStripMenuItem.Name" xml:space="preserve">
+    <value>quitToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;quitToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;questionStorageToolStripMenuItem.Name" xml:space="preserve">
+    <value>questionStorageToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;questionStorageToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;examPaperToolStripMenuItem.Name" xml:space="preserve">
+    <value>examPaperToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;examPaperToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;formExamPaperAndAnswerToolStripMenuItem.Name" xml:space="preserve">
+    <value>formExamPaperAndAnswerToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;formExamPaperAndAnswerToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;formExamPaperToolStripMenuItem.Name" xml:space="preserve">
+    <value>formExamPaperToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;formExamPaperToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolStripSeparator3.Name" xml:space="preserve">
+    <value>toolStripSeparator3</value>
+  </data>
+  <data name="&gt;&gt;toolStripSeparator3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;openExamPaperDirToolStripMenuItem.Name" xml:space="preserve">
+    <value>openExamPaperDirToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;openExamPaperDirToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;locationExamPaperToolStripMenuItem.Name" xml:space="preserve">
+    <value>locationExamPaperToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;locationExamPaperToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;examPaperDirToolStripTextBox.Name" xml:space="preserve">
+    <value>examPaperDirToolStripTextBox</value>
+  </data>
+  <data name="&gt;&gt;examPaperDirToolStripTextBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripTextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;helpToolStripMenuItem.Name" xml:space="preserve">
+    <value>helpToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;helpToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;manualToolStripMenuItem.Name" xml:space="preserve">
+    <value>manualToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;manualToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;aboutToolStripMenuItem.Name" xml:space="preserve">
+    <value>aboutToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;aboutToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;formExamPaperToolStripStatusLabel.Name" xml:space="preserve">
+    <value>formExamPaperToolStripStatusLabel</value>
+  </data>
+  <data name="&gt;&gt;formExamPaperToolStripStatusLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripStatusLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>MainForm</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+</root>
