@@ -274,7 +274,7 @@ namespace ExamPaperFactory
             Type officeType = Type.GetTypeFromProgID("Word.Application");
             Office();
             //检查系统环境是否符合要求，缩放比例是否符合要求
-            if (!GetDotNetVersion("4.9.2"))
+            if (!GetDotNetVersion("4.7.2"))
             {
                 if (MessageBox.Show("当前缺少\".Net Framework 4.7.2\"运行环境", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error) == DialogResult.OK)
                 {
