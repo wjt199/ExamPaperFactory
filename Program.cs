@@ -257,114 +257,19 @@ namespace ExamPaperFactory
             return string.Compare(oldname, version) > 0;
         }
 
-        public static void CheckOffice()
-        {
-
-            Type officeType = Type.GetTypeFromProgID("Word.Application");
-            Console.WriteLine(officeType);
-            if (officeType == null)
-            {
-                Console.WriteLine("Word is not installed.");
-                // Word is not installed.
-                // Show message or alert that Word is not installed.
-            }
-            else
-            {
-                Console.WriteLine("Word is installed.");
-
-                // Word is installed.
-                // Continue your work.
-            }
-
-
-            bool ifused = false;
-            int officeVersion = 0;
-
-            RegistryKey rk = Registry.LocalMachine;
-            RegistryKey akey07 = rk.OpenSubKey(@"SOFTWARE\Microsoft\Office\12.0\Word\InstallRoot\");//查询2007
-            RegistryKey akey10 = rk.OpenSubKey(@"SOFTWARE\Microsoft\Office\14.0\Word\InstallRoot\");//查询2010
-            RegistryKey akey13 = rk.OpenSubKey(@"SOFTWARE\Microsoft\Office\15.0\Word\InstallRoot\");//查询2013
-            RegistryKey akey16 = rk.OpenSubKey(@"SOFTWARE\Microsoft\Office\16.0\Word\InstallRoot\");//查询2016
-            RegistryKey akey19 = rk.OpenSubKey(@"SOFTWARE\Microsoft\Office\16.0\Word\InstallRoot\");//查询2019
-
-            //检查本机是否安装Office2007
-            if (akey07 != null)
-            {
-                string office07 = akey07.GetValue("Path").ToString();
-                if (File.Exists(office07 + "Word.exe"))
-                {
-                    ifused = true;
-                    officeVersion = 2007;
-                }
-            }
-
-            //检查本机是否安装Office2010
-            if (akey10 != null)
-            {
-                Console.WriteLine("213");
-                string office10 = akey10.GetValue("Path").ToString();
-                if (File.Exists(office10 + "Word.exe"))
-                {
-                    ifused = true;
-                    officeVersion = 2010;
-                }
-            }
-
-            //检查本机是否安装Office2013
-            if (akey13 != null)
-            {
-                Console.WriteLine("213");
-                string office13 = akey13.GetValue("Path").ToString();
-                if (File.Exists(office13 + "Word.exe"))
-                {
-                    ifused = true;
-                    officeVersion = 2013;
-                }
-
-            }
-
-            //检查本机是否安装Office2016       
-            if (akey16 != null)
-            {
-                Console.WriteLine("213");
-                string office16 = akey16.GetValue("Path").ToString();
-                if (File.Exists(office16 + "Word.exe"))
-                {
-                    ifused = true;
-                    officeVersion = 2016;
-                }
-            }
-
-            //检查本机是否安装Office2019      
-            if (akey19 != null)
-            {
-                Console.WriteLine("213");
-                string office19 = akey19.GetValue("Path").ToString();
-                if (File.Exists(office19 + "Word.exe"))
-                {
-                    ifused = true;
-                    officeVersion = 2019;
-                }
-            }
-
-
-            Debug.WriteLine("result:" + ifused.ToString());
-            Debug.WriteLine("office:" + officeVersion.ToString());
-        }
-
         /// <summary>
         /// 应用程序的主入口点。
         /// </summary>
         [STAThread]
         static void Main()
         {
-            System.Windows.Forms.Application.EnableVisualStyles();//此方法为应用程序启用可视样式
+            Application.EnableVisualStyles();//此方法为应用程序启用可视样式
             /**
              * 作用:在应用程序范围内设置控件显示文本的默认方式(可以设为使用新的GDI+ , 还是旧的GDI)
              *   true使用GDI+方式显示文本，
              *   false使用GDI方式显示文本。
              */
-            System.Windows.Forms.Application.SetCompatibleTextRenderingDefault(false);
+            Application.SetCompatibleTextRenderingDefault(false);
 
             Type officeType = Type.GetTypeFromProgID("Word.Application");
 
@@ -372,10 +277,9 @@ namespace ExamPaperFactory
             if (!GetDotNetVersion("4.7.2"))
             { if (MessageBox.Show("当前缺少\".Net Framework 4.7.2\"运行环境", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error) == DialogResult.OK) return; }
             else if (ScaleX != 1f) { float scaling = 100 * ScaleX; if (MessageBox.Show("当前屏幕缩放比例为" + scaling + "%，请设置为100%后重试！", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error) == DialogResult.OK) return; }
-            else if (officeType == null) { if (MessageBox.Show("当前系统未安装Office软件，请安装Office2016及以上版本！", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error) == DialogResult.OK) return; }
-            else if (!GetVersion().Contains("Office2017 and higher")) { if (MessageBox.Show("当前系统未安装Office软件或Office版本较低，请升至Office2016及以上！", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error) == DialogResult.OK) return; }
-            else System.Windows.Forms.Application.Run(new MainForm());//在当前线程上开始运行标准应用程序消息循环
-                                                                      //{Console.WriteLine("dpiX:{0},Scaling:{1},DesktopResolution:{2},WorkingArea:{3}", Program.DpiX, Program.ScaleX,Program.DesktopResolution,Program.WorkingArea); }
+            else if (officeType == null) { if (MessageBox.Show("当前系统未安装Office软件，请安装Office2013及以上版本！", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error) == DialogResult.OK) return; }
+            else if (!GetVersion().Contains("Office2017 and higher")|| !GetVersion().Contains("Office2013")) { if (MessageBox.Show("当前系统安装Office版本较低，请升至Office2013及以上！", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error) == DialogResult.OK) return; }
+            else Application.Run(new MainForm());//在当前线程上开始运行标准应用程序消息循环
         }
     }
 }
