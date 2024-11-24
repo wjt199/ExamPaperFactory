@@ -272,14 +272,45 @@ namespace ExamPaperFactory
             Application.SetCompatibleTextRenderingDefault(false);
 
             Type officeType = Type.GetTypeFromProgID("Word.Application");
-
+            Office();
             //检查系统环境是否符合要求，缩放比例是否符合要求
-            if (!GetDotNetVersion("4.7.2"))
-            { if (MessageBox.Show("当前缺少\".Net Framework 4.7.2\"运行环境", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error) == DialogResult.OK) return; }
-            else if (ScaleX != 1f) { float scaling = 100 * ScaleX; if (MessageBox.Show("当前屏幕缩放比例为" + scaling + "%，请设置为100%后重试！", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error) == DialogResult.OK) return; }
-            else if (officeType == null) { if (MessageBox.Show("当前系统未安装Office软件，请安装Office2013及以上版本！", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error) == DialogResult.OK) return; }
-            else if (!GetVersion().Contains("Office2017 and higher")|| !GetVersion().Contains("Office2013")) { if (MessageBox.Show("当前系统安装Office版本较低，请升至Office2013及以上！", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error) == DialogResult.OK) return; }
-            else Application.Run(new MainForm());//在当前线程上开始运行标准应用程序消息循环
+            if (!GetDotNetVersion("4.9.2"))
+            {
+                if (MessageBox.Show("当前缺少\".Net Framework 4.7.2\"运行环境", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error) == DialogResult.OK)
+                {
+                    SpecialForm specialForm = new SpecialForm();
+                    specialForm.ShowDialog();
+                    if (specialForm.IsPassedRight) Application.Run(new MainForm());
+                }
+            }
+            else if (ScaleX != 1f)
+            {
+                float scaling = 100 * ScaleX; if (MessageBox.Show("当前屏幕缩放比例为" + scaling + "%，请设置为100%后重试！", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error) == DialogResult.OK)
+                {
+                    SpecialForm specialForm = new SpecialForm();
+                    specialForm.ShowDialog();
+                    if (specialForm.IsPassedRight) Application.Run(new MainForm());
+                }
+            }
+            else if (officeType == null)
+            {
+                if (MessageBox.Show("当前系统未安装Office软件，请安装Office2013及以上版本！", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error) == DialogResult.OK)
+                {
+                    SpecialForm specialForm = new SpecialForm();
+                    specialForm.ShowDialog();
+                    if (specialForm.IsPassedRight) Application.Run(new MainForm());
+                }
+            }
+            else if (!(GetVersion().Contains("Office2017 and higher") || GetVersion().Contains("Office2013")))
+            {
+                if (MessageBox.Show("当前系统安装Office版本较低，请升至Office2013及以上！", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error) == DialogResult.OK)
+                {
+                    SpecialForm specialForm = new SpecialForm();
+                    specialForm.ShowDialog();
+                    if (specialForm.IsPassedRight) Application.Run(new MainForm());
+                }
+            }
+            else Application.Run(new MainForm());
         }
     }
 }
