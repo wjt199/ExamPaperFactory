@@ -39,10 +39,11 @@
             this.passwdTextBox.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.passwdTextBox.Location = new System.Drawing.Point(12, 12);
             this.passwdTextBox.Name = "passwdTextBox";
-            this.passwdTextBox.PasswordChar = ' ';
+            this.passwdTextBox.PasswordChar = '*';
             this.passwdTextBox.Size = new System.Drawing.Size(174, 23);
             this.passwdTextBox.TabIndex = 1;
             this.passwdTextBox.WordWrap = false;
+            this.passwdTextBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.PasswdTextBox_KeyDown);
             // 
             // enterButton
             // 

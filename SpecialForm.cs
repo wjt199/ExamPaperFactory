@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace ExamPaperFactory
@@ -28,6 +21,23 @@ namespace ExamPaperFactory
         private void QuitButton_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        /// <summary>
+        /// 按Enter键直接确认
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e">传递按键信息</param>
+        private void PasswdTextBox_KeyDown(object sender, KeyEventArgs e)
+        {
+            switch (e.KeyCode)
+            {
+                case Keys.Enter:
+                    EnterButton_Click(sender, e);
+                    break;
+                default:
+                    break;
+            }
         }
     }
 }
