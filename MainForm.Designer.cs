@@ -40,7 +40,6 @@
             this.saveAsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.quitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.questionStorageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.examPaperToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.formExamPaperAndAnswerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.formExamPaperToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -112,6 +111,7 @@
             resources.ApplyResources(this.formExamPaperToolStripProgressBar, "formExamPaperToolStripProgressBar");
             this.formExamPaperToolStripProgressBar.ForeColor = System.Drawing.SystemColors.GrayText;
             this.formExamPaperToolStripProgressBar.Margin = new System.Windows.Forms.Padding(3, 3, 1, 3);
+            this.formExamPaperToolStripProgressBar.MarqueeAnimationSpeed = 300;
             this.formExamPaperToolStripProgressBar.Name = "formExamPaperToolStripProgressBar";
             this.formExamPaperToolStripProgressBar.Step = 1;
             // 
@@ -122,7 +122,6 @@
             this.mainMenuStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.mainMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileToolStripMenuItem,
-            this.questionStorageToolStripMenuItem,
             this.examPaperToolStripMenuItem,
             this.helpToolStripMenuItem});
             this.mainMenuStrip.Name = "mainMenuStrip";
@@ -186,11 +185,6 @@
             this.quitToolStripMenuItem.Name = "quitToolStripMenuItem";
             resources.ApplyResources(this.quitToolStripMenuItem, "quitToolStripMenuItem");
             this.quitToolStripMenuItem.Click += new System.EventHandler(this.QuitToolStripMenuItem_Click);
-            // 
-            // questionStorageToolStripMenuItem
-            // 
-            resources.ApplyResources(this.questionStorageToolStripMenuItem, "questionStorageToolStripMenuItem");
-            this.questionStorageToolStripMenuItem.Name = "questionStorageToolStripMenuItem";
             // 
             // examPaperToolStripMenuItem
             // 
@@ -644,7 +638,7 @@
             // 
             resources.ApplyResources(this.formExamPaperToolStripStatusLabel, "formExamPaperToolStripStatusLabel");
             this.formExamPaperToolStripStatusLabel.ForeColor = System.Drawing.Color.Green;
-            this.formExamPaperToolStripStatusLabel.Margin = new System.Windows.Forms.Padding(283, 3, 0, 2);
+            this.formExamPaperToolStripStatusLabel.Margin = new System.Windows.Forms.Padding(3, 3, 0, 2);
             this.formExamPaperToolStripStatusLabel.Name = "formExamPaperToolStripStatusLabel";
             this.formExamPaperToolStripStatusLabel.Overflow = System.Windows.Forms.ToolStripItemOverflow.Never;
             // 
@@ -743,7 +737,6 @@
         private System.Windows.Forms.ToolStripTextBox examPaperDirToolStripTextBox;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
         private System.Windows.Forms.ToolStripMenuItem openExamPaperDirToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem questionStorageToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
         private System.Windows.Forms.Label textColumnsLabel;
         private System.Windows.Forms.Label fixedTextColumnsLabel;

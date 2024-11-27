@@ -57,7 +57,7 @@ namespace ExamPaperFactory
 
         //大题每题分值列表
         private List<float> questionGrade;
-        
+
         //大题下每小题的空行数
         private List<int> questionNextLineSpace;
 
@@ -277,13 +277,13 @@ namespace ExamPaperFactory
                                         new XElement("paperMargin",
                                             new XElement("top", MarginTop),
                                             new XElement("bottom", MarginBottom),
-                                            new XElement("left", MarginLeft), 
+                                            new XElement("left", MarginLeft),
                                             new XElement("right", MarginRight)),
                                         new XElement("mainTitle",
-                                            new XElement("font",MainTitleFont),
-                                            new XElement("fontStyle",MainTitleFontStyle),
-                                            new XElement("fontSize",MainTitleFontSize),
-                                            new XElement("nextLineSpace",MainTitleNextLineSpace)),
+                                            new XElement("font", MainTitleFont),
+                                            new XElement("fontStyle", MainTitleFontStyle),
+                                            new XElement("fontSize", MainTitleFontSize),
+                                            new XElement("nextLineSpace", MainTitleNextLineSpace)),
                                         new XElement("subTitle",
                                             new XElement("font", SubTitleFont),
                                             new XElement("fontStyle", SubTitleFontStyle),
@@ -304,7 +304,7 @@ namespace ExamPaperFactory
             //content节点信息
             XElement contentElement = new XElement("content");
 
-            for (int i = 0; i < QuestionName.Count; i++) 
+            for (int i = 0; i < QuestionName.Count; i++)
             {
                 XElement questionElement = new XElement("question");//新建一个question节点
                 XAttribute questionNameXAttribute = new XAttribute("name", QuestionName[i]);//question节点属性
@@ -315,7 +315,7 @@ namespace ExamPaperFactory
                 questionElement.Add(questionNextLineSpaceXattribute);//将属性questionNextLineSpace添加进question节点
 
                 //Console.WriteLine("QuestionName[{0}] = {1}", i, QuestionName[i]);
-                for (int j = 0; j < FirstQuestionList[i].Count; j++) 
+                for (int j = 0; j < FirstQuestionList[i].Count; j++)
                 {
                     //Console.WriteLine("FirstQuestionList[{0}][{1}].path = {2}", i,j, FirstQuestionList[i][j].path);
                     //Console.WriteLine("FirstQuestionList[{0}][{1}].amount = {2}", i,j, FirstQuestionList[i][j].amount);

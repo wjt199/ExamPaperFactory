@@ -44,9 +44,9 @@
             this.nameTextLabel.Font = new System.Drawing.Font("Times New Roman", 9F);
             this.nameTextLabel.Location = new System.Drawing.Point(117, 32);
             this.nameTextLabel.Name = "nameTextLabel";
-            this.nameTextLabel.Size = new System.Drawing.Size(198, 15);
+            this.nameTextLabel.Size = new System.Drawing.Size(228, 15);
             this.nameTextLabel.TabIndex = 0;
-            this.nameTextLabel.Text = "ExamPaper Factory 1.0.1 -[2024/11/24]";
+            this.nameTextLabel.Text = "ExamPaper Factory 1.0.3Alpha -[2024/11/24]";
             // 
             // copyRightTextLabel
             // 

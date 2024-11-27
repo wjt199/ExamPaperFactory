@@ -64,7 +64,7 @@ namespace ExamPaperFactory
 
         public static string GetVersion()
         {
-            Office();
+
             string versionFromReg = GetVersionNumberFromRegistry();
             string versionInstalled = LatestVersions[versionFromReg];
 

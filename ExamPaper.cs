@@ -21,7 +21,7 @@ namespace ExamPaperFactory
         private string examPaperAnswerName = null;//生成试卷答案的文件名称
         private string mainFormTitle = null;//试卷任务标题
 
-        public ExamPaperTask ExamPaperTask { get => examPaperTask; set => examPaperTask = value; }
+        public ExamPaperTask ExamPaperTask1 { get => examPaperTask; set => examPaperTask = value; }
         public string ExamPaperDirPath { get => examPaperDirPath; set => examPaperDirPath = value; }
         public string ExamPaperName { get => examPaperName; set => examPaperName = value; }
         public string ExamPaperFileFormTime { get => examPaperFileFormTime; set => examPaperFileFormTime = value; }

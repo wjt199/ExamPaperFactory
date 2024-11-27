@@ -67,7 +67,7 @@ namespace ExamPaperFactory
                     // Set up the ToolTip text for the Button and Checkbox.
                     toolTip.SetToolTip(path, "题库有误，请调整后重试！");
                 }
-                
+
                 //questionAmountLabel
                 Label questionAmount = new Label();
                 questionAmount.AutoEllipsis = false;
@@ -78,7 +78,7 @@ namespace ExamPaperFactory
                 questionAmount.Name = "questionAmountLabel" + index + "_" + i;
                 questionAmount.Text = questionElements[i].amount.ToString();
                 if (Utilities.CheckQuestionStorageFormat(questionElements[i].path) && Utilities.CountQuestionNumFromQuestionStoragePath(questionElements[i].path) < questionElements[i].amount)
-                { 
+                {
                     questionAmount.ForeColor = Color.Red;
                     // Create the ToolTip and associate with the Form container.
                     ToolTip toolTip = new ToolTip();

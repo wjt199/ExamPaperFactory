@@ -69,10 +69,10 @@ namespace ExamPaperFactory
         /// <param name="endNum">结束数字</param>
         /// <param name="step">步进值</param>
         /// <returns>字符串数组</returns>
-        public static String[] NumToStringList(float startNum, float endNum, float step) 
+        public static String[] NumToStringList(float startNum, float endNum, float step)
         {
             List<string> strList = new List<String>();
-            for (float i = startNum; i <= endNum; i+=step) { strList.Add(i.ToString()); }
+            for (float i = startNum; i <= endNum; i += step) { strList.Add(i.ToString()); }
             return strList.ToArray();
         }
 
@@ -82,7 +82,7 @@ namespace ExamPaperFactory
         /// </summary>
         /// <param name="questionStoragePath"></param>
         /// <returns></returns>
-        public static int CountQuestionNumFromQuestionStoragePath(string questionStoragePath) 
+        public static int CountQuestionNumFromQuestionStoragePath(string questionStoragePath)
         {
             int num = 0;
             StreamReader streamReader = File.OpenText(questionStoragePath);
@@ -132,15 +132,15 @@ namespace ExamPaperFactory
             while (nextLine != null)
             {
                 //string templine = nextLine;
-                if (nextLine.Length >= 3 && (nextLine.Substring(0, 3) == "题目:"|| nextLine.Substring(0, 3) == "题目："))
+                if (nextLine.Length >= 3 && (nextLine.Substring(0, 3) == "题目:" || nextLine.Substring(0, 3) == "题目："))
                 {
-                    questionIndexList.Add(lineIndex);    
+                    questionIndexList.Add(lineIndex);
                     List<string> list = new List<string>();
                     list.Add(nextLine);
-                    while ((nextLine = streamReader.ReadLine())!= null)
+                    while ((nextLine = streamReader.ReadLine()) != null)
                     {
                         lineIndex++;//总行号计数器+1
-                        if (nextLine.Length>=3 && (nextLine.Substring(0, 3) == "答案:" || nextLine.Substring(0, 3) == "答案：")) break; //遇到答案就退出本循环
+                        if (nextLine.Length >= 3 && (nextLine.Substring(0, 3) == "答案:" || nextLine.Substring(0, 3) == "答案：")) break; //遇到答案就退出本循环
                         list.Add(nextLine);
                     }
                     questionList.Add(list);
@@ -156,7 +156,7 @@ namespace ExamPaperFactory
                         //Console.WriteLine("nextLine:{0}", nextLine);
                         //Console.WriteLine("nextLine.Substring(0, 3):{0}", nextLine.Substring(0, 3));
                         if (nextLine.Length >= 3 && (nextLine.Substring(0, 3) == "题目:" || nextLine.Substring(0, 3) == "题目：")) break; //遇到题目就退出本循环
-                        if(nextLine != "") list.Add(nextLine);//答案不要空行
+                        if (nextLine != "") list.Add(nextLine);//答案不要空行
                     }
                     answerList.Add(list);
                 }
@@ -173,7 +173,7 @@ namespace ExamPaperFactory
             streamReader.Close();
 
             if (questionIndexList.Count == 0 || answerIndexList.Count == 0) return false;//表明里面没有数据内容，故不符合题库条件
-            if (questionIndexList.Count == answerIndexList.Count) 
+            if (questionIndexList.Count == answerIndexList.Count)
             {
                 questionStart = questionIndexList[0];
                 answerStart = answerIndexList[0];
@@ -181,7 +181,8 @@ namespace ExamPaperFactory
                 answerEnd = answerIndexList[answerIndexList.Count - 1];
                 if (questionStart > answerStart || questionEnd > answerEnd) return false;
                 else return true;
-            }else return false;
+            }
+            else return false;
         }
 
         /// <summary>
@@ -193,7 +194,7 @@ namespace ExamPaperFactory
         internal static (List<List<string>>, List<List<string>>) GetNeededQuestionAndAnswerFromQuestionStorage(string questionStoragePath, int num)
         {
             //Console.WriteLine("questionStoragePath:{0}", questionStoragePath);
-            if (!File.Exists(questionStoragePath)) return (null,null);///检查路径文件存在
+            if (!File.Exists(questionStoragePath)) return (null, null);///检查路径文件存在
             StreamReader streamReader = File.OpenText(questionStoragePath);//打开文件
 
             string nextLine;
@@ -279,9 +280,9 @@ namespace ExamPaperFactory
                 List<string> strings = new List<string>();
                 //Console.WriteLine("numIndex[{0}-1]= {1}",i, numIndex[i] - 1   );
                 //Console.WriteLine("questionList[numIndex[{0}]-1].Count = {1}", i, questionList[numIndex[i] - 1].Count);
-                for (int j = 0; j < questionList[numIndex[i]-1].Count; j++)
+                for (int j = 0; j < questionList[numIndex[i] - 1].Count; j++)
                 {
-                    strings.Add(questionList[numIndex[i]-1][j]);
+                    strings.Add(questionList[numIndex[i] - 1][j]);
                 }
                 newQuestionString.Add(strings);
             }
@@ -397,7 +398,7 @@ namespace ExamPaperFactory
         internal static List<List<string>> GetNeededQuestionFromQuestionStorageByIndex(string questionStoragePath, int[] index)
         {
             //Console.WriteLine("questionStoragePath:{0}", questionStoragePath);
-            if (!File.Exists(questionStoragePath)) return  null;///检查路径文件存在
+            if (!File.Exists(questionStoragePath)) return null;///检查路径文件存在
             StreamReader streamReader = File.OpenText(questionStoragePath);//打开文件
 
             string nextLine;
@@ -448,7 +449,7 @@ namespace ExamPaperFactory
             streamReader.Close();
 
             if (questionIndexList.Count == 0) return null;//表明里面没有数据内容，故不符合题库条件
-          
+
             List<List<string>> newQuestionString = new List<List<string>>();
 
             for (int i = 0; i < index.Length; i++)
@@ -469,7 +470,8 @@ namespace ExamPaperFactory
         /// <param name="questionStoragePath">题库路径</param>
         /// <param name="index">索引</param>
         /// <returns>答案内容</returns>
-        internal static List<List<string>> GetNeededAnswerFromQuestionStorageByIndex(string questionStoragePath, int[] index) {
+        internal static List<List<string>> GetNeededAnswerFromQuestionStorageByIndex(string questionStoragePath, int[] index)
+        {
             //Console.WriteLine("questionStoragePath:{0}", questionStoragePath);
             if (!File.Exists(questionStoragePath)) return null;///检查路径文件存在
             StreamReader streamReader = File.OpenText(questionStoragePath);//打开文件
@@ -550,7 +552,7 @@ namespace ExamPaperFactory
         /// <param name="a"></param>
         /// <param name="b"></param>
         /// <returns></returns>
-        internal static List<List<string>> CombineList(List<List<string>> a, List<List<string>> b) 
+        internal static List<List<string>> CombineList(List<List<string>> a, List<List<string>> b)
         {
             List<List<string>> newOne = new List<List<string>>();
             if (a != null)

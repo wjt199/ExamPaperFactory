@@ -1,12 +1,23 @@
 ﻿//This file is part of ExamPaper Factory
+using Microsoft.Office.Core;
+using Microsoft.Office.Interop.Word;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Text;
+using System.Threading;
 using System.Windows.Forms;
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.IO;
+using System.Reflection;
+using System.Threading;
+using Microsoft.Office.Core;
 
 namespace ExamPaperFactory
 {
@@ -19,6 +30,9 @@ namespace ExamPaperFactory
         private ExamPaperTask currentTask = null;//当前任务
         private string examPaperDirPath;//试卷生成位置目录
 
+        private ExamPaper examPaper = null;
+        private BackgroundWorker backgroundWorker = null;
+
         public static NewExamTaskContentForm netc = null;//新建任务窗体
         public static EditExamTaskContentForm eetc = null;//编辑任务窗体
         public static ExamTaskContentForm etc = null;//更多内容窗体
@@ -27,11 +41,12 @@ namespace ExamPaperFactory
 
         public bool isCurrentTaskExist = false;//判断当前界面是否有任务，右任务才涉及到任务新旧的问题
         public bool isCurrentTaskNew = false;//是新的任务文件标志（只有编辑过未被保存的文件才算新任务文件）
-        public bool isCurrentRight ;//当前任务文件经过检查后，修改此处的值，若处理后发现有问题，则这里为false；处理后没有问题则为true；
-        
+        public bool isCurrentRight;//当前任务文件经过检查后，修改此处的值，若处理后发现有问题，则这里为false；处理后没有问题则为true；
+
         public string ExamPaperTaskFilePath { get => examPaperTaskFilePath; set => examPaperTaskFilePath = value; }
         public ExamPaperTask CurrentTask { get => currentTask; set => currentTask = value; }
         public string ExamPaperFilePath { get => examPaperDirPath; set => examPaperDirPath = value; }
+        internal ExamPaper ExamPaper { get => examPaper; set => examPaper = value; }
 
         public MainForm() { InitializeComponent(); }
 
@@ -41,7 +56,7 @@ namespace ExamPaperFactory
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void MainForm_Load(object sender, EventArgs e)
-        { 
+        {
             if (CurrentTask != null) this.moreExamPaperInfoButton.Enabled = true;
             if (File.Exists(@"configPath.txt"))
             {
@@ -111,7 +126,7 @@ namespace ExamPaperFactory
             if (CurrentTask.ReadXMLFile(ExamPaperTaskFilePath))//将读取到的数据投射到主界面上
             {
                 DisplayInfoToMainForm(CurrentTask);
-                isCurrentTaskNew = false; 
+                isCurrentTaskNew = false;
                 UpdateMainFormTiltleName();
             }
             else { DialogResult Error = System.Windows.Forms.MessageBox.Show("文件加载错误，请检查后重试", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error); }
@@ -141,8 +156,8 @@ namespace ExamPaperFactory
                 netc.currentTaskDelegate = this.NewTaskFileReceiverAndDisplay; //【4】将第二个窗体中的委托变量和方法关联
                 netc.Show();
             }
-           else netc.Activate();
-            
+            else netc.Activate();
+
         }
 
         /// <summary>
@@ -179,13 +194,13 @@ namespace ExamPaperFactory
         /// 4.新建的文件在没有保存的情况下，编辑显示：软件名称 + “*”
         /// 5.新建的文件保存后则，则显示：软件名称 + 试卷问卷绝对路径（相当于打开的试卷任务文件）
         /// </summary>
-        private void UpdateMainFormTiltleName() 
+        private void UpdateMainFormTiltleName()
         {
             string mainFormTitleHere = null;
-            if(examPaperTaskFilePath != null) mainFormTitleHere = Path.GetFileName(examPaperTaskFilePath);
+            if (examPaperTaskFilePath != null) mainFormTitleHere = Path.GetFileName(examPaperTaskFilePath);
             if (!isCurrentTaskNew && examPaperTaskFilePath == null) this.Text = "试卷工厂";
             else if (!isCurrentTaskNew && examPaperTaskFilePath != null) this.Text = "试卷工厂(" + mainFormTitleHere + ")";
-            else if (isCurrentTaskNew && examPaperTaskFilePath == null) this.Text = "试卷工厂*" ;
+            else if (isCurrentTaskNew && examPaperTaskFilePath == null) this.Text = "试卷工厂*";
             else if (isCurrentTaskNew && examPaperTaskFilePath != null) this.Text = "试卷工厂(*" + mainFormTitleHere + ")";
         }
 
@@ -283,7 +298,7 @@ namespace ExamPaperFactory
             {
                 this.editEPFileToolStripMenuItem.Enabled = true;//编辑按钮可用
                 this.isCurrentTaskExist = true;
-                this.saveAsToolStripMenuItem.Enabled =true;//另存为按钮可用
+                this.saveAsToolStripMenuItem.Enabled = true;//另存为按钮可用
             }
         }
 
@@ -295,7 +310,7 @@ namespace ExamPaperFactory
         private bool CheckQuestionListRight(ExamPaperTask examPaperTask)
         {
 
-            for (int i = 0; i < examPaperTask.FirstQuestionList.Count; i++) 
+            for (int i = 0; i < examPaperTask.FirstQuestionList.Count; i++)
             {
                 for (int j = 0; j < examPaperTask.FirstQuestionList[i].Count; j++)
                 {
@@ -317,7 +332,7 @@ namespace ExamPaperFactory
             {
                 etc = new ExamTaskContentForm(currentTask);
                 etc.StartPosition = FormStartPosition.Manual;
-                etc.Location = new System.Drawing.Point(this.Location.X,this.Location.Y + 55);
+                etc.Location = new System.Drawing.Point(this.Location.X, this.Location.Y + 55);
                 etc.Show();
             }
             else etc.Activate();
@@ -377,7 +392,8 @@ namespace ExamPaperFactory
                     //ExamPaperTaskFilePath = saveFilePath;//更新文件路径
                     UpdateMainFormTiltleName();//更新主界面标题}
                 }
-                else {
+                else
+                {
                     DialogResult dialogResult = MessageBox.Show("文件保存失败", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     if (dialogResult == DialogResult.OK) return;
                 }
@@ -396,7 +412,7 @@ namespace ExamPaperFactory
             sfd.RestoreDirectory = true;//保存对话框是否记忆上次打开的目录,即使软件退出后再打开，他也能记住
             sfd.Filter = "试卷任务文件（*.xml）|*.xml";//设置文件类型
             sfd.FileName = "未命名";//默认文件名
-            sfd.DefaultExt="xml";//设置默认的文件名
+            sfd.DefaultExt = "xml";//设置默认的文件名
             sfd.Title = "试卷任务文件另存为";//对话框标题
 
             //点了另存为按钮进入 
@@ -418,7 +434,7 @@ namespace ExamPaperFactory
         /// 另存为功能重载
         /// </summary>
         private void SaveAs()
-        { 
+        {
             SaveFileDialog sfd = new SaveFileDialog();
             sfd.FilterIndex = 1;//设置默认文件类型显示顺序 
             sfd.RestoreDirectory = true;//保存对话框是否记忆上次打开的目录,即使软件退出后再打开，他也能记住
@@ -506,25 +522,7 @@ namespace ExamPaperFactory
         private void OpenExamPaperDirToolStripMenuItem_Click(object sender, EventArgs e)
         { if (examPaperDirPath != "") System.Diagnostics.Process.Start("Explorer.exe", examPaperDirPath); }
 
-        /// <summary>
-        /// 生成试卷按钮（不变）
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void FormExamPaperToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            if (isCurrentRight)
-            {
-                ExamPaper examPaper = new ExamPaper();//创建试卷生成对象
-                examPaper.ExamPaperTask = CurrentTask;//生成试卷所依据的任务文件为当前任务文件
-                examPaper.ExamPaperDirPath = examPaperDirPath;//给定试卷生成目录
-                examPaper.MainFormTitle = examPaperTaskFilePath != null ? examPaper.MainFormTitle = Path.GetFileNameWithoutExtension(examPaperTaskFilePath) : "";
-                examPaper.ExamPaperFileFormTime = DateTime.Now.ToString("yyyyMMdd_HHmmss");//20241113210012(2024年11月13日21:00:12)
-                //examPaper.FormExamPaper();
-                StartLongRunningTask2(examPaper);
-                //examPaper.FormExamPaperAndAnswer();
-            }
-        }
+
 
         /// <summary>
         /// 总分数值变化时进行判断，不为100时改变颜色进行提醒，不作为数据错误
@@ -533,9 +531,11 @@ namespace ExamPaperFactory
         /// <param name="e"></param>
         private void GradeAmountLabel_TextChanged(object sender, EventArgs e)
         {
-            if (gradeAmountLabel.Text == "100") gradeAmountLabel.ForeColor = Color.Black; 
+            if (gradeAmountLabel.Text == "100") gradeAmountLabel.ForeColor = Color.Black;
             else gradeAmountLabel.ForeColor = Color.Gray;
         }
+
+        #region 生成试卷和答案相关方法
 
         /// <summary>
         /// 生成试卷和答案按钮
@@ -546,109 +546,573 @@ namespace ExamPaperFactory
         {
             if (isCurrentRight)
             {
-                ExamPaper examPaper = new ExamPaper();//创建试卷生成对象
-                examPaper.ExamPaperTask = CurrentTask;//生成试卷所依据的任务文件为当前任务文件
-                examPaper.ExamPaperDirPath = examPaperDirPath;//给定试卷生成目录
-                if (examPaperTaskFilePath != null) examPaper.MainFormTitle = Path.GetFileNameWithoutExtension(examPaperTaskFilePath);
-                else examPaper.MainFormTitle = "";
+                examPaper = new ExamPaper
+                {
+                    ExamPaperTask1 = CurrentTask,//生成试卷所依据的任务文件为当前任务文件
+                    ExamPaperDirPath = examPaperDirPath//给定试卷生成目录
+                };//创建试卷生成对象
+                examPaper.MainFormTitle = examPaperTaskFilePath != null ? examPaper.MainFormTitle = Path.GetFileNameWithoutExtension(examPaperTaskFilePath) : "";
                 examPaper.ExamPaperFileFormTime = DateTime.Now.ToString("yyyyMMdd_HHmmss");//20241113210012(2024年11月13日21:00:12)
-                //examPaper.FormExamPaper();
 
-                StartLongRunningTask(examPaper);
-                //examPaper.FormExamPaperAndAnswer();
+                StartFormExamPaperAndAnswer();
             }
         }
 
         /// <summary>
-        /// 生成试卷开辟新线程
+        /// 开始生成试卷和答案任务
         /// </summary>
-        /// <param name="examPaper">试卷对象</param>
-        private void StartLongRunningTask(ExamPaper examPaper)
+        /// <param name="examPaper">试卷内容</param>
+        private void StartFormExamPaperAndAnswer()
         {
-            formExamPaperToolStripProgressBar.Visible = true;
+            formExamPaperToolStripProgressBar.Visible = true;//使进度条可见
+            formExamPaperToolStripStatusLabel.ForeColor = SystemColors.Desktop;//黑色
             //formExamPaperToolStripStatusLabel.Margin.Left = 140;
-            BackgroundWorker worker = new BackgroundWorker();
-            worker.WorkerReportsProgress = true;
-            worker.WorkerSupportsCancellation = true;
-
-            worker.DoWork += (sender, e) =>
+            backgroundWorker = new BackgroundWorker
             {
-                if (worker.CancellationPending)
-                {
-                    e.Cancel = true;
-                    Console.WriteLine("111");
-                    return;
-                }
+                WorkerReportsProgress = true,//可以报告进度
+                WorkerSupportsCancellation = true//可以随时取消
+            };//新建一个后台线程
 
-                // 进度更新应该在主线程
-                worker.ReportProgress(0);
-                if (examPaper.FormExamPaperAndAnswer(worker))
-                {
-                    Console.WriteLine("113331"); 
-                    return;
-                }
-            };
-
-            worker.ProgressChanged += (sender, e) =>
-            {
-                formExamPaperToolStripProgressBar.Value = e.ProgressPercentage;
-
-                if (formExamPaperToolStripProgressBar.Value == 100)
-                {
-                    this.formExamPaperToolStripStatusLabel.Text = "试卷答案已生成";
-                    formExamPaperToolStripProgressBar.Visible = false;
-                    Console.WriteLine("222");
-                    return;
-                }
-            };
-
-            worker.RunWorkerAsync();
+            backgroundWorker.DoWork += new DoWorkEventHandler(BackgroundWorker_FormExamPaperAndAnswer);
+            backgroundWorker.RunWorkerCompleted += new RunWorkerCompletedEventHandler(BackgroundWorker_FormExamPaperAndAnswerCompleted);
+            backgroundWorker.ProgressChanged += new ProgressChangedEventHandler(BackgroundWorker_FormExamPaperAndAnswer_ProgressChanged);
+            backgroundWorker.RunWorkerAsync();
         }
 
         /// <summary>
-        /// 只生成试卷应用
+        /// 进度条变更显示方法
         /// </summary>
-        /// <param name="examPaper"></param>
-        private void StartLongRunningTask2(ExamPaper examPaper)
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        /// <exception cref="NotImplementedException"></exception>
+        private void BackgroundWorker_FormExamPaperAndAnswer_ProgressChanged(object sender, ProgressChangedEventArgs e)
         {
-            formExamPaperToolStripProgressBar.Visible = true;
-            //formExamPaperToolStripStatusLabel.Margin.Left = 140;
-            BackgroundWorker worker = new BackgroundWorker();
-            worker.WorkerReportsProgress = true;
-            worker.WorkerSupportsCancellation = true;
-
-            worker.DoWork += (sender, e) =>
-            {
-                // 模拟耗时操作
-                //for (int i = 0; i < 100; i++)
-                //{
-                if (worker.CancellationPending)
-                {
-                    e.Cancel = true;
-                    return;
-                }
-
-                // 进度更新应该在主线程
-                worker.ReportProgress(0);
-                if (examPaper.FormExamPaper(worker)) return;
-            };
-
-            worker.ProgressChanged += (sender, e) =>
-            {
-                formExamPaperToolStripProgressBar.Value = e.ProgressPercentage;
-
-                if (formExamPaperToolStripProgressBar.Value == 100)
-                {
-                    this.formExamPaperToolStripStatusLabel.Text = "试卷已生成";
-                    formExamPaperToolStripProgressBar.Visible = false;
-                    return;
-                }
-            };
-
-            worker.RunWorkerAsync();
-
+            formExamPaperToolStripProgressBar.Value = e.ProgressPercentage;
+            formExamPaperToolStripStatusLabel.Text = e.UserState as String;
         }
 
+        /// <summary>
+        /// 后台生成试卷和答案任务完成方法
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void BackgroundWorker_FormExamPaperAndAnswerCompleted(object sender, RunWorkerCompletedEventArgs e)
+        {
+            if (e.Cancelled) formExamPaperToolStripStatusLabel.Text = "任务取消";
+            formExamPaperToolStripStatusLabel.ForeColor = Color.Green;//绿色
+            formExamPaperToolStripProgressBar.Visible = false;
+            formExamPaperToolStripStatusLabel.Text = "试卷答案已生成";
+
+            //两个变量在使用完后丢点
+            backgroundWorker = null;
+            examPaper = null;
+        }
+
+        /// <summary>
+        /// 后台生成试卷和答案方法
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void BackgroundWorker_FormExamPaperAndAnswer(object sender, DoWorkEventArgs e)
+        {
+
+            backgroundWorker.ReportProgress(1, "试卷生成中...");
+
+            List<List<int[]>> chosenIndex = new List<List<int[]>>();//用来装试卷和答案序号的列表
+            backgroundWorker.ReportProgress(5, "试卷生成中...");
+            //检查并创建生成试卷和答案的目录，反之非法行为导致生成失败
+            if (!Directory.Exists(examPaperDirPath)) Directory.CreateDirectory(examPaperDirPath);
+
+            ///生成试卷
+            ExamPaper.ExamPaperName = ExamPaper.MainFormTitle + "（试卷）" + ExamPaper.ExamPaperFileFormTime + ".docx";
+            //Console.WriteLine("ExamPaperName:{0}", ExamPaperName);
+
+            //Word应用程序变量
+            Microsoft.Office.Interop.Word.Application wordexampaperop = null;
+            Document wordexampaper = null;
+            backgroundWorker.ReportProgress(8, "试卷生成中...");
+            try
+            {
+                wordexampaperop = new Microsoft.Office.Interop.Word.Application();
+                wordexampaperop.AutomationSecurity = MsoAutomationSecurity.msoAutomationSecurityForceDisable;//屏蔽宏
+                wordexampaperop.Visible = false;//使文档不可见,生成文件过程中文档不可见
+                                                //wordexamop.Visible = true;//使文档可见
+
+                Object exampapermissing = Missing.Value;//由于使用的是COM库，因此有许多变量需要使用Missing.Value代替
+
+                wordexampaper = wordexampaperop.Documents.Add();
+
+                //纸张大小设置
+                if (ExamPaper.ExamPaperTask1.PaperSize == "A3") wordexampaper.PageSetup.PaperSize = WdPaperSize.wdPaperA3;//设置纸张样式为A3纸
+                else if (ExamPaper.ExamPaperTask1.PaperSize == "A4") wordexampaper.PageSetup.PaperSize = WdPaperSize.wdPaperA4;//设置纸张样式为A4纸
+                else wordexampaper.PageSetup.PaperSize = WdPaperSize.wdPaperA4;//默认纸张样式为A4规格
+
+                //横竖版面设置
+                if (ExamPaper.ExamPaperTask1.Orientation == "竖版") wordexampaper.PageSetup.Orientation = WdOrientation.wdOrientPortrait;
+                else if (ExamPaper.ExamPaperTask1.Orientation == "横版") wordexampaper.PageSetup.Orientation = WdOrientation.wdOrientLandscape;
+                else wordexampaper.PageSetup.Orientation = WdOrientation.wdOrientPortrait;
+
+                //页面设置
+                wordexampaper.PageSetup.LeftMargin = float.Parse(ExamPaper.ExamPaperTask1.MarginLeft.ToString()); //2.82CM
+                wordexampaper.PageSetup.RightMargin = float.Parse(ExamPaper.ExamPaperTask1.MarginRight.ToString());
+                wordexampaper.PageSetup.TopMargin = float.Parse(ExamPaper.ExamPaperTask1.MarginTop.ToString());//3.525CM
+                wordexampaper.PageSetup.BottomMargin = float.Parse(ExamPaper.ExamPaperTask1.MarginBottom.ToString());
+
+                //分栏设置
+                if (ExamPaper.ExamPaperTask1.TextColumns == "2") wordexampaper.PageSetup.TextColumns.SetCount(2);
+                else wordexampaper.PageSetup.TextColumns.SetCount(1);
+
+                //添加试卷标题
+                wordexampaperop.Selection.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphCenter;
+                wordexampaperop.Selection.Font.Size = float.Parse(ExamPaper.ExamPaperTask1.MainTitleFontSize);
+                wordexampaperop.Selection.Font.Name = ExamPaper.ExamPaperTask1.MainTitleFont;
+                wordexampaperop.Selection.ParagraphFormat.CharacterUnitFirstLineIndent = 0;//首行缩进为0
+                wordexampaperop.Selection.ParagraphFormat.FirstLineIndent = wordexampaper.Application.CentimetersToPoints((float)0.75 * 0);//首行缩进为0，全局设置为0
+                wordexampaperop.Selection.ParagraphFormat.LineSpacingRule = WdLineSpacing.wdLineSpaceExactly;//行距为固定值
+                wordexampaperop.Selection.ParagraphFormat.LineSpacing = float.Parse(ExamPaper.ExamPaperTask1.MainTitleNextLineSpace);
+                wordexampaper.Paragraphs.Last.Range.Text = this.ExamPaper.ExamPaperTask1.TitleName + Environment.NewLine + Environment.NewLine;//试卷标题
+                backgroundWorker.ReportProgress(15, "试卷生成中...");
+                object exampaperunite = WdUnits.wdStory;
+                wordexampaperop.Selection.EndKey(ref exampaperunite, ref exampapermissing);//将光标移动到文本末尾
+                wordexampaperop.Selection.Font.Size = float.Parse(ExamPaper.ExamPaperTask1.SubTitleFontSize);//次标题大小
+                wordexampaperop.Selection.Font.Name = ExamPaper.ExamPaperTask1.SubTitleFont;
+                wordexampaper.Paragraphs.Last.Range.Text = "单位：___________    姓名：___________    成绩：___________" + Environment.NewLine + Environment.NewLine;
+                backgroundWorker.ReportProgress(20, "试卷生成中...");
+                int mount1 = ExamPaper.ExamPaperTask1.QuestionName.Count;
+                int step1 = 30 / mount1;
+                for (int i = 0; i < ExamPaper.ExamPaperTask1.QuestionName.Count; i++)
+                {
+                    //题目标题加内容
+                    wordexampaperop.Selection.EndKey(ref exampaperunite, ref exampapermissing);//将光标移动到文本末尾
+                    wordexampaperop.Selection.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphJustify;
+                    wordexampaperop.Selection.Font.Size = float.Parse(ExamPaper.ExamPaperTask1.FirstHeadingTitleFontSize);//大题字体大小设置
+                    wordexampaperop.Selection.Font.Name = ExamPaper.ExamPaperTask1.FirstHeadingTitleFont;//大题字体设置
+                                                                                                         //wordexamop.Selection.ParagraphFormat.LineSpacingRule = Word.WdLineSpacing.wdLineSpaceExactly;//行距为固定值,前面已经设置过了
+                    wordexampaperop.Selection.ParagraphFormat.LineSpacing = float.Parse(ExamPaper.ExamPaperTask1.FirstHeadingTitleNextLineSpace);//大题行间距设置
+                    float sum = 0;
+                    for (int j = 0; j < ExamPaper.ExamPaperTask1.FirstQuestionList[i].Count; j++) sum += ExamPaper.ExamPaperTask1.QuestionGrade[i] * ExamPaper.ExamPaperTask1.FirstQuestionList[i][j].amount;
+                    wordexampaper.Paragraphs.Last.Range.Text = Utilities.IntToBigNum(i + 1) + ExamPaper.ExamPaperTask1.QuestionName[i] + "（每题" + ExamPaper.ExamPaperTask1.QuestionGrade[i] + "分，共" + sum + "分）" + Environment.NewLine;
+                    wordexampaperop.Selection.EndKey(ref exampaperunite, ref exampapermissing);//将光标移动到文本末尾
+                    wordexampaperop.Selection.Font.Size = float.Parse(ExamPaper.ExamPaperTask1.SecondHeadingTitleFontSize);//小题字体大小设置
+                    wordexampaperop.Selection.Font.Name = ExamPaper.ExamPaperTask1.SecondHeadingTitleFont;//小题字体设置
+                                                                                                          //wordexamop.Selection.Font.;
+                                                                                                          //wordexamop.Selection.ParagraphFormat.LineSpacingRule = Word.WdLineSpacing.wdLineSpaceExactly;//行距为固定值
+                    wordexampaperop.Selection.ParagraphFormat.LineSpacing = float.Parse(ExamPaper.ExamPaperTask1.SecondHeadingTitleNextLineSpace);//小题行间距设置
+
+                    for (int j = 0; j < ExamPaper.ExamPaperTask1.FirstQuestionList[i].Count; j++)
+                    {
+                        List<List<string>> questionList = new List<List<string>>();
+                        //questionList = null;
+                        List<int[]> ints = new List<int[]>();
+                        while (j < ExamPaper.ExamPaperTask1.FirstQuestionList[i].Count)
+                        {
+                            List<List<string>> newQuestionList = new List<List<string>>();
+                            string questionStoragePath = ExamPaper.ExamPaperTask1.FirstQuestionList[i][j].path;//题库路径
+                            int num = ExamPaper.ExamPaperTask1.FirstQuestionList[i][j].amount;//上述路径对应的选题数
+                            int[] index = new int[num];
+                            index = Utilities.GetNeededQuestionAndAnswerIndexFromQuestionStorage(questionStoragePath, num);
+                            ints.Add(index);
+                            newQuestionList = Utilities.GetNeededQuestionFromQuestionStorageByIndex(questionStoragePath, index);
+                            questionList = Utilities.CombineList(questionList, newQuestionList);
+                            j++;
+                        }
+                        chosenIndex.Add(ints);
+
+                        for (int k = 0; k < questionList.Count; k++)
+                        {
+                            //Console.WriteLine("k:{0}", k);
+                            for (int l = 0; l < questionList[k].Count; l++)
+                            {
+                                if (l == 0) wordexampaper.Paragraphs.Last.Range.Text = (k + 1).ToString() + ". " + questionList[k][l] + Environment.NewLine;
+                                else wordexampaper.Paragraphs.Last.Range.Text = questionList[k][l] + Environment.NewLine;
+                            }
+                            for (int m = 0; m < ExamPaper.ExamPaperTask1.QuestionNextLineSpace[i]; m++)//每个大的题型的小题行距以每个大题第一个题库输入的行间距为准，后续题库的输入值不予采纳
+                                wordexampaper.Paragraphs.Last.Range.Text = Environment.NewLine;
+                        }
+
+                    }
+                    wordexampaper.Paragraphs.Last.Range.Text = Environment.NewLine;//大题之间的空行
+                    backgroundWorker.ReportProgress(20 + i * step1, "试卷生成中...");
+                }
+                wordexampaper.SaveAs(Path.Combine(ExamPaper.ExamPaperDirPath, ExamPaper.ExamPaperName));//存储试卷
+                wordexampaper.Close(ref exampapermissing, ref exampapermissing, ref exampapermissing);
+                wordexampaper = null;
+                wordexampaperop.Quit(ref exampapermissing, ref exampapermissing, ref exampapermissing);
+                wordexampaperop = null;
+
+                backgroundWorker.ReportProgress(50, "试卷已完成");
+
+
+                ///生成答案
+                ExamPaper.ExamPaperAnswerName = ExamPaper.MainFormTitle + "（答案）" + ExamPaper.ExamPaperFileFormTime + ".docx";
+                //Console.WriteLine("ExamPaperName:{0}", ExamPaperName);
+                backgroundWorker.ReportProgress(52, "答案生成中...");
+                //Word应用程序变量
+                Microsoft.Office.Interop.Word.Application wordexampaperanswerop = null;
+                Document wordexampaperanser = null;
+                backgroundWorker.ReportProgress(55, "答案生成中...");
+                wordexampaperanswerop = new Microsoft.Office.Interop.Word.Application();
+                wordexampaperanswerop.AutomationSecurity = MsoAutomationSecurity.msoAutomationSecurityForceDisable;//屏蔽宏
+                wordexampaperanswerop.Visible = false;//使文档不可见,生成文件过程中文档不可见
+                                                      //wordexamop.Visible = true;//使文档可见
+                backgroundWorker.ReportProgress(58, "答案生成中...");
+                Object exampaperanswermissing = Missing.Value;//由于使用的是COM库，因此有许多变量需要使用Missing.Value代替
+
+                wordexampaperanser = wordexampaperanswerop.Documents.Add();
+
+                //纸张大小设置
+                wordexampaperanser.PageSetup.PaperSize = WdPaperSize.wdPaperA4;//设置纸张样式为A4纸
+                //横竖版面设置
+                wordexampaperanser.PageSetup.Orientation = WdOrientation.wdOrientPortrait;//设置为竖版
+                //页面设置
+                wordexampaperanser.PageSetup.LeftMargin = float.Parse(ExamPaper.ExamPaperTask1.MarginLeft.ToString()); //2.82CM
+                wordexampaperanser.PageSetup.RightMargin = float.Parse(ExamPaper.ExamPaperTask1.MarginRight.ToString());
+                wordexampaperanser.PageSetup.TopMargin = float.Parse(ExamPaper.ExamPaperTask1.MarginTop.ToString());//3.525CM
+                wordexampaperanser.PageSetup.BottomMargin = float.Parse(ExamPaper.ExamPaperTask1.MarginBottom.ToString());
+                backgroundWorker.ReportProgress(60, "答案生成中...");
+                //添加试卷标题
+                wordexampaperanswerop.Selection.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphCenter;
+                wordexampaperanswerop.Selection.Font.Size = float.Parse(ExamPaper.ExamPaperTask1.MainTitleFontSize);
+                wordexampaperanswerop.Selection.Font.Name = ExamPaper.ExamPaperTask1.MainTitleFont;
+                wordexampaperanswerop.Selection.ParagraphFormat.CharacterUnitFirstLineIndent = 0;//首行缩进为0
+                wordexampaperanswerop.Selection.ParagraphFormat.FirstLineIndent = wordexampaperanser.Application.CentimetersToPoints((float)0.75 * 0);//首行缩进为0，全局设置为0
+                wordexampaperanswerop.Selection.ParagraphFormat.LineSpacingRule = WdLineSpacing.wdLineSpaceExactly;//行距为固定值
+                wordexampaperanswerop.Selection.ParagraphFormat.LineSpacing = float.Parse(ExamPaper.ExamPaperTask1.MainTitleNextLineSpace);
+                wordexampaperanser.Paragraphs.Last.Range.Text = this.ExamPaper.ExamPaperTask1.TitleName + "答案" + Environment.NewLine + Environment.NewLine;//试卷标题
+                backgroundWorker.ReportProgress(70, "答案生成中...");
+                object exampaperanswerunite = WdUnits.wdStory;
+                wordexampaperanswerop.Selection.EndKey(ref exampaperanswerunite, ref exampaperanswermissing);//将光标移动到文本末尾
+
+                int step2 = 25 / mount1;
+
+                for (int i = 0; i < ExamPaper.ExamPaperTask1.QuestionName.Count; i++)
+                {
+                    //题目标题加内容
+                    wordexampaperanswerop.Selection.EndKey(ref exampaperanswerunite, ref exampaperanswermissing);
+                    wordexampaperanswerop.Selection.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphJustify;
+                    wordexampaperanswerop.Selection.Font.Size = 10;
+                    wordexampaperanswerop.Selection.Font.Name = "黑体";
+                    //wordexamop.Selection.ParagraphFormat.LineSpacingRule = Word.WdLineSpacing.wdLineSpaceExactly;//行距为固定值,前面已经设置过了
+                    wordexampaperanswerop.Selection.ParagraphFormat.LineSpacing = 14f;
+                    wordexampaperanser.Paragraphs.Last.Range.Text = Utilities.IntToBigNum(i + 1) + ExamPaper.ExamPaperTask1.QuestionName[i] + Environment.NewLine;
+                    wordexampaperanswerop.Selection.EndKey(ref exampaperanswerunite, ref exampaperanswermissing);//将光标移动到文本末尾
+                    wordexampaperanswerop.Selection.Font.Size = 9;
+                    wordexampaperanswerop.Selection.Font.Name = "宋体";//小答案内容字体设置
+                    wordexampaperanswerop.Selection.ParagraphFormat.LineSpacing = 12f;//小题行间距设置
+
+                    int step = 30 / ExamPaper.ExamPaperTask1.FirstQuestionList[i].Count;
+                    for (int j = 0; j < ExamPaper.ExamPaperTask1.FirstQuestionList[i].Count; j++)
+                    {
+                        List<List<string>> answerList = new List<List<string>>();
+                        answerList = null;
+                        while (j < ExamPaper.ExamPaperTask1.FirstQuestionList[i].Count)
+                        {
+                            List<List<string>> newAnswerList = new List<List<string>>();
+                            string questionStoragePath = ExamPaper.ExamPaperTask1.FirstQuestionList[i][j].path;
+                            int num = ExamPaper.ExamPaperTask1.FirstQuestionList[i][j].amount;
+                            newAnswerList = Utilities.GetNeededAnswerFromQuestionStorageByIndex(questionStoragePath, chosenIndex[i][j]);
+                            answerList = Utilities.CombineList(answerList, newAnswerList);
+                            j++;
+                        }
+
+                        string answer = "";
+                        for (int k = 0; k < answerList.Count; k++)
+                        {
+                            for (int l = 0; l < answerList[k].Count; l++)
+                            {
+                                if (l == 0) answer += "[" + (k + 1).ToString() + "]" + answerList[k][l] + "  ";
+                                else answer += answerList[k][l] + "  ";
+                            }
+                        }
+                        wordexampaperanser.Paragraphs.Last.Range.Text = answer + Environment.NewLine;
+
+
+                    }
+                    backgroundWorker.ReportProgress(70 + i * step2, "答案生成中...");
+                }
+                backgroundWorker.ReportProgress(95, "答案生成中...");
+
+                wordexampaperanser.SaveAs(Path.Combine(ExamPaper.ExamPaperDirPath, ExamPaper.ExamPaperAnswerName));//存储试卷答案
+                wordexampaperanser.Close(ref exampaperanswermissing, ref exampaperanswermissing, ref exampaperanswermissing);
+                wordexampaperanser = null;
+                wordexampaperanswerop.Quit(ref exampaperanswermissing, ref exampaperanswermissing, ref exampaperanswermissing);
+                wordexampaperanswerop = null;
+
+                Thread.Sleep(500);
+                backgroundWorker.ReportProgress(99, "答案生成中...");
+                Thread.Sleep(500);
+                backgroundWorker.ReportProgress(100, "答案已完成");
+                Thread.Sleep(1000);
+            }
+            catch
+            {
+                backgroundWorker.ReportProgress(100, "发生异常");
+            }
+        }
+
+        #endregion
+
+        #region 生成试卷方法 
+        /// <summary>
+        /// 生成试卷按钮
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void FormExamPaperToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (isCurrentRight)
+            {
+                examPaper = new ExamPaper
+                {
+                    ExamPaperTask1 = CurrentTask,//生成试卷所依据的任务文件为当前任务文件
+                    ExamPaperDirPath = examPaperDirPath//给定试卷生成目录
+                };//创建试卷生成对象
+                examPaper.MainFormTitle = examPaperTaskFilePath != null ? examPaper.MainFormTitle = Path.GetFileNameWithoutExtension(examPaperTaskFilePath) : "";
+                examPaper.ExamPaperFileFormTime = DateTime.Now.ToString("yyyyMMdd_HHmmss");//20241113210012(2024年11月13日21:00:12)
+
+                StartFormExamPaperWithoutAnswer();
+            }
+        }
+
+        /// <summary>
+        /// 开始生成试卷
+        /// </summary>
+        private void StartFormExamPaperWithoutAnswer()
+        {
+            formExamPaperToolStripProgressBar.Visible = true;//使进度条可见
+            formExamPaperToolStripStatusLabel.ForeColor = SystemColors.Desktop;//黑色
+            backgroundWorker = new BackgroundWorker
+            {
+                WorkerReportsProgress = true,//可以报告进度
+                WorkerSupportsCancellation = true//可以随时取消
+            };//新建一个后台线程
+
+            backgroundWorker.DoWork += new DoWorkEventHandler(BackgroundWorker_FormExamPaperWithoutAnswer);
+            backgroundWorker.RunWorkerCompleted += new RunWorkerCompletedEventHandler(BackgroundWorker_FormExamPaperWithoutAnswerCompleted);
+            backgroundWorker.ProgressChanged += new ProgressChangedEventHandler(BackgroundWorker_FormExamPaperWithoutAnswer_ProgressChanged);
+            backgroundWorker.RunWorkerAsync();
+        }
+
+        /// <summary>
+        /// 进度条变更显示方法
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void BackgroundWorker_FormExamPaperWithoutAnswer_ProgressChanged(object sender, ProgressChangedEventArgs e)
+        {
+            formExamPaperToolStripProgressBar.Value = e.ProgressPercentage;
+            formExamPaperToolStripStatusLabel.Text = e.UserState as String;
+        }
+
+        /// <summary>
+        /// 后台生成试卷任务完成后方法
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void BackgroundWorker_FormExamPaperWithoutAnswerCompleted(object sender, RunWorkerCompletedEventArgs e)
+        {
+            if (e.Cancelled) formExamPaperToolStripStatusLabel.Text = "任务取消";
+            formExamPaperToolStripStatusLabel.ForeColor = Color.Green;//绿色
+            formExamPaperToolStripProgressBar.Visible = false;
+            formExamPaperToolStripStatusLabel.Text = "试卷已生成";
+
+            //两个变量在使用完后丢点
+            backgroundWorker = null;
+            examPaper = null;
+        }
+
+        /// <summary>
+        /// 后台生成试卷方法
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void BackgroundWorker_FormExamPaperWithoutAnswer(object sender, DoWorkEventArgs e)
+        {
+            backgroundWorker.ReportProgress(5, "试卷生成中...");
+            //检查并创建生成试卷和答案的目录，反之非法行为导致生成失败
+            if (!Directory.Exists(examPaperDirPath)) Directory.CreateDirectory(examPaperDirPath);
+            ExamPaper.ExamPaperName = ExamPaper.MainFormTitle + "（试卷）" + ExamPaper.ExamPaperFileFormTime + ".docx";
+            //Console.WriteLine("ExamPaperName:{0}", ExamPaperName);
+            //生成试卷
+            //Word应用程序变量
+            Microsoft.Office.Interop.Word.Application wordexamop = null;
+            Document wordexam = null;
+            backgroundWorker.ReportProgress(10, "试卷生成中...");
+            try
+            {
+                wordexamop = new Microsoft.Office.Interop.Word.Application();
+                wordexamop.AutomationSecurity = MsoAutomationSecurity.msoAutomationSecurityForceDisable;//屏蔽宏
+                wordexamop.Visible = false;//使文档不可见,生成文件过程中文档不可见
+                                           //wordexamop.Visible = true;//使文档可见
+
+                Object missing = Missing.Value;//由于使用的是COM库，因此有许多变量需要使用Missing.Value代替
+
+                wordexam = wordexamop.Documents.Add();
+                backgroundWorker.ReportProgress(20, "试卷生成中...");
+                //纸张大小设置
+                if (ExamPaper.ExamPaperTask1.PaperSize == "A3") wordexam.PageSetup.PaperSize = WdPaperSize.wdPaperA3;//设置纸张样式为A3纸
+                else if (ExamPaper.ExamPaperTask1.PaperSize == "A4") wordexam.PageSetup.PaperSize = WdPaperSize.wdPaperA4;//设置纸张样式为A4纸
+                else wordexam.PageSetup.PaperSize = WdPaperSize.wdPaperA4;//默认纸张样式为A4规格
+
+                //横竖版面设置
+                if (ExamPaper.ExamPaperTask1.Orientation == "竖版") wordexam.PageSetup.Orientation = WdOrientation.wdOrientPortrait;
+                else if (ExamPaper.ExamPaperTask1.Orientation == "横版") wordexam.PageSetup.Orientation = WdOrientation.wdOrientLandscape;
+                else wordexam.PageSetup.Orientation = WdOrientation.wdOrientPortrait;
+
+                //页面设置
+                wordexam.PageSetup.LeftMargin = float.Parse(ExamPaper.ExamPaperTask1.MarginLeft.ToString()); //2.82CM
+                wordexam.PageSetup.RightMargin = float.Parse(ExamPaper.ExamPaperTask1.MarginRight.ToString());
+                wordexam.PageSetup.TopMargin = float.Parse(ExamPaper.ExamPaperTask1.MarginTop.ToString());//3.525CM
+                wordexam.PageSetup.BottomMargin = float.Parse(ExamPaper.ExamPaperTask1.MarginBottom.ToString());
+
+                //分栏设置
+                if (ExamPaper.ExamPaperTask1.TextColumns == "2") wordexam.PageSetup.TextColumns.SetCount(2);
+
+                //添加试卷标题
+                wordexamop.Selection.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphCenter;
+                wordexamop.Selection.Font.Size = float.Parse(ExamPaper.ExamPaperTask1.MainTitleFontSize);
+                wordexamop.Selection.Font.Name = ExamPaper.ExamPaperTask1.MainTitleFont;
+                wordexamop.Selection.ParagraphFormat.CharacterUnitFirstLineIndent = 0;//首行缩进为0
+                wordexamop.Selection.ParagraphFormat.FirstLineIndent = wordexam.Application.CentimetersToPoints((float)0.75 * 0);//首行缩进为0，全局设置为0
+                wordexamop.Selection.ParagraphFormat.LineSpacingRule = WdLineSpacing.wdLineSpaceExactly;//行距为固定值
+                wordexamop.Selection.ParagraphFormat.LineSpacing = float.Parse(ExamPaper.ExamPaperTask1.MainTitleNextLineSpace);
+                wordexam.Paragraphs.Last.Range.Text = this.ExamPaper.ExamPaperTask1.TitleName + Environment.NewLine + Environment.NewLine;//试卷标题
+
+                object unite = WdUnits.wdStory;
+                wordexamop.Selection.EndKey(ref unite, ref missing);//将光标移动到文本末尾
+                wordexamop.Selection.Font.Size = float.Parse(ExamPaper.ExamPaperTask1.SubTitleFontSize);//次标题大小
+                wordexamop.Selection.Font.Name = ExamPaper.ExamPaperTask1.SubTitleFont;
+                wordexam.Paragraphs.Last.Range.Text = "单位：___________    姓名：___________    成绩：___________" + Environment.NewLine + Environment.NewLine;
+                backgroundWorker.ReportProgress(40, "试卷生成中...");
+                int step = 40 / ExamPaper.ExamPaperTask1.QuestionName.Count;
+                for (int i = 0; i < ExamPaper.ExamPaperTask1.QuestionName.Count; i++)
+                {
+                    //题目标题加内容
+                    wordexamop.Selection.EndKey(ref unite, ref missing);//将光标移动到文本末尾
+                                                                        //wordexamop.Selection.ParagraphFormat.Alignment = Word.WdParagraphAlignment.wdAlignParagraphLeft;
+                    wordexamop.Selection.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphJustify;
+                    wordexamop.Selection.Font.Size = float.Parse(ExamPaper.ExamPaperTask1.FirstHeadingTitleFontSize);//四号字体大小
+                    wordexamop.Selection.Font.Name = ExamPaper.ExamPaperTask1.FirstHeadingTitleFont;
+                    //wordexamop.Selection.ParagraphFormat.LineSpacingRule = Word.WdLineSpacing.wdLineSpaceExactly;//行距为固定值,前面已经设置过了
+                    wordexamop.Selection.ParagraphFormat.LineSpacing = float.Parse(ExamPaper.ExamPaperTask1.FirstHeadingTitleNextLineSpace);
+
+                    float sum = 0;
+                    for (int j = 0; j < ExamPaper.ExamPaperTask1.FirstQuestionList[i].Count; j++) sum += ExamPaper.ExamPaperTask1.QuestionGrade[i] * ExamPaper.ExamPaperTask1.FirstQuestionList[i][j].amount;
+
+                    wordexam.Paragraphs.Last.Range.Text = Utilities.IntToBigNum(i + 1) + ExamPaper.ExamPaperTask1.QuestionName[i] + "（每题" + ExamPaper.ExamPaperTask1.QuestionGrade[i] + "分，共 " + sum + "分）" + Environment.NewLine;
+                    //i++;
+                    wordexamop.Selection.EndKey(ref unite, ref missing);//将光标移动到文本末尾
+                    wordexamop.Selection.Font.Size = float.Parse(ExamPaper.ExamPaperTask1.SecondHeadingTitleFontSize);//四号字体大小
+                    wordexamop.Selection.Font.Name = ExamPaper.ExamPaperTask1.SecondHeadingTitleFont;
+                    //wordexamop.Selection.Font.;
+                    //wordexamop.Selection.ParagraphFormat.LineSpacingRule = Word.WdLineSpacing.wdLineSpaceExactly;//行距为固定值
+                    wordexamop.Selection.ParagraphFormat.LineSpacing = float.Parse(ExamPaper.ExamPaperTask1.SecondHeadingTitleNextLineSpace);//固定行距为18
+
+                    //Console.WriteLine("examPaperTask.FirstQuestionList[{0}].Count = {1}", i, examPaperTask.FirstQuestionList[i].Count);
+                    for (int j = 0; j < ExamPaper.ExamPaperTask1.FirstQuestionList[i].Count; j++)
+                    {
+                        List<List<string>> questionList = new List<List<string>>();
+                        questionList = null;
+                        while (j < ExamPaper.ExamPaperTask1.FirstQuestionList[i].Count)
+                        {
+                            List<List<string>> newQuestionList = new List<List<string>>();
+                            string questionStoragePath = ExamPaper.ExamPaperTask1.FirstQuestionList[i][j].path;
+                            int num = ExamPaper.ExamPaperTask1.FirstQuestionList[i][j].amount;
+                            newQuestionList = Utilities.GetNeededQuestionAndAnswerFromQuestionStorage(questionStoragePath, num).Item1;
+                            questionList = Utilities.CombineList(questionList, newQuestionList);
+                            j++;
+                        }
+
+                        for (int k = 0; k < questionList.Count; k++)
+                        {
+                            //Console.WriteLine("k:{0}", k);
+                            for (int l = 0; l < questionList[k].Count; l++)
+                            {
+                                if (l == 0) wordexam.Paragraphs.Last.Range.Text = (k + 1).ToString() + ". " + questionList[k][l] + Environment.NewLine;
+                                else wordexam.Paragraphs.Last.Range.Text = questionList[k][l] + Environment.NewLine;
+                            }
+                            for (int m = 0; m < ExamPaper.ExamPaperTask1.QuestionNextLineSpace[i]; m++)//每个大的题型的小题行距以每个大题第一个题库输入的行间距为准，后续题库的输入值不予采纳
+                                wordexam.Paragraphs.Last.Range.Text = Environment.NewLine;
+                        }
+                    }
+                    wordexam.Paragraphs.Last.Range.Text = Environment.NewLine;//大题之间的空行
+                    backgroundWorker.ReportProgress(40 + step, "试卷生成中...");
+                }
+                backgroundWorker.ReportProgress(80, "试卷生成中...");
+
+                //Console.WriteLine(Path.Combine(ExamPaperDirPath, ExamPaperName));
+                wordexam.SaveAs(Path.Combine(ExamPaper.ExamPaperDirPath, ExamPaper.ExamPaperName));
+                wordexam.Close(ref missing, ref missing, ref missing);
+                wordexam = null;
+
+                wordexamop.Quit(ref missing, ref missing, ref missing);
+                wordexamop = null;
+                backgroundWorker.ReportProgress(90, "试卷生成中...");
+                Thread.Sleep(500);
+                backgroundWorker.ReportProgress(99, "试卷生成中...");
+                Thread.Sleep(500);
+                backgroundWorker.ReportProgress(100, "试卷已完成");
+                Thread.Sleep(1000);
+            }
+            catch
+            {
+                //Console.WriteLine("发生了异常");
+            }
+        }
+
+        #endregion
+
+        /// <summary>
+        /// 只生成试卷应用（生成试卷）
+        /// </summary>
+        /// <param name="examPaper"></param>
+        //private void StartLongRunningTask2(ExamPaper examPaper)
+        //{
+        //    formExamPaperToolStripProgressBar.Visible = true;
+        //    //formExamPaperToolStripStatusLabel.Margin.Left = 140;
+        //    BackgroundWorker worker = new BackgroundWorker
+        //    {
+        //        WorkerReportsProgress = true,
+        //        WorkerSupportsCancellation = true
+        //    };
+
+        //    worker.DoWork += (sender, e) =>
+        //    {
+        //        // 模拟耗时操作
+        //        //for (int i = 0; i < 100; i++)
+        //        //{
+        //        if (worker.CancellationPending)
+        //        {
+        //            e.Cancel = true;
+        //            return;
+        //        }
+
+        //        // 进度更新应该在主线程
+        //        worker.ReportProgress(0);
+        //        if (examPaper.FormExamPaper(worker)) return;
+        //    };
+
+        //    worker.ProgressChanged += (sender, e) =>
+        //    {
+        //        formExamPaperToolStripProgressBar.Value = e.ProgressPercentage;
+
+        //        if (formExamPaperToolStripProgressBar.Value == 100)
+        //        {
+        //            this.formExamPaperToolStripStatusLabel.Text = "试卷已生成";
+        //            formExamPaperToolStripProgressBar.Visible = false;
+        //            return;
+        //        }
+        //    };
+
+        //    worker.RunWorkerAsync();
+
+        //}
+
+        /// <summary>
+        /// 关于窗体
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void AboutToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (af == null)
@@ -661,13 +1125,18 @@ namespace ExamPaperFactory
             else af.Activate();
         }
 
+        /// <summary>
+        /// 主窗体退出按钮事件，完全彻底退出应用软件
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void MainForm_FormClosing(object sender, FormClosingEventArgs e) { System.Environment.Exit(0); }
 
-        private void Button1_Click(object sender, EventArgs e)
-        {
-            //Console.WriteLine( Utilities.GetScreenScaling(this));
-        }
-
+        /// <summary>
+        /// 使用手册窗体
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ManualToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (mf == null)

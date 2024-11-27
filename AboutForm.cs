@@ -6,22 +6,20 @@ namespace ExamPaperFactory
 {
     public partial class AboutForm : Form
     {
+        public AboutForm() { InitializeComponent(); }
 
-        //FormStartPosition fatherStartPosition = FormStartPosition.Manual;
+        /// <summary>
+        /// 确定也就是退出按钮作用
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void QuitButton_Click(object sender, EventArgs e) { this.Close(); }
 
-        public AboutForm()
-        {
-            InitializeComponent();
-        }
-
-        private void QuitButton_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        private void AboutForm_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            MainForm.af = null;
-        }
+        /// <summary>
+        /// 窗体退出后方法
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void AboutForm_FormClosing(object sender, FormClosingEventArgs e) { MainForm.af = null; }
     }
 }
