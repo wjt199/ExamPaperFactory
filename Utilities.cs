@@ -213,7 +213,7 @@ namespace ExamPaperFactory
             while (nextLine != null)
             {
                 //string templine = nextLine;
-                if (nextLine.Length > 3 && (nextLine.Substring(0, 3) == "题目:" || nextLine.Substring(0, 3) == "题目："))
+                if (nextLine.Length >= 3 && (nextLine.Substring(0, 3) == "题目:" || nextLine.Substring(0, 3) == "题目："))
                 {
                     questionIndexList.Add(lineIndex);
                     List<string> list = new List<string>();
@@ -221,12 +221,12 @@ namespace ExamPaperFactory
                     while ((nextLine = streamReader.ReadLine()) != null)
                     {
                         lineIndex++;//总行号计数器+1
-                        if (nextLine.Length > 3 && (nextLine.Substring(0, 3) == "答案:" || nextLine.Substring(0, 3) == "答案：")) break; //遇到答案就退出本循环
+                        if (nextLine.Length >= 3 && (nextLine.Substring(0, 3) == "答案:" || nextLine.Substring(0, 3) == "答案：")) break; //遇到答案就退出本循环
                         list.Add(nextLine);
                     }
                     questionList.Add(list);
                 }
-                else if (nextLine.Length > 3 && (nextLine.Substring(0, 3) == "答案:" || nextLine.Substring(0, 3) == "答案："))
+                else if (nextLine.Length >= 3 && (nextLine.Substring(0, 3) == "答案:" || nextLine.Substring(0, 3) == "答案："))
                 {
                     answerIndexList.Add(lineIndex);
                     List<string> list = new List<string>();
@@ -236,7 +236,7 @@ namespace ExamPaperFactory
                         lineIndex++;//总行号计数器+1
                         //Console.WriteLine("nextLine:{0}", nextLine);
                         //Console.WriteLine("nextLine.Substring(0, 3):{0}", nextLine.Substring(0, 3));
-                        if (nextLine.Length > 3 && (nextLine.Substring(0, 3) == "题目:" || nextLine.Substring(0, 3) == "题目：")) break; //遇到题目就退出本循环
+                        if (nextLine.Length >= 3 && (nextLine.Substring(0, 3) == "题目:" || nextLine.Substring(0, 3) == "题目：")) break; //遇到题目就退出本循环
                         if (nextLine != "") list.Add(nextLine);//答案不要空行
                     }
                     answerList.Add(list);
@@ -331,7 +331,7 @@ namespace ExamPaperFactory
             while (nextLine != null)
             {
                 //string templine = nextLine;
-                if (nextLine.Length > 3 && (nextLine.Substring(0, 3) == "题目:" || nextLine.Substring(0, 3) == "题目："))
+                if (nextLine.Length >= 3 && (nextLine.Substring(0, 3) == "题目:" || nextLine.Substring(0, 3) == "题目："))
                 {
                     questionIndexList.Add(lineIndex);
                     List<string> list = new List<string>();
@@ -339,12 +339,12 @@ namespace ExamPaperFactory
                     while ((nextLine = streamReader.ReadLine()) != null)
                     {
                         lineIndex++;//总行号计数器+1
-                        if (nextLine.Length > 3 && (nextLine.Substring(0, 3) == "答案:" || nextLine.Substring(0, 3) == "答案：")) break; //遇到答案就退出本循环
+                        if (nextLine.Length >= 3 && (nextLine.Substring(0, 3) == "答案:" || nextLine.Substring(0, 3) == "答案：")) break; //遇到答案就退出本循环
                         list.Add(nextLine);
                     }
                     questionList.Add(list);
                 }
-                else if (nextLine.Length > 3 && (nextLine.Substring(0, 3) == "答案:" || nextLine.Substring(0, 3) == "答案："))
+                else if (nextLine.Length >= 3 && (nextLine.Substring(0, 3) == "答案:" || nextLine.Substring(0, 3) == "答案："))
                 {
                     answerIndexList.Add(lineIndex);
                     List<string> list = new List<string>();
@@ -354,7 +354,7 @@ namespace ExamPaperFactory
                         lineIndex++;//总行号计数器+1
                         //Console.WriteLine("nextLine:{0}", nextLine);
                         //Console.WriteLine("nextLine.Substring(0, 3):{0}", nextLine.Substring(0, 3));
-                        if (nextLine.Length > 3 && (nextLine.Substring(0, 3) == "题目:" || nextLine.Substring(0, 3) == "题目：")) break; //遇到题目就退出本循环
+                        if (nextLine.Length >= 3 && (nextLine.Substring(0, 3) == "题目:" || nextLine.Substring(0, 3) == "题目：")) break; //遇到题目就退出本循环
                         if (nextLine != "") list.Add(nextLine);//答案不要空行
                     }
                     answerList.Add(list);
@@ -415,7 +415,7 @@ namespace ExamPaperFactory
             while (nextLine != null)
             {
                 //string templine = nextLine;
-                if (nextLine.Length > 3 && (nextLine.Substring(0, 3) == "题目:" || nextLine.Substring(0, 3) == "题目："))
+                if (nextLine.Length >= 3 && (nextLine.Substring(0, 3) == "题目:" || nextLine.Substring(0, 3) == "题目："))
                 {
                     questionIndexList.Add(lineIndex);
                     List<string> list = new List<string>();
@@ -423,17 +423,17 @@ namespace ExamPaperFactory
                     while ((nextLine = streamReader.ReadLine()) != null)
                     {
                         lineIndex++;//总行号计数器+1
-                        if (nextLine.Length > 3 && (nextLine.Substring(0, 3) == "答案:" || nextLine.Substring(0, 3) == "答案：")) break; //遇到答案就退出本循环
+                        if (nextLine.Length >= 3 && (nextLine.Substring(0, 3) == "答案:" || nextLine.Substring(0, 3) == "答案：")) break; //遇到答案就退出本循环
                         list.Add(nextLine);
                     }
                     questionList.Add(list);
                 }
-                else if (nextLine.Length > 3 && (nextLine.Substring(0, 3) == "答案:" || nextLine.Substring(0, 3) == "答案："))
+                else if (nextLine.Length >= 3 && (nextLine.Substring(0, 3) == "答案:" || nextLine.Substring(0, 3) == "答案："))
                 {
                     while ((nextLine = streamReader.ReadLine()) != null)
                     {
                         lineIndex++;//总行号计数器+1
-                        if (nextLine.Length > 3 && (nextLine.Substring(0, 3) == "题目:" || nextLine.Substring(0, 3) == "题目：")) break; //遇到题目就退出本循环
+                        if (nextLine.Length >= 3 && (nextLine.Substring(0, 3) == "题目:" || nextLine.Substring(0, 3) == "题目：")) break; //遇到题目就退出本循环
                     }
                 }
                 else//对于没有出现答案和题目的情况，如下处理
@@ -490,15 +490,15 @@ namespace ExamPaperFactory
             while (nextLine != null)
             {
                 //string templine = nextLine;
-                if (nextLine.Length > 3 && (nextLine.Substring(0, 3) == "题目:" || nextLine.Substring(0, 3) == "题目："))
+                if (nextLine.Length >= 3 && (nextLine.Substring(0, 3) == "题目:" || nextLine.Substring(0, 3) == "题目："))
                 {
                     while ((nextLine = streamReader.ReadLine()) != null)
                     {
                         lineIndex++;//总行号计数器+1
-                        if (nextLine.Length > 3 && (nextLine.Substring(0, 3) == "答案:" || nextLine.Substring(0, 3) == "答案：")) break; //遇到答案就退出本循环
+                        if (nextLine.Length >= 3 && (nextLine.Substring(0, 3) == "答案:" || nextLine.Substring(0, 3) == "答案：")) break; //遇到答案就退出本循环
                     }
                 }
-                else if (nextLine.Length > 3 && (nextLine.Substring(0, 3) == "答案:" || nextLine.Substring(0, 3) == "答案："))
+                else if (nextLine.Length >= 3 && (nextLine.Substring(0, 3) == "答案:" || nextLine.Substring(0, 3) == "答案："))
                 {
                     answerIndexList.Add(lineIndex);
                     List<string> list = new List<string>();
@@ -508,7 +508,7 @@ namespace ExamPaperFactory
                         lineIndex++;//总行号计数器+1
                         //Console.WriteLine("nextLine:{0}", nextLine);
                         //Console.WriteLine("nextLine.Substring(0, 3):{0}", nextLine.Substring(0, 3));
-                        if (nextLine.Length > 3 && (nextLine.Substring(0, 3) == "题目:" || nextLine.Substring(0, 3) == "题目：")) break; //遇到题目就退出本循环
+                        if (nextLine.Length >= 3 && (nextLine.Substring(0, 3) == "题目:" || nextLine.Substring(0, 3) == "题目：")) break; //遇到题目就退出本循环
                         if (nextLine != "") list.Add(nextLine);//答案不要空行
                     }
                     answerList.Add(list);
