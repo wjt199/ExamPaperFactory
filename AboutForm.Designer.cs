@@ -46,7 +46,7 @@
             this.nameTextLabel.Name = "nameTextLabel";
             this.nameTextLabel.Size = new System.Drawing.Size(228, 15);
             this.nameTextLabel.TabIndex = 0;
-            this.nameTextLabel.Text = "ExamPaper Factory 1.0.4Alpha -[2024/11/29]";
+            this.nameTextLabel.Text = "ExamPaper Factory 1.0.5Alpha -[2024/11/30]";
             // 
             // copyRightTextLabel
             // 
