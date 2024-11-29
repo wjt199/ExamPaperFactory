@@ -1,5 +1,4 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<!--This file is part of ExamPaper Factory-->
 <examPaperTask title="这是测试用例考试">
 	<form>
 		<paperSize>A4</paperSize>
@@ -38,30 +37,30 @@
 	</form>
 	<content>
 		<question name="填空题" grade="2" nextLineSpace="0">
-			<dir path="C:\Users\cgy\Documents\Visual Studio 2022\ExamPaperFactory\题库类型_填空题.txt">
-				<amount>15</amount>
-			</dir>
-		</question>
-		<question name="选择题" grade="2" nextLineSpace="0">
-			<dir path="C:\Users\cgy\Documents\Visual Studio 2022\ExamPaperFactory\题库类型_选择题.txt">
-				<amount>8</amount>
-			</dir>
-			<dir path="C:\Users\cgy\Documents\Visual Studio 2022\ExamPaperFactory\题库类型_选择题2.txt">
-				<amount>2</amount>
-			</dir>
-		</question>
-		<question name="判断题" grade="1" nextLineSpace="0">
-			<dir path="C:\Users\cgy\Documents\Visual Studio 2022\ExamPaperFactory\题库类型_判断题.txt">
+			<dir path="C:\Users\wjt\Documents\Visual Studio 2022\ExamPaperFactory\题库类型_填空题20.txt">
 				<amount>10</amount>
 			</dir>
 		</question>
+		<question name="选择题" grade="2" nextLineSpace="0">
+			<dir path="C:\Users\wjt\Documents\Visual Studio 2022\ExamPaperFactory\题库类型_选择题7.txt">
+				<amount>5</amount>
+			</dir>
+			<dir path="C:\Users\wjt\Documents\Visual Studio 2022\ExamPaperFactory\题库类型_选择题11.txt">
+				<amount>5</amount>
+			</dir>
+		</question>
+		<question name="判断题" grade="1" nextLineSpace="0">
+			<dir path="C:\Users\wjt\Documents\Visual Studio 2022\ExamPaperFactory\题库类型_判断题22.txt">
+				<amount>20</amount>
+			</dir>
+		</question>
 		<question name="简答题" grade="5" nextLineSpace="8">
-			<dir path="C:\Users\cgy\Documents\Visual Studio 2022\ExamPaperFactory\题库类型_简答题.txt">
+			<dir path="C:\Users\wjt\Documents\Visual Studio 2022\ExamPaperFactory\题库类型_简答题20.txt">
 				<amount>4</amount>
 			</dir>
 		</question>
 		<question name="论述题" grade="10" nextLineSpace="10">
-			<dir path="C:\Users\cgy\Documents\Visual Studio 2022\ExamPaperFactory\题库类型_论述题.txt">
+			<dir path="C:\Users\wjt\Documents\Visual Studio 2022\ExamPaperFactory\题库类型_论述题20.txt">
 				<amount>2</amount>
 			</dir>
 		</question>

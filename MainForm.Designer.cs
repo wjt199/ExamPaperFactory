@@ -626,16 +626,19 @@
             // 
             // mainStatusStrip
             // 
+            resources.ApplyResources(this.mainStatusStrip, "mainStatusStrip");
             this.mainStatusStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.mainStatusStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.formExamPaperToolStripProgressBar,
             this.formExamPaperToolStripStatusLabel});
-            resources.ApplyResources(this.mainStatusStrip, "mainStatusStrip");
             this.mainStatusStrip.Name = "mainStatusStrip";
+            this.mainStatusStrip.ShowItemToolTips = true;
             this.mainStatusStrip.SizingGrip = false;
+            this.mainStatusStrip.Stretch = false;
             // 
             // formExamPaperToolStripStatusLabel
             // 
+            this.formExamPaperToolStripStatusLabel.AutoToolTip = true;
             resources.ApplyResources(this.formExamPaperToolStripStatusLabel, "formExamPaperToolStripStatusLabel");
             this.formExamPaperToolStripStatusLabel.ForeColor = System.Drawing.Color.Green;
             this.formExamPaperToolStripStatusLabel.Margin = new System.Windows.Forms.Padding(3, 3, 0, 2);

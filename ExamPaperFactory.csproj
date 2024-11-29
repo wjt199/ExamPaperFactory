@@ -153,6 +153,7 @@
     <Compile Include="NewExamTaskContentForm.Designer.cs">
       <DependentUpon>NewExamTaskContentForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="WorkResult.cs" />
     <EmbeddedResource Include="AboutForm.resx">
       <DependentUpon>AboutForm.cs</DependentUpon>
     </EmbeddedResource>

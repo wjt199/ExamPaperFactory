@@ -170,7 +170,7 @@
             // allRenewToolStripMenuItem
             // 
             this.allRenewToolStripMenuItem.Name = "allRenewToolStripMenuItem";
-            this.allRenewToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Alt) 
+            this.allRenewToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Alt)
             | System.Windows.Forms.Keys.R)));
             this.allRenewToolStripMenuItem.Size = new System.Drawing.Size(181, 22);
             this.allRenewToolStripMenuItem.Text = "全复位";
@@ -251,7 +251,7 @@
             this.pathTextBox1_1.Size = new System.Drawing.Size(283, 20);
             this.pathTextBox1_1.TabIndex = 62;
             this.pathTextBox1_1.TextChanged += new System.EventHandler(this.PathTextBox1_1_TextChanged);
-            this.pathTextBox1_1.DoubleClick += new System.EventHandler(this.QuestionStoragePlusToolStripMenuItem_Click);
+            this.pathTextBox1_1.DoubleClick += new System.EventHandler(this.PathTextBox_DoubleClick);
             // 
             // questionStorageMinusLabel
             // 
