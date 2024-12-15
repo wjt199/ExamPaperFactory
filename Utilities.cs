@@ -12,7 +12,7 @@ namespace ExamPaperFactory
     internal static class Utilities
 
     {
-        /// <summary>
+        /// <summary> *不再使用*
         /// 根据输入的文件路径类型对ConfigPath.txt文件进行更新
         /// 当文件存在时，进行更新操作，文件不存在时，新建ConfigPath.txt文件并写入新条目
         /// </summary>
@@ -38,41 +38,41 @@ namespace ExamPaperFactory
         }
 
         /// <summary>
-        /// 将数字转换为从1到该数字组成的字符串数组
+        /// 功能：将数字转换为从1到该数字组成的字符串数组
         /// </summary>
         /// <param name="num">大于1的整数</param>
         /// <returns>字符串数组</returns>
         public static String[] NumToStringList(int num)
         {
             List<string> strList = new List<String>();
-            for (int i = 1; i <= num; i++) { strList.Add(i.ToString()); }
+            for (int i = 1; i <= num; i++) strList.Add(i.ToString());
             return strList.ToArray();
         }
 
         /// <summary>
-        /// 将两个数字之间的所有整数转换为由小到大的字符串数组
+        /// 功能：将两个数字之间的所有整数转换为由小到大的字符串数组
         /// </summary>
-        /// <param name="startNum">起始数字</param>
-        /// <param name="endNum">结束数字</param>
+        /// <param name="startNum">起始数字（int）</param>
+        /// <param name="endNum">结束数字（int）</param>
         /// <returns>字符串数组</returns>
         public static String[] NumToStringList(int startNum, int endNum)
         {
             List<string> strList = new List<String>();
-            for (int i = startNum; i <= endNum; i++) { strList.Add(i.ToString()); }
+            for (int i = startNum; i <= endNum; i++) strList.Add(i.ToString());
             return strList.ToArray();
         }
 
         /// <summary>
-        /// 将两个数字之间的数字按照给定的步进值转换为由小到大的字符串数组
+        /// 功能：将两个数字之间的数字按照给定的步进值转换为由小到大的字符串数组
         /// </summary>
-        /// <param name="startNum">起始数字</param>
-        /// <param name="endNum">结束数字</param>
-        /// <param name="step">步进值</param>
+        /// <param name="startNum">起始数字（float）</param>
+        /// <param name="endNum">结束数字（float）</param>
+        /// <param name="step">步进值（float）</param>
         /// <returns>字符串数组</returns>
         public static String[] NumToStringList(float startNum, float endNum, float step)
         {
             List<string> strList = new List<String>();
-            for (float i = startNum; i <= endNum; i += step) { strList.Add(i.ToString()); }
+            for (float i = startNum; i <= endNum; i += step) strList.Add(i.ToString());
             return strList.ToArray();
         }
 
