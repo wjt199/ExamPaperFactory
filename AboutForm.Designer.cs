@@ -1,4 +1,4 @@
-﻿namespace ExamPaperFactory
+namespace ExamPaperFactory
 {
     partial class AboutForm
     {
@@ -46,7 +46,7 @@
             this.nameTextLabel.Name = "nameTextLabel";
             this.nameTextLabel.Size = new System.Drawing.Size(228, 15);
             this.nameTextLabel.TabIndex = 0;
-            this.nameTextLabel.Text = "ExamPaper Factory 1.0.5Alpha -[2024/11/30]";
+            this.nameTextLabel.Text = "ExamPaper Factory 1.0.6Alpha -[2024/12/13]";
             // 
             // copyRightTextLabel
             // 
@@ -102,7 +102,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(372, 154);
+            this.ClientSize = new System.Drawing.Size(375, 154);
             this.Controls.Add(this.telLabel);
             this.Controls.Add(this.examPaperFactoryPictureBox);
             this.Controls.Add(this.quitButton);
@@ -116,7 +116,7 @@
             this.MinimizeBox = false;
             this.Name = "AboutForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "关于";
+            this.Text = "关于（ExamPaper Factory 1.0.6 Alpha）";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.AboutForm_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.examPaperFactoryPictureBox)).EndInit();
             this.ResumeLayout(false);
