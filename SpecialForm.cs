@@ -15,11 +15,11 @@ namespace ExamPaperFactory
 
         private void EnterButton_Click(object sender, EventArgs e)
         {
-            if (passwdTextBox.Text == "1234567890") { IsPassedRight = true; this.Close(); }
+            if (passwdTextBox.Text == "666") { IsPassedRight = true; this.Close(); }
             else
             {
                 toolStripStatusLabel.ForeColor = Color.Red;
-                toolStripStatusLabel.Text = "  口令错误";
+                toolStripStatusLabel.Text = "口令错误";
             }
         }
 
@@ -50,7 +50,7 @@ namespace ExamPaperFactory
             if (passwdTextBox.Text == String.Empty)
             {
                 toolStripStatusLabel.ForeColor = SystemColors.ControlText;
-                toolStripStatusLabel.Text = "  调试口令：1234567890";
+                toolStripStatusLabel.Text = "口令：666 (强进或异)";
             }
         }
     }
