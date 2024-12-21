@@ -1,4 +1,5 @@
-﻿using System;
+using System;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace ExamPaperFactory
@@ -14,8 +15,12 @@ namespace ExamPaperFactory
 
         private void EnterButton_Click(object sender, EventArgs e)
         {
-            if (passwdTextBox.Text == "1234567890") IsPassedRight = true;
-            this.Close();
+            if (passwdTextBox.Text == "1234567890") { IsPassedRight = true; this.Close(); }
+            else
+            {
+                toolStripStatusLabel.ForeColor = Color.Red;
+                toolStripStatusLabel.Text = "  口令错误";
+            }
         }
 
         private void QuitButton_Click(object sender, EventArgs e)
@@ -37,6 +42,15 @@ namespace ExamPaperFactory
                     break;
                 default:
                     break;
+            }
+        }
+
+        private void PasswdTextBox_TextChanged(object sender, EventArgs e)
+        {
+            if (passwdTextBox.Text == String.Empty)
+            {
+                toolStripStatusLabel.ForeColor = SystemColors.ControlText;
+                toolStripStatusLabel.Text = "  调试口令：1234567890";
             }
         }
     }
